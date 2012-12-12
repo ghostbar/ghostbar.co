@@ -1,0 +1,23 @@
+---
+layout: post
+title: Memorias de la preparación de un USB para instalar Debian
+tags:
+- Debian
+- Español
+- Instalador
+- Planeta Debian
+- Planeta Linux
+- Software
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wp_old_slug: ''
+  dsq_thread_id: '123000547'
+---
+Lo más importante de todo es: <strong>¡Usen el mismo <code>vmlinuz</code>, <code>initrd.gz</code> e <code>ISO</code>!!</strong>, si es testing todo testing, si es stable todo stable, si es testing weekly todo weekly, si es daily todo daily...
+
+Sino les dará un error al cargar los módulos del kernel y tendrán que descargarse de nuevo tanto el ISO como el initrd.gz y el vmlinuz.
+
+Oh, y si usan el método de <code>zcat</code> probablemente no les arranque, prefieran el método flexible siempre más un <code>install-mbr</code> por si acaso.

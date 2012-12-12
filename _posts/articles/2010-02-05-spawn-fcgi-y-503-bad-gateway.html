@@ -1,0 +1,31 @@
+---
+layout: post
+title: spawn-fcgi y 503 Bad Gateway
+tags:
+- '503'
+- Español
+- Linux
+- nginx
+- Planeta Debian
+- Planeta Linux
+- Software
+- spawn-fcgi
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '122917335'
+---
+Este es un error MUY común el 503 Bad Gateway al menos usando <code>nginx</code> + <code>spawn-fcgi</code>, yo terminaba encontrándomelo cada 2 o 3 días y sin razón aparente.
+
+La forma como terminé resolviéndolo fue especificando el valor de la variable <code>PHP_FCGI_MAX_REQUESTS</code> en el script <code>/usr/bin/php-fastcgi a 1000</code>:
+<pre>#!/bin/sh
+PHP_FCGI_MAX_REQUESTS=1000 \
+/usr/bin/spawn-fcgi blah blah blah</pre>
+
+Luego terminé agregando más procesos a <code>spawn-fcgi</code> para darle más fluidez por lo que terminó quedando el script con algo como:
+<pre>#!/bin/sh
+PHP_FCGI_CHILDREN=3 \
+PHP_FCGI_MAX_REQUESTS=1000 \
+/usr/bin/spawn-fcgi blah blah blah</pre>

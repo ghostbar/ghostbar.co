@@ -1,0 +1,29 @@
+---
+layout: post
+title: ! 'Node.js''s Stitch + NginX: don''t use the trailing slash on proxy_pass'
+tags:
+- English
+- nginx
+- Node.js
+- Software
+- Stitch
+- Tecnología
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '579018303'
+---
+This is a remainder for me of what failed. While using <a href="https://github.com/sstephenson/stitch">stitch</a> module for Node.js together with NginX as proxy-reverse for my application I got 404 while trying to get /application.js, except anything else being generated at run-time.
+
+The reason was the trailing slash in proxy_pass variable. So, instead of
+<pre>
+proxy_pass http://127.0.0.1:88334/;
+</pre>
+You should use
+<pre>
+proxy_pass http://127.0.0.1:88334;
+</pre>
+
+That fixed my issue, didn't had time to do further investigation, but that's a workaround for that issue.

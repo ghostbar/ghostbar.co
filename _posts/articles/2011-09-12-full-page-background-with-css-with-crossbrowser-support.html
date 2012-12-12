@@ -1,0 +1,55 @@
+---
+layout: post
+title: Full-Page Background with CSS with crossbrowser support
+tags:
+- Background
+- Cross Browser
+- CSS
+- Design
+- English
+- Full Page Background
+- Planet Debian
+- Software
+- Web
+- Web Design
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '411764799'
+---
+I've been trying to get the perfect full-page background without using JavaScript since a while. I tried with CSS3 but, obviously for IE <9 was a pain in the ass, even for older Firefox' releases. So I decided to go with the plain-CSS option:
+
+<code lang="html">
+<!doctype html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img id="bg" src="/img/bg.jpg">
+
+  <p>Content</p>
+</body>
+</html></code>
+
+<code lang="css">
+img#bg {
+  min-width: 100%;
+  min-height: 100%;
+  
+  /* Proportionate re-dimension */
+  width: 100%;
+  height: auto;
+
+  position: fixed; top: 0; left: 0;
+
+  z-index: -1;
+}
+</code>
+<h3>What does it does?</h3>
+It takes an inline image and uses it as if were a <code no_cc="true">background-image</code> thanks to the <code no_cc="true">z-index: -1</code> CSS-rule.
+
+There are lots of other techniques at <a href="http://css-tricks.com/3458-perfect-full-page-background-image/">CSS-Tricks</a> but none works in every browser as this one in particular.
+
+Enjoy.

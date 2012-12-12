@@ -1,0 +1,47 @@
+---
+layout: post
+title: ! 'Gwibber: excelente cliente gráfico para micro-blogging'
+tags:
+- Debian
+- Español
+- Gwibber
+- Identi.ca
+- Micro-blogging
+- Open Source
+- Planeta Debian
+- Planeta Linux
+- Software
+- Tecnología
+- Twitter
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '122916428'
+---
+[caption id="" align="alignleft" width="246" caption="Gwibber con estatus de twitter (azul) e identi.ca (verde)"]<a href="https://launchpad.net/gwibber"><img alt="Gwibber con estatus de twitter (azul) e identi.ca (verde)" src="http://fc84.deviantart.com/fs43/f/2009/073/f/6/Gwibber_on_debian_sid_by_ghostbar.png" title="Gwibber con estatus de twitter (azul) e identi.ca (verde)" width="246" height="521" /></a>[/caption]
+
+Nunca he sido fan de los clientes para escritorio de mis cuentas web, sin embargo últimamente me he visto en la necesidad de <strong>no tener el navegador abierto</strong> para poder concentrarme en otros trabajos, sin embargo sí queriendo recibir actualizaciones tanto de mi RSS como de <a href="http://twitter.com/ghostbar">Twitter</a> e <a href="http://identi.ca/ghostbar">Identi.ca</a>.
+
+Empecé a usar twhirl y me convencía a primera vista, cumplía mis requerimientos de poder actualizar identi.ca y twitter con el mismo cliente, mantenía ventanas separadas para cada servicio pero cada vez que lo iniciaba me notificaba de las últimas 100 o 200 notificaciones en cada servicio y no conseguí manera de cambiar eso.
+
+Gwibber era el próximo cliente en la lista que cumplía los requerimientos e incluso ya me lo <a href="http://identi.ca/notice/2664109">habían recomendado</a> así que decidí probarlo.
+
+Entre las mejores cosas que tiene es que une todo en un sólo stream y lo identificas con colores que tú mismo colocas.
+
+Aparte de que soporta <a href="http://ping.fm">Ping.fm</a> directamente y puedes señalar de los servicios de cuales envías, de cuáles recibes. Por lo tanto mi configuración fue sólo recibir de twitter e identi.ca y sólo enviar con ping.fm.
+
+A pesar de esto, si le doy a responder a alguno de los estatus la actualización se envía únicamente al servicio del usuario al cuál estoy respondiendo, por lo tanto una respuesta a algún follower de twitter llegará sólo a twitter cuando le doy en el botón responder. Algo que no sucede si desde el cuadro de texto intento responder directamente con el <em>@usuario</em>.
+
+Así mismo revisa si una entrada es duplicada y la une, por lo tanto si alguien actualiza en twitter e identi.ca con el mismo estatus gwibber notará esto y los unirá.
+
+Gwibber tiene más funcionalidades como la de cliente de RSS, sin embargo preferí no usarlo pues empezando dejaba de mostrarme las notificaciones cuando se enviaban updates (quizás un bug en gwibber) y además Liferea hace mejor trabajo como cliente RSS para escritorio.
+
+Instalarlo es fácil, en Ubuntu ya está en los repositorios y si estás en Debian como yo sólo basta con hacer:
+
+<pre># vi /etc/apt/sources.list.d/gwibber.list
+deb http://ppa.launchpad.net/gwibber-team/ubuntu intrepid main
+deb-src http://ppa.launchpad.net/gwibber-team/ubuntu intrepid main
+:wq
+# aptitude update; aptitude install gwibber</pre>

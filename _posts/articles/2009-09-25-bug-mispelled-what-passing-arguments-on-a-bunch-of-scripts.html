@@ -1,0 +1,19 @@
+---
+layout: post
+title: Bug? Mispelled? What? Passing arguments on a bunch of scripts
+tags:
+- Debian
+- English
+- Planet Debian
+- Software
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+I really have a complicated environment for building my packages that only I understand (and maybe no one should try to understand if wants to maintain mentally stable). So I was building with git-buildpackage that points to a script gbp-builder that builds with pdebuild and which got its debbuildopts with '' and I was passing more args with a local variable (EXOP) with "" and guess what. It was -v5.05-3+nmu1 and I got that argument OK on dpkg-genchanges for my source.changes but not to my i386.changes.
+
+I had to put in my gbp-builder script debbuildopts with "" and everything got OK. I frankly don't understand what happened, why the args passed until that point and not to the last dpkg-genchanges but hey! it works now! I hope nobody pass trough this and waste 2 hours finding what was wrong and it only were a pair of ".
+
+BTW, now I'm DD! Second in Venezuela :D

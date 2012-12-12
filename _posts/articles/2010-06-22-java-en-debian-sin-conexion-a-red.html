@@ -1,0 +1,29 @@
+---
+layout: post
+title: Java en Debian sin conexión a red
+tags:
+- Debian
+- Español
+- Java
+- Network
+- Planeta Debian
+- Planeta Linux
+- Problema
+- Red
+- Software
+- Solución
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wp_old_slug: ''
+  dsq_thread_id: '122916615'
+---
+Desde hace un buen tiempo tenía fallas con Java, en general los applets no funcionaban y mi decisión era desistir de usar Java. Pero hoy, tuve que usarlo así que me dediqué a buscar cual era el problema.
+
+Resulta que IPv6 está activado por defecto y cuando va a buscar una dirección IPv4 no la consigue por lo que siempre va a dar un <em>Network unreachable</em>.
+
+La solución pasa por ser demasiado sencilla, en <code>~/.java/deployment/deployment.properties</code> hay una línea para argumentos adicionales, agreguen en esa línea esto:
+
+<pre>deployment.javaws.jre.0.args=-Djava.net.preferIPv4Stack\=true</pre>

@@ -1,0 +1,43 @@
+---
+layout: post
+title: Cifrando particiones en Debian
+tags:
+- Cifrado
+- Debian
+- dm-crypt
+- Español
+- Planeta Debian
+- Planeta Linux
+- Seguridad
+- Software
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wp_old_slug: ''
+  dsq_thread_id: '126103500'
+---
+Suelo tener una tarjeta SD de 16MB como respaldo de mi clave GPG secreta y pública, así como del certificado de revocación. La única forma de que sea de hecho guardada seguramente es cifrándola y para eso uso <code>dm-crypt</code>. El único problema con <code>dm-crypt</code> es que no cifra <em>on-the-fly</em> sino que necesitas una partición vacía o de lo contrario en el proceso se eliminarán los datos. El proceso es sencillo, aquí explicaré lo que haría con mi tarjeta SD si lo tuviese que hacer de nuevo:
+
+<ul>
+<li>Instalar <code>cryptsetup</code>:
+<pre>~$ sudo aptitude install cryptsetup</pre>
+</li>
+<li>Crear una partición nueva en el dispositivo que en este caso llamaremos <code>mmc0p1</code>, para esto recomiendo usar GParted si no se es muy bueno con <code>cfdisk</code>, yo lo hice con éste último porque GParted no formatea en <code>fat12</code> y es el máximo FAT que soporta una partición de <code>16M</code>.</li>
+<li>Ahora, ciframos la partición:
+<pre>~$ sudo  cryptsetup -v -y -h sha256 luksFormat /dev/mmc0p1</pre>
+Aquí nos advertirá sobre la re-escritura de la partición y que por ende perderemos todos los datos y escribirán la contraseña que deseen.</li>
+<li>Hecho el paso anterior ahora abriremos la partición para crear una partición virtual dentro de ella:
+<pre>~$ sudo cryptsetup luksOpen /dev/mmc0p1 sd16M</pre>
+El <code>sd16M</code> es el nombre que le daremos a la partición virtual, ésta irá a <code>/dev/mapper</code> donde le darán formato.</li>
+<li>Dándole formato a <code>/dev/mapper/sd16M</code>:
+<pre>~$ mkfs.vfat -F 12 -n "sd16M" /dev/mapper/sd16M</pre></li>
+<li>Ahora cerraremos la partición virtual que hicimos:
+<pre>~$ sudo cryptsetup luksClose sd16M</pre></li>
+<li>Ya estamos listos básicamente, si tienen configurado para que automonte particiones les quedará más fácil, simplemente remuevan la tarjeta o el dispositivo y vuélvanlo a introducir en la ranura, en esto les saltará una ventana emergente pidiéndoles la clave y listo.
+
+Si éste no es el caso entonces tendrán que instalar <code>cryptmount</code> y nada mejor que el manpage para aprender como usarlo, tiene ejemplos completos de como montar particiones protegidas bajo LUKS (el método usado en éste tutorial).</li>
+</ul>
+
+Estas particiones pueden ser leídas en Windows también usando <a href="http://en.wikipedia.org/wiki/FreeOTFE">FreeOTFE</a>, con tal que Windows soporte el formato de la partición (<code>FAT12</code>, <code>FAT16</code>, <code>FAT32</code>, <code>NTFS</code>)

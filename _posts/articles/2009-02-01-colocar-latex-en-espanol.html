@@ -1,0 +1,35 @@
+---
+layout: post
+title: Colocar LaTeX en español
+tags:
+- Español
+- LaTeX
+- Open Source
+- Planeta Debian
+- Planeta Linux
+- Software
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '123784602'
+---
+A modo de recordatorio y para que otros también se enteren, simplemente luego de <code>\documentclass</code> colocan esto:
+
+<pre>\usepackage[utf8]{inputenc}
+\renewcommand\listfigurename{Lista de Figuras}
+\renewcommand\listtablename{Lista de Tablas}
+\renewcommand\bibname{Bibliografía}
+\renewcommand\indexname{Indice alfabético}
+\renewcommand\figurename{Figura}
+\renewcommand\tablename{Tabla}
+\renewcommand\partname{Parte}
+\renewcommand\chaptername{Capítulo}
+\renewcommand\appendixname{Apéndice}
+\newcommand\abstractname{Resumen}</pre>
+
+Edición: Sólo usen:
+<code>\usepackage[spanish]{babel}</code>
+
+Gracias Milmazz :D

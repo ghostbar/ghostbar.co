@@ -1,0 +1,56 @@
+---
+layout: post
+title: Changing background sync'd with jQueryUI Tabs
+tags:
+- English
+- javascript
+- jQuery
+- jQuery UI
+- Planet Debian
+- Software
+- Swap Image
+- Tabs
+- Web
+- Web Design
+- Web Development
+- webdev
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '412887830'
+---
+I love to use <a href="http://jqueryui.com">jQuery UI</a> plugins. The one I use constantly is <a href="http://jqueryui.com/demos/tabs">Tabs</a> and this time I needed to sync the auto-changing of tab with the background. For this I used an event called <code no_cc="true">tabsshow</code> to trigger my function + the code I wrote yesterday for <a href="http://ghostbar.ath.cx/2011/09/12/full-page-background-with-css-with-crossbrowser-support/">full-page background with CSS</a>:
+<code lang="js">
+/* @author Jose Luis Rivas <joseluis@eserre.com>
+ *
+ * @desc swaping full-background pages with jQuery UI's Tabs plugin events.
+*/
+
+
+$(document).ready(function() {
+
+	$( "#slides" ).bind( "tabsshow", function(event, ui) {
+		var tabattr = $('.ui-state-active').find('a').attr('href');
+
+		switch(tabattr) {
+			case '#tab1':
+				$('img#bg').attr('src', '/img/tab1.jpg');
+				break;
+
+			case '#tab2':
+				$('img#bg').attr('src', '/img/tab2.jpg');
+				break;
+
+			default:
+				$('img#bg').attr('src', '/img/tab1.jpg');
+                                break;
+		}
+
+	});
+
+});</code>
+
+<h3>What it does the script?</h3>
+Finds the active-tab identified with the <code no_cc="true">.ui-state-active</code> class and then changes the <code no_cc="true">img</code> tab <code no_cc="true">src</code> attribute according to the <code no_cc="true">href</code> attribute of the active-tab.

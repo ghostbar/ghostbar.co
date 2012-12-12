@@ -1,0 +1,29 @@
+---
+layout: post
+title: sysvinit y upstart
+tags:
+- Debian
+- Español
+- Linux
+- Planeta Debian
+- Planeta Linux
+- Software
+- sysvinit
+- Tecnología
+- upstart
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '122916459'
+---
+Yo venía acostumbrado, de toda la vida a tener mis comandos reboot, poweroff y shutdown en mi máquina.
+
+Un día instalando algún servicio probé con la alternativa a sysvinit de Ubuntu upstart y durante mucho tiempo no había revisado esa máquina.
+
+Resulta que al desinstalarme sysvinit me quitó reboot, poweroff, shutdown y además me dañó el /sbin/init.
+
+¿Solución? Arrancar con un LiveUSB y copiar el /sbin/init del live en mi sistema para poder iniciar, de manera subsecuente quitar upstart y dejar mi amado sysvinit :)
+
+A modo de recomendación: si no quieren perder tiempo entonces no instalen upstart.

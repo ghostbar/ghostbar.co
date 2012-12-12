@@ -1,0 +1,32 @@
+---
+layout: post
+title: Usando xrandr para cosas útiles
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '122916164'
+---
+Mi portátil tiene una pantalla de 12" que a pesar de su tamaño me es muy útil además de que es lo que hace más <em>portátil</em> mi máquina. Sin embargo, es más sencillo programar cuando tienes más líneas y en el laboratorio suelo tener monitores de 21" sin nada que hacer así que tengo esa pantalla para programar y en la pantalla de mi portátil suelo tener documentación abierta, es tan sencillo como hacer:
+
+<pre>$ xrandr --output VGA --auto --right-of LVDS</pre>
+
+Así tener una pantalla a <code>1600x1200</code> con código y la otra <code>1024x768</code> con documentación. Al correr esto quizás tengas problemas de tamaño, necesitas tener bien configurado el espacio de la pantalla virtual, en mi caso la coloqué de esta manera en mi <code>xorg.conf</code>:
+
+<pre> SubSection "Display"
+                Depth           24
+                Modes           "1600x1200" "1280x1024" "1024x768"
+                <strong>Virtual         2624 1200</strong>
+        EndSubSection
+</pre>
+
+También <code>xrandr</code> es muy útil cuando haces presentaciones con un proyector, sólo haces:
+
+<pre>$ xrandr --auto</pre>
+
+Y él automáticamente va a hacer un clon de tu pantalla en la conexión <code>VGA</code>, para reacomodar el tamaño de una pantalla puedes usar:
+
+<pre>$ xrandr --output VGA --mode 800x600</pre>
+
+Eso funciona normalmente para acomodarse a la resolución de los proyectores que es <code>800x600</code>. Si quieres saber los modos que tienes configurados disponibles y las pantallas haz <code>xrandr -q</code>.

@@ -1,0 +1,31 @@
+---
+layout: post
+title: gzip en nginx
+tags:
+- Español
+- gzip
+- Linux
+- nginx
+- Planeta Debian
+- Planeta Linux
+- Servidor Web
+- Web Server
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '123053896'
+---
+Siguiendo con la serie de configuraciones que realicé con <code>nginx</code> aquí va lo que hice en <code>/etc/nginx/nginx.conf</code> para tener <code>gzip</code> funcionando:
+<pre>gzip  on;
+    gzip_http_version 1.1;
+    gzip_buffers 16 8k;
+    gzip_comp_level 2;
+    gzip_disable "MSIE [1-6]\.(?!.*SV1)";
+    gzip_types  text/html text/css text/xml application/x-javascript application/atom+xml text/plain text/x-component;
+    gzip_vary on;</pre>
+
+Como podrán haber adivinado en <code>gzip_types</code> van el tipo de archivos que quieren sean comprimidos.
+
+Esa parte se incluye en la zona de http y con eso tendrán <code>gzip</code> funcionando al reiniciar <code>nginx</code>.

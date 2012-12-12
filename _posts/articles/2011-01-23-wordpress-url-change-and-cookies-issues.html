@@ -1,0 +1,27 @@
+---
+layout: post
+title: ! 'WordPress: URL change and cookies issues'
+tags:
+- cookies
+- English
+- How To
+- HowTo
+- Issues
+- nginx
+- Planet Debian
+- Software
+- Solved
+- URL change
+- WordPress
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '214520462'
+---
+I had a site under <code>alpha.mydomain.tld</code> and when I changed it to <code>www.mydomain.tld</code> I did it trough the Settings of WordPress without changing anything else.
+
+I added the new domains to my nginx-configuration without removing the <code>alpha</code> subdomain and I got a lot of issues with WordPress cookies. By e.g., I logged in to <code>/wp-admin</code>, closed that tab and reopened in a while and I got to re-login, even if I set "Remember Me".
+
+After checking, re-change of URL and things like that I just removed the <code>alpha</code> subdomain from my nginx-configuration and everything got solved. Yes, is stupid, but it happens.

@@ -1,0 +1,26 @@
+---
+layout: post
+title: ! 'TIP: Kdenlive on Debian, solving crash'
+tags:
+- Crash
+- Debian
+- English
+- Kdenlive
+- Linux
+- Planet Debian
+- Software
+- Solution
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '123401877'
+---
+If doesn't stop crashing while you're starting it or while adding clips then purge melt and kdenlive then reinstall, first melt and then kdenlive this way:
+
+<pre>$ sudo aptitude purge melt kdenlive
+$ rm ~/.kde/share/config/kdenliverc
+$ sudo aptitude install melt; sudo aptitude install kdenlive</pre>
+
+It worked for me, now I'm rendering my videos with this great app!

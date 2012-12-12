@@ -1,0 +1,39 @@
+---
+layout: post
+title: Usando LVM para lo que es bueno
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '122916228'
+---
+Aún mucha gente desconoce <code>LVM</code>, incluso le tienen miedo. Uno de los pasos más difíciles, molestos, tediosos en la instalación de una máquina es el particionado de los discos. Ya he visto muchos que por pereza hacen 2 particiones, la raíz y la swap. Muchos temen es por colocar el tamaño de las particiones mal y que después terminen necesitando más disco. En fin, para eso está <code>LVM</code> :)
+
+Después de crear los volúmenes lógicos y asignarles particiones llega el momento en el que te diste cuenta que de hecho, te equivocaste, y te toca redimensionar tus particiones. ¿Cómo?
+
+Para achicar alguna partición primero la desmontas, luego redimensionas el tamaño de la partición y de último redimensionas el tamaño del volúmen lógico en el <code>LVM</code>. Para entender porque es en este orden voy a tomar una explicación que dio alguien hace poco en <code>debian-user-spanish@l.d.o</code>:
+
+Piensa en el volúmen lógico del <code>LVM</code> como un vaso y la partición como un líquido. Si quieres volver el vaso más pequeño primero disminuyes la cantidad de líquido para que no se derrame del envase. Igual se aplica cuando vamos a aumentar el tamaño, primero aumentas el tamaño del vaso y luego agregas más líquido.
+
+Ya conocida la teoría vamos a la práctica:
+
+Reduciendo un volúmen lógico:
+<pre># umount /particion
+# resize2fs /dev/volumenfisico/volumenlogico tamañoM
+# lvreduce /dev/volumenfisico/volumenlogico -LtamañoM
+</pre>
+
+Expandiendo un volúmen lógico:
+<pre># umount /particion
+# lvextend /dev/volumenfisico/volumenlogico -LtamañoM
+#resize2fs /dev/volumenfisico/volumenlogico tamañoM
+</pre>
+
+Hay una nota muy especial sobre el tamaño, en los ejemplos que di arriba cambias tamaño por el nuevo tamaño que le vas a dar, la M es de Megabytes, también puedes usar G para Gigabytes, sin embargo, cuando estás manipulando el tamaño de los volúmenes lógicos en vez de usar sólo la bandera <code>-L</code> y seguidamente el nuevo tamaño puedes decir en cuanto se va a reducir o aumentar, es decir, puedes decir en <code>lvreduce</code> que vas a reducir el volúmen lógico en 1G con:
+<pre># lvreduce /dev/volumenfisico/volumenlogico -L-1G</pre>
+
+Aplicas lo mismo para <code>lvextend</code> pero esta vez con <code>-L+1G</code> para aumentar un Giga, puedes usarlo también con otras medidas.
+
+Espero sirva para que le dejen el miedo a <code>LVM</code> y tomen partido de su ventaja.
+<!--break-->

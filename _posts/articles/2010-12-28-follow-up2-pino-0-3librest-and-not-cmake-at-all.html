@@ -1,0 +1,26 @@
+---
+layout: post
+title: ! 'Follow-up[2]: pino-0.3+librest (and not cmake, at all)'
+tags:
+- Debian
+- English
+- librest
+- Linux
+- pino
+- Planet Debian
+- Software
+- Tecnología
+- vala
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '199052711'
+  _wp_old_slug: ''
+---
+So, after <a href="http://ghostbar.ath.cx/2010/12/26/dear-lazyweb-cmake-pino-0-3-little-issue/">having</a> <a href="http://ghostbar.ath.cx/2010/12/26/follow-up-pino0-3cmake/">troubles</a> while trying to compile <code>pino-0.3</code> it turns out is has nothing to do with <code>cmake</code>, nor with <code>librest</code> not shipping <code>gir</code> files but with <code>vala</code> bindings and incompability between those bindings from <code>rest-0.6</code> and <code>rest-0.7</code>. So if I really want to compile <code>pino-0.3</code> I have two options: use <code>rest-0.6</code> or update <code>rest.vapi</code> for <code>vala</code> and send a patch for <code>pino-0.3</code> to get a working code with <code>rest-0.7</code> and it's new <code>vala</code> bindings...
+
+But there's not enough free time for me this holidays so, maybe next time :-/
+
+Anyway, thanks to all those who helped :)

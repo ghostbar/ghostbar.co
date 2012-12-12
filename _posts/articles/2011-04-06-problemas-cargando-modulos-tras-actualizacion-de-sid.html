@@ -1,0 +1,23 @@
+---
+layout: post
+title: Problemas cargando módulos tras actualización de SID
+tags:
+- base-files
+- Debian
+- Español
+- módulos
+- Planeta Debian
+- Planeta Linux
+- Sid
+- Software
+- Tecnología
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '272763346'
+---
+Esta mañana al encender mi portátil consigo que no carga el módulo de synaptics ni el de la inalámbrica de manera automática. Los cargo manualmente y empiezo a revisar que puede ser, y por mera casualidad llego hasta un post de <a href="http://blog.venthur.de/2011/04/06/dear-lazyweb-2/">Bastian Venthur señalando a <code>base-files</code> 6.2 como el culpable</a>.
+
+Efectivamente, lo único que se necesita hacer es bajar <code>base-files</code> de 6.2 a 6.1, el cuál pueden descargar desde <a href="http://blog.venthur.de/2011/04/06/dear-lazyweb-2/">snapshot.debian.org</a> y los módulos se volverán a cargar automáticamente.
