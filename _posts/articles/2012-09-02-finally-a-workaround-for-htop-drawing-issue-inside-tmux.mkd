@@ -3,6 +3,7 @@ layout: post
 title: Finally a workaround for htop drawing issue inside tmux!
 categories:
 - English
+- planet-debian
 tags:
 - English
 - htop
