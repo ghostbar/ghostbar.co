@@ -2,23 +2,23 @@
 layout: default
 ---
 
+<div class='container'>
+  <div class='row'>
 
-<div class="article-navigation">
-  {% for item in site.categories.articles limit:40 offset:0 %}
-    <a class="article-link" href="{{site.baseurl}}{{item.url}}" title="{{item.title}}">
-      
-    </a>
-  {% endfor %}
-</div>
+    <article class='twelvecol'>
+      <header>
+        <h1>{{ page.title }}</h1>
+        <div class='date'>
+          {{page.date | date: "%B %d, %Y" }}
+        </div>
+      </header>
 
-<div class="intro">
-  <div class="title">{{page.title}}</div>
-  <div class="abstract">{{page.abstract}}</div>
-  <div class="meta"> Posted by <a href="http://twitter.com/{{page.author_twitter}}">{{page.author}}</a> on {{ page.date | date: "%B %d, %Y" }} </div>
-</div>
+      <div class='content'>
+        {{ content }}
+      </div>
 
-<div class="article-wrapper">
-  <div class="help post-content">
-    {{ content }}
-  </div>
-</div>
+
+    </article>
+
+  </div> <!-- end .row -->
+</div> <!-- end .container -->

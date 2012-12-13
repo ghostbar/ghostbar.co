@@ -26,12 +26,13 @@ title: Homepage
         {% else %}
           <li class='sixcol last'>
         {% endif %}
+        <article>
           <h1><a href='{{ post.url }}'>{{ post.title }}</a></h1>
 
           <div class='content'>
             {{ post.content | truncate: 450 }}
           </div>
-
+        </article>
         </li>
       {% endfor %}
     </ul>
