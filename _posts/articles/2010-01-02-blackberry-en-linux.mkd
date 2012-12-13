@@ -1,0 +1,27 @@
+---
+layout: post
+title: BlackBerry en Linux
+tags:
+- Barry
+- BlackBerry
+- Español
+- Linux
+- Planeta Linux
+- Software
+- Tecnología
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '122986821'
+---
+Por si es muy difícil hacer una búsqueda en la web, o lo quiere en castellano:
+
+Barry es una aplicación para Linux que le permite sincronizar todo de su handheld BlackBerry en Linux así como tener backups.
+
+Tan simple como hacer <code>barrybackup</code> en la terminal para hacer el respaldo de todos sus datos en su máquina linux.
+
+Por cierto, es OpenSource y pueden descargarlo desde <a href="http://www.netdirect.ca/software/packages/barry">aquí</a>, o en su defecto, si están desde Debian (o algún derivado) hacen:
+<pre>
+# aptitude install barry-util barrybackup-gui opensync-plugin-barry libbarry0</pre>

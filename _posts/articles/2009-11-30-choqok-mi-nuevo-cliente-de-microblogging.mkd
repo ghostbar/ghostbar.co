@@ -1,0 +1,28 @@
+---
+layout: post
+title: Choqok, mi nuevo cliente de microblogging
+tags:
+- ChoqoK
+- Español
+- Laconica
+- Microblogging
+- Open Source
+- Planeta Debian
+- Planeta Linux
+- Software
+- Tecnología
+- Twitter
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '123528448'
+---
+Había tenido una predilección desde hace algunos meses por clientes hechos en Adobe AIR y sí, me molestaba la lentitud pero prefería las excelentes GUIs que tienen clientes como TweetDeck y twhirl.
+
+Sin embargo luego de mi cambio (o regreso) a <code>awesome</code> como window manager ya no eran una opción.
+
+Empecé así a usar ChoqoK que no sólo tiene soporte para Twitter, también para Identi.ca lo cuál me ha simplificado mucho el tratamiento con diversas cuentas y además ¡está en Qt! Lo cuál hace que sea muchísimo más rápido que cualquier aplicación basada en Adobe AIR.
+
+Mucho mejor que Gwibber porque cada cuenta la separa en una pestaña y facilita la navegación. Si están usando Gwibber les recomiendo probar ChoqoK.

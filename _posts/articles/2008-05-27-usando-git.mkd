@@ -1,0 +1,16 @@
+---
+layout: post
+title: Usando git
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+Ya veo porque lo usa tanta gente y después de pasar por <code>git</code> no se cambian. Es fácil, a la final es trivial y más entendible a la primera que <code>SVN</code>. Aún no logro entender muy bien como hacer cambios en los <em>branchs</em> en <code>SVN</code> pero con <code>git</code> lo tengo clarísimo y lo uso demasiado. Incluso, ahora estoy manteniendo configuraciones por <code>git</code> de mis servidores, tengo mi código, mis paquetes de debian (algunos incluso con <a href="http://git.ghostbar.ath.cx/?p=debian/libtorrent.git;a=shortlog;h=refs/heads/master-experimental">versiones experimentales</a> y <a href="http://git.ghostbar.ath.cx/?p=debian/libtorrent.git;a=shortlog;h=refs/heads/master">unstables </a> en el mismo repositorio! Sólo cosa de diferentes <em>branches</em>)
+
+La administración de los repos lo hago con <a href="http://eagain.net/gitweb/?p=gitosis.git;a=summary"><code>gitosis</code></a> que ha sido una herramienta genial sobre todo al montarlo en mi universidad donde les daré cuentas a muchas personas, quizás lo adapte dentro de poco para usar las cuentas del <code>LDAP</code> en vez de que funcione en base sólo a llaves públicas <code>RSA</code> o quizás que el mismo <code>LDAP</code> pase algo o que permita el logueo. Algo se me ocurrirá ya :)
+
+Por el momento he empezado a escribir una <a href="http://git.ghostbar.ath.cx/?p=misc/git-buildpackage-extra-tools.git;a=summary">serie de <em>scripts</em> en <code>bash</code> para ayudarme en la tarea de mantener paquetes con <code>git</code></a> en <em>multi-versiones</em> (<code>experimental</code> por los momentos, pronto <code>backports</code> que quizás pueda adaptarse a <code>volatile</code>), nada muy interesante pero después podría tornarse en algo bueno y útil para otras personas.
+<!--break-->

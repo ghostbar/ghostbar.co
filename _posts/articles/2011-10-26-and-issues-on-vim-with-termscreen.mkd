@@ -1,0 +1,25 @@
+---
+layout: post
+title: and  issues on vim with $TERM="screen"
+tags:
+- English
+- Linux
+- Planet Debian
+- Software
+- Tecnología
+- tmux
+- VIM
+- XTerm
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '453397893'
+---
+Because of tmux I run with $TERM="screen" instead of my regular rxvt-unicode, but I had a big issue with VIM because of this, it kept writing and F\n and H\n each time I pressed <End> and <Home> keys respectively. I finally found the way to solve this, making VIM use $TERM="xterm" internally writing this on my ~/.vimrc:
+<code>if &term == "screen"
+  set term=xterm
+endif</code>
+
+So, this way, even in my servers without XTerm installed (but ncurses-term) I can use VIM as I'm used to.

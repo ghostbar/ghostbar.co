@@ -1,0 +1,32 @@
+---
+layout: post
+title: No more TweetDeck for me, on AIR
+tags:
+- Adobe AIR
+- Awesome
+- English
+- Linux
+- Planet Debian
+- Software
+- Tecnología
+- TweetDeck
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '221252344'
+  _wp_old_slug: ''
+---
+I changed (once again) to <code>awesome</code> and AIR applications doesn't work here.
+
+One of the apps I heavily use based on AIR is TweetDeck. So I tried old clients that were once an alternative like HootSuite but not having support for both kind of RTs (Native and Quote) is a pain in the ass.
+
+Then I remembered I installed once TweetDeck for Google Chrome on my browser and never give it a chance, because it was not exactly the same as the AIR-based app. Now it only lacks proper relation between followers and no-followers in each account when there are multiple accounts configured.
+
+So yesterday was the day to try it, the right day.
+
+<a href="http://www.flickr.com/photos/ghostbar/5410955493/sizes/o/in/photostream/"><img alt="" src="http://farm6.static.flickr.com/5013/5410955493_05e69e4081.jpg" title="TweetDeck screenshot 2" class="aligncenter" width="500" height="375" /></a>
+
+It even has notification support, and customized by column!
+<img alt="" src="http://farm6.static.flickr.com/5020/5411567820_9e998b9d38_o.png" title="TweetDeck screenshot 3" class="aligncenter" width="316" height="161" />

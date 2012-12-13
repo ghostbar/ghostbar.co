@@ -1,0 +1,22 @@
+---
+layout: post
+title: awesome3 en debian sid-experimental
+tags: []
+status: publish
+type: post
+published: true
+meta: {}
+---
+<a href="http://fc06.deviantart.com/fs31/f/2008/210/9/0/transparent_consoles_by_ghostbar.png"><img src="http://fc06.deviantart.com/fs31/f/2008/210/9/0/transparent_consoles_by_ghostbar.png" width=100% /></a>
+
+Como dije en <a href="http://ghostbar.ath.cx/node/28">mi post anterior</a> después de acostumbrarme a dvtm empecé a usar awesome (al principio iba a ser dwm pero para mi uso me convenció más awesome) y ya que José Parrella sacó el tema de <a href="http://blog.bureado.com.ve/?p=482">los manejadores de ventana a colación</a> quise hablar un poco de awesome, más específicamente awesome3, la versión que se consigue <a href="http://ghostbar.ath.cx/node/28">a través del git de awesome</a>. Es diferente de <=awesome2 en que ahora usa <code>LUA</code> en su archivo de configuración haciéndolo más extensible aunque para muchos es aprender un lenguaje de scripting más para configurar su WM, sin embargo, a mi parecer vale la pena.
+
+<code>awesome</code> es una re-escritura de <code>dwm</code> así que al igual que éste último maneja las ventanas usando cuanto espacio puede en la pantalla (<em>tiling windows</em>) y además luce mucho más bonito.
+
+Además, en conjunto con la extensión <code>Composite</code> del <code>X.Org</code> y las <em>xapps</em> <code>xcompmgr</code> y <code>transset</code> he conseguido ventanas transparentes, primitivas, pero con transparencia real...
+
+Se los recomiendo si no les molesta usar parte de su tiempo aprendiendo un poco de <code>LUA</code> (que no es difícil si ya sabes programar) y aprendiendo como funcionas las librerias de ayuda de awesome para configurarlo a medida, aunque de por si la configuración por defecto funciona muy bien y cubre la mayoría de los gustos (después de todo, es muy poco lo que por los momentos le he agregado).
+
+Luego colgaré detalles de mi configuración (que comparto con el workstation en mi universidad), sencillamente a mi parecer no hay nada mejor que un <em>tiling winndow manager</em> para una portátil con una pantalla de 12" o un workstation con pantalla de 21"...
+
+Lo único que he notado es un problema con las aplicaciones Qt, al intentar desvanecerlas debe hacerse dos veces o no sucede, aunque no uso muchas aplicaciones en Qt uso una en específico de manera extensiva, amaroK y aunque ya le conseguí un workaround (presionar Win + P 5 veces en vez de una) no es la solución, quizás en la semana de vacaciones intente buscar donde está el problema...

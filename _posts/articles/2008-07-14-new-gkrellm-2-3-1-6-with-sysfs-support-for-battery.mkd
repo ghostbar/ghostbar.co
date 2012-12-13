@@ -1,0 +1,15 @@
+---
+layout: post
+title: New gkrellm 2.3.1-6 with sysfs support for battery
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '124290962'
+---
+Now gkrellm works with kernels >=2.6.24, since where /proc/acpi has been deprecated in favor of /sys.
+
+The binaries packages for most of the archs debian supports most be available already in the debian archive since anibal upload it the saturday.
+
+Enjoy!

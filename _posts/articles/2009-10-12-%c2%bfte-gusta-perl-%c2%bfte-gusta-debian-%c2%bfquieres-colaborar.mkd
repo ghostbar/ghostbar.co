@@ -1,0 +1,21 @@
+---
+layout: post
+title: ¿Te gusta Perl? ¿Te gusta Debian? ¿Quieres colaborar?
+tags:
+- Debian
+- Español
+- Linux
+- Perl
+- Planeta Debian
+- Planeta Linux
+- Software
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '122916484'
+---
+Debian Perl Group es un equipo de trabajo en mantenimiento de paquetes de perl en Debian con una baja barrera de entrada para cualquier tipo de colaborador. Tienes un SVN disponible con sólo tener acuenta en <a href="http://alioth.debian.org">Alioth</a> y pedir ser incorporado en el <a href="http://alioth.debian.org/projects/pkg-perl/">grupo pkg-perl</a> en el canal de IRC #debian-perl en la red irc.oftc.net o en el mismo irc.debian.org podrás conseguir muchísimo apoyo y tus paquetes serán revisados rápidamente por cualquiera de los colaboradores del grupo.
+
+También podrás <a href="http://pkg-perl.alioth.debian.org/cgi-bin/pet.cgi">conseguir un PET</a> diseñado para que sepas que paquetes necesitan más atención y el estátus de todos los paquetes mantenidos por el grupo.

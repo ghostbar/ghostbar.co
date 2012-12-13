@@ -1,0 +1,17 @@
+---
+layout: post
+title: Odiando Firefox 3 de a ratos
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '122916196'
+---
+Si estoy en otra aplicación y presiono un link la ventana del Firefox se roba el foco, de hecho, se mueve al escritorio donde estoy. <strong>¡No quiero que robes mi foco! ¡Sólo quiero que abras el link! Ya veré yo cuando lo miraré</strong>. En esos momentos odio el nuevo Firefox, justo como cuando estoy leyendo mi correo con Thunderbird y veo las noticias, reviso correos de bugs con links, etc.
+
+De vez en cuando, si abro una página con muchos objetos en Flash se termina sólo el Firefox, no me molesta eso, simplemente instalé <a href="http://flashblock.mozdev.org">Flashblock</a> y me ahorro además ancho de banda, pero un usuario normal querrá ver sus páginas con todos los colorines y dolores de cabeza que da una página con muchos objetos en Flash :) Aún así a veces tiene choques sin razón alguna aparente, de manera aleatoria.
+
+<strong>PS.</strong> De casualidad leyendo <a href="http://planet.debian.org">Planet Debian</a> veo que allí también hay muchas personas quejándose del nuevo firefox y justo hay uno que también <a href="http://www.grep.be/blog/en/computer/cluebat/firefox_sucks_really">se queja del robo de foco</a> y no sólo eso sino también de los <em>crashes</em> tontos que tiene y voy a coincidir con él en su párrafo final:
+
+<blockquote>You know what the problem is? Webbrowser developers think they're developing the most important application for any computer. They're not. It's just a webbrowser, no more important than an xterm or a mail client: a tool to get a job done. <em>Period</em>.</blockquote>

@@ -1,0 +1,27 @@
+---
+layout: post
+title: NetworkManager y todas las interfaces de red
+tags:
+- Español
+- GNOME
+- Linux
+- NetworkManager
+- Planeta Debian
+- Planeta Linux
+- Software
+- Tecnología
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wp_old_slug: ''
+  dsq_thread_id: '141463940'
+---
+Estaba buscando desde hace como una semana la razón por la que no me aparecía la opción para usar el NetworkManager para configurar mi conexión por cable de red.
+
+Resulta que lo único que esto viene configurado para no manejarlos, sólo la WiFi. Solucionarlo es muy sencillo, se edita <code>/etc/NetworkManager/NetworkManager.conf</code> y se busca la sección de <code>ifupdown</code> debe decir algo como:
+<pre>[ifupdown]
+managed=false</pre>
+
+Simplemente se cambia a <code>true</code> el valor <code>managed</code> y luego de reiniciar el demonio (<code>/etc/init.d/network-manager restart</code>) ya puede manejar las redes listadas en <code>/etc/network/interfaces</code>.

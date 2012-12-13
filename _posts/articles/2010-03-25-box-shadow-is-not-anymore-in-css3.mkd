@@ -1,0 +1,21 @@
+---
+layout: post
+title: box-shadow is not anymore in CSS3
+tags:
+- box-shadow
+- CSS3
+- English
+- Planet Debian
+- Tecnología
+- W3C
+- webdev
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '123109223'
+---
+I was finding a solution to not use a bunch of <code>DIV</code>s with <code>PNG</code>s for shadows in some boxes, and found <code>box-shadow</code> that's supposed to be on CSS3 but checking the <a href="http://www.w3.org/TR/css3-background/">CSS3 Background and Borders models</a> found that there's not anymore <code>box-shadow</code> so probably the solution will not be a standard soon.
+
+Does anyone knows why?

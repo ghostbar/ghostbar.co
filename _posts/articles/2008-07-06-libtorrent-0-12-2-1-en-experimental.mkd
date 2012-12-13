@@ -1,0 +1,12 @@
+---
+layout: post
+title: libtorrent 0.12.2-1 en experimental
+tags: []
+status: publish
+type: post
+published: true
+meta: {}
+---
+El nuevo libtorrent 0.12.2 ya fue subido a experimental (Gracias a <a href="http://bureado.com.ve/">bureado</a> por subirlo :D ), en esta versión además se agrega el soporte para dispositivos xscale-based así que los NSLU2 ahora también funcionarán con libtorrent!
+
+De cualquier manera, en unas horas ya la red de buildd's debe haberlo construido para todas las arquitecturas :) Así podré finalizar mi trabajo en rtorrent.

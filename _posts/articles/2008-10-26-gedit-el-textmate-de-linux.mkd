@@ -1,0 +1,17 @@
+---
+layout: post
+title: gedit, el textmate de linux
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '122916348'
+---
+Siempre he sido un gran aficionado a <code>vim</code>, quizás por la costumbre, quizás porque ya lo tengo totalmente configurado a mi gusto y hace gran parte de lo que quiero como espero que lo haga, sin embargo, me dió por probar algo gráfico y gvim no me convenció del todo.
+
+Recordé TextMate, ese editor de MacOS que te autocompleta cosas y que normalmente sale en los screencast de Ruby, cuando lo busqué para Linux encontré que muchos hacían funcionar gedit como TextMate, ¡y es que es increíble con unos cuantos plugins!
+
+Tengo un navegador de clases, un navegador de archivos, tengo para hacer snippets de código (con lo que se hace templates para cualquier cosa), incluso hay un plugin de integración de snipplr para tener los snippets directamente en la red y buscarlos desde allí en gedit!
+
+Me volví adicto, ya no puedo soltarlo, ahora todo lo que he hecho lo hago desde <code>gedit</code> y sólo configuraciones las he hecho desde <code>vim</code>.

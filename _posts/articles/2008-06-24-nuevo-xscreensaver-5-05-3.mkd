@@ -1,0 +1,16 @@
+---
+layout: post
+title: Nuevo xscreensaver 5.05-3
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _oembed_905669d627ffd4e0dc273cf316b30dd1: ! '{{unknown}}'
+  _oembed_24d57d290e1f4078904d88542eedcf7e: ! '{{unknown}}'
+---
+Después de varias pruebas de los nuevos parches ya está listo el nuevo <code>xscreensaver</code> con <a href="http://debian.rivco.info/xscreensaver/5.05-3/xscreensaver_5.05-3_source.changes">varios arreglos de algunos bugs</a> con XineRama.
+
+Están los binarios <code>deb</code> disponibles <a href="http://debian.rivco.info/xscreensaver/5.05-3/">aquí</a>, pero si usas una arquitectura diferente a algún <code>x86</code> puedes compilarlo con:
+<pre>$ dget --build \
+http://debian.rivco.info/xscreensaver/5.05-3/xscreensaver_5.05-3.dsc</pre>

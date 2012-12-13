@@ -1,0 +1,37 @@
+---
+layout: post
+title: nuevo libtorrent y rtorrent (betas!)
+tags:
+- Debian
+- Empaquetado
+- Español
+- LibTorrent
+- Open Source
+- Planeta Debian
+- Planeta Linux
+- rTorrent
+- Software
+- Tecnología
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _oembed_0348f3dfd036251e33e5fe6fced1c519: ! '{{unknown}}'
+  _oembed_048be3bdf3ad7230c1319e65a3ca484f: ! '{{unknown}}'
+  _oembed_cd4b443238b04b4601b5ae1d4072c9bf: ! '{{unknown}}'
+  _oembed_1598e0227ee266e79046e1f5e7a49b5b: ! '{{unknown}}'
+  dsq_thread_id: '125058597'
+---
+Recién salidos del horno: <code>libtorrent 0.12.4</code> y <code>rtorrent 0.8.4</code>. Como siempre disponibles en:
+
+Mi semi-archivo de debian: http://debian.rivco.info/
+
+Mi repositorio privado:
+<code>deb{,-src} http://reprepro.deb.rivco.info/ experimental main</code>
+
+Y por supuesto, git:
+http://git.debian.org/?p=collab-maint/libtorrent.git
+http://git.debian.org/?p=collab-maint/rtorrent.git
+
+Recuerden, son betas aún y quizá cambien algunas cosas cuando entren a Debian, así que cualquier problema: <strong>por aquí</strong>.
