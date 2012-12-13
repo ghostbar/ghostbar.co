@@ -2,9 +2,55 @@
 layout: default
 title: Homepage
 ---
+<div id='first-post' class='container'>
+  <div class='row'>
 
-<ul>
-  {% for post in site.posts %}
-  <li><a href='{{ post.url }}'>{{post.title}}</a></li>
-  {% endfor %}
-</ul>
+    {% assign first_post = site.posts.first %}
+    <article class='twelvecol'>
+      <h1><a href='{{ first_post.url }}'>{{ first_post.title }}</a></h1>
+      <div class='content'>
+        {{ first_post.content }}
+      </div>
+    </article>
+
+  </div><!-- end for .row -->
+</div><!-- end for #first-post.container -->
+
+<div id='featured-posts' class='container'>
+  <div class='row'>
+
+    <ul>
+      {% for post in site.posts limit: 2 offset: 1 %}
+        {% if forloop.first %}
+          <li class='sixcol'>
+        {% else %}
+          <li class='sixcol last'>
+        {% endif %}
+          <h1><a href='{{ post.url }}'>{{ post.title }}</a></h1>
+
+          <div class='content'>
+            {{ post.content | truncate: 450 }}
+          </div>
+
+        </li>
+      {% endfor %}
+    </ul>
+
+  </div> <!-- end for .row -->
+</div><!-- end for #featured-posts.container -->
+
+<div id='next-10-posts' class='container'>
+  <div class='row'>
+    
+    <section class='twelvecol'>
+      <ul>
+        {% for post in site.posts limit: 10 offset: 3 %}
+        <li><h2><a href='{{ post.url }}'>{{post.title}}</a><h2></li>
+        {% endfor %}
+      </ul>
+
+      <a class='read-more' href='/archive.html'>See the archive for more posts</a>
+    </section>
+
+  </div> <!-- end for .row -->
+</div> <!-- end for .container -->
