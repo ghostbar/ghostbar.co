@@ -3,6 +3,7 @@ server: true
 permalink: "/:year/:month/:day/:title.html"
 baseurl: ""
 name: 'GHOSTBAR'
+description: 'Random thoughts on technology written by Jose Luis Rivas'
 pygments: true
 markdown: rdiscount
 exclude:
