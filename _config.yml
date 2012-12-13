@@ -2,6 +2,7 @@ auto: true
 server: true
 permalink: "/:year/:month/:day/:title.html"
 baseurl: ""
+name: 'GHOSTBAR'
 pygments: true
 exclude:
 - .gitignore
