@@ -2,6 +2,7 @@ auto: true
 server: true
 permalink: "/:year/:month/:day/:title.html"
 baseurl: ""
+pygments: true
 exclude:
 - .gitignore
 - README.md
