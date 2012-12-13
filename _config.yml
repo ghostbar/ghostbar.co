@@ -1,6 +1,6 @@
 auto: true
 server: true
-permalink: none
+permalink: "/:year/:month/:day/:title.html"
 baseurl: ""
 exclude:
 - .gitignore
