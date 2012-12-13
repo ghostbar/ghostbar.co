@@ -4,6 +4,7 @@ permalink: "/:year/:month/:day/:title.html"
 baseurl: ""
 name: 'GHOSTBAR'
 pygments: true
+markdown: rdiscount
 exclude:
 - .gitignore
 - README.md
