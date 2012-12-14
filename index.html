@@ -7,7 +7,7 @@ title: Homepage
 
     {% assign first_post = site.posts.first %}
     <article class='twelvecol'>
-      <h1><a href='{{ first_post.url }}'>{{ first_post.title }}</a></h1>
+      <h1><a href='{{ site.baseurl }}{{ first_post.url }}'>{{ first_post.title }}</a></h1>
       <div class='content'>
         {{ first_post.content }}
       </div>
@@ -27,7 +27,7 @@ title: Homepage
           <li class='sixcol last'>
         {% endif %}
         <article>
-          <h1><a href='{{ post.url }}'>{{ post.title }}</a></h1>
+          <h1><a href='{{ site.baseurl}}{{ post.url }}'>{{ post.title }}</a></h1>
 
           <div class='content'>
             {{ post.content | truncate: 450 }}
@@ -46,11 +46,11 @@ title: Homepage
     <section class='twelvecol'>
       <ul>
         {% for post in site.posts limit: 10 offset: 3 %}
-        <li><h2><a href='{{ post.url }}'>{{post.title}}</a><h2></li>
+        <li><h2><a href='{{ site.baseurl}}{{ post.url }}'>{{post.title}}</a><h2></li>
         {% endfor %}
       </ul>
 
-      <a class='read-more' href='/archive.html'>See the archive for more posts</a>
+      <a class='read-more' href='{{ site.baseurl }}/archive'>See the archive for more posts</a>
     </section>
 
   </div> <!-- end for .row -->
