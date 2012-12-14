@@ -1,6 +1,6 @@
 auto: true
 server: true
-permalink: "/:year/:month/:day/:title.html"
+permalink: "/:year/:month/:day/:title"
 baseurl: ""
 name: 'GHOSTBAR'
 description: 'Random thoughts on technology written by Jose Luis Rivas'
