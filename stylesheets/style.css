@@ -106,9 +106,13 @@ legend {
   box-sizing: border-box;
   *behavior: url("https://raw.github.com/Schepp/box-sizing-polyfill/master/boxsizing.htc");
 }
+html {
+  background: url("../img/tileable_wood_texture.png");
+}
 body {
   font: 16px 'Titillium Web', sans-serif;
   font-weight: 300;
+  color: #2d2d2d;
   -webkit-text-size-adjust: none;
 }
 a {
@@ -234,32 +238,9 @@ h6 {
   font-weight: 700;
   font-style: italic;
 }
-article .content pre {
-  background: #ccc;
-  overflow: auto;
-  padding: 0.33em;
-  border: 1px solid #999;
-  -webkit-border-radius: 0.2em;
-  -moz-border-radius: 0.2em;
-  -o-border-radius: 0.2em;
-  border-radius: 0.2em;
-}
-article .content code {
-  background: #ccc;
-  border: 1px solid #999;
-  -webkit-border-radius: 0.15em;
-  -moz-border-radius: 0.15em;
-  -o-border-radius: 0.15em;
-  border-radius: 0.15em;
-}
-#first-post h1 {
-  font-size: 1.66em;
-}
-#featured-posts h1 {
-  font-size: 1.33em;
-}
-article.post h1 {
-  font-size: 1.66em;
+header#header {
+  padding-top: 1.66em;
+  padding-bottom: 0.33em;
 }
 header#header #logo,
 header#header #title,
@@ -280,6 +261,38 @@ header#header #tla h2 {
   font-size: 1.33em;
   font-weight: 400;
   font-style: normal;
+}
+article .content pre {
+  display: inline-block;
+  overflow: auto;
+  padding: 0.33em;
+}
+article .content code,
+article .content pre {
+  background: #f4f4f4;
+  font-family: 'Inconsolata', monospace;
+}
+#first-post h1 {
+  font-size: 1.66em;
+}
+#featured-posts h1 {
+  font-size: 1.33em;
+}
+article.post h1 {
+  font-size: 1.66em;
+}
+footer#footer {
+  color: #fff;
+  padding-top: 0.33em;
+  padding-bottom: 0.33em;
+  background: url("../img/wild_oliva.png");
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+footer#footer a,
+footer#footer a:visited {
+  color: #fff;
+  font-weight: 700;
 }
 @media only screen and (min-width: 480px) {
   .btn {
