@@ -285,6 +285,11 @@ article .content pre {
   border-radius: 0.33em;
   margin-bottom: 1.33em;
 }
+#first-post .date,
+#featured-posts .date {
+  font-size: 0.6em;
+  text-transform: uppercase;
+}
 #first-post h1 {
   font-size: 1.66em;
 }
@@ -293,6 +298,12 @@ article .content pre {
 }
 article.post h1 {
   font-size: 1.66em;
+  text-align: center;
+}
+article.post .date {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: center;
 }
 footer#footer {
   color: #fff;
