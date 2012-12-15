@@ -272,6 +272,18 @@ article .content pre {
   background: #f4f4f4;
   font-family: 'Inconsolata', monospace;
 }
+#first-post .container,
+#featured-posts .container {
+  padding-top: 0.66em;
+  padding-bottom: 0.33em;
+  background: #fff;
+  background: rgba(255,255,255,0.5);
+  -webkit-border-radius: 0.33em;
+  -moz-border-radius: 0.33em;
+  -o-border-radius: 0.33em;
+  border-radius: 0.33em;
+  margin-bottom: 1.33em;
+}
 #first-post h1 {
   font-size: 1.66em;
 }
