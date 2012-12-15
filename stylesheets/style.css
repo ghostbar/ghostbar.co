@@ -273,7 +273,8 @@ article .content pre {
   font-family: 'Inconsolata', monospace;
 }
 #first-post .container,
-#featured-posts .container {
+#featured-posts .container,
+#post .container {
   padding-top: 0.66em;
   padding-bottom: 0.33em;
   background: #fff;
