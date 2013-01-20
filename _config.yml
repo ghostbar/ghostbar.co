@@ -1,7 +1,7 @@
 auto: true
 server: true
 permalink: "/:year/:month/:day/:title"
-baseurl: ""
+baseurl: "ghostbar.ath.cx"
 name: 'GHOSTBAR'
 description: 'Random thoughts on technology and hacking written by Jose Luis Rivas'
 pygments: true
