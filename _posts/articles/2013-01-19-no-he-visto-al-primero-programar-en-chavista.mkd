@@ -18,3 +18,5 @@ Yo entiendo que puedan haber problemas entre personas, entre grupos, ¿pero por 
 Si quieren hacer, **hagan**. Sino, busquen algo que de verdad les guste y hagan allá, pero dejen en paz.
 
 PD: *Un ejemplo de lo que pasa cuando se mezcla política con software: [Objectivist-C](http://fdiv.net/2012/04/01/objectivist-c)*.
+
+Edit(2013-01-20 00:40:27 UTC-0430): Pueden complementar con esta lectura de mi amigo Miguel: [El software libre y su mezcla con la política en Venezuela](http://skatox.com/blog/2011/03/13/el-software-libre-y-su-mezcla-con-la-politica-en-venezuela/).
