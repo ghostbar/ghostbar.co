@@ -15,7 +15,7 @@ Lo que es más triste del caso es que él es el presidente de la Comisión de Ci
 
 ## Un poco de contexto
 
-El Software Libre está muy atado a la cultura hacker y al internet desde sus inicios. Algo que diferencia a las comunidades hackers de otro tipo de comunidades es que tienen una cultura de compartir conocimiento e información, pues después de todo, un hacker es alguien ávido de conocimiento especializado. Los inicios de esta cultura hacker podemos establecerla en 1961 en el MIT, cuando adquirieron la primera PDP-1. Estos primeros hackers se convertirían en el Laboratorio de Inteligencia Artificial del MIT y gracias a la red ARPA se extendió su influencia por todo EEUU y el mundo por el año 1969. Gracias a esta red, pudieron compartir información entre laboratorios y el Laboratorio de AI de Stanford así como el de Carnegie-Mellon pasaron a ser casi tan importantes como el notorio LAI del MIT.
+El Software Libre está muy atado a la cultura hacker y al internet desde sus inicios¹. Algo que diferencia a las comunidades hackers de otro tipo de comunidades es que tienen una cultura de compartir conocimiento e información, pues después de todo, un hacker es alguien ávido de conocimiento especializado. Los inicios de esta cultura hacker podemos establecerla en 1961 en el MIT, cuando adquirieron la primera PDP-1. Estos primeros hackers se convertirían en el Laboratorio de Inteligencia Artificial del MIT y gracias a la red ARPA se extendió su influencia por todo EEUU y el mundo por el año 1969. Gracias a esta red, pudieron compartir información entre laboratorios y el Laboratorio de AI de Stanford así como el de Carnegie-Mellon pasaron a ser casi tan importantes como el notorio LAI del MIT.
 
 Estos hackers para aprovechar al máximo las PDP-10 que producía NEC empezaron a hacer sus propios sistemas operativos (compitiendo y colaborando entre ellos), y gracias a esto lograron generar técnicas innovadoras que marcan muchos principios de cómo funcionan nuestras computadoras hoy en día. De ahí también salió UNIX, sistema operativo en el que se basan todos los sistemas operativos hoy en día menos Windows, y quien lo hizo su misión era poder usarlo desde afuera de los laboratorios.
 
@@ -44,3 +44,6 @@ Hoy, en vez de invitarlos a la crítica fácil, los invito al trabajo por una so
 Recuerden, no porque las cosas sean ley significan que estén bien.
 
 Happy hacking.
+
+¹ **Lecturas relacionadas**: «*:(){ :|:& };: Internet, hackers y software libre*», «*En el principio... fue la línea de comandos*», «*La Catedral y El Bazar*» y «*[Cyphernomicon](http://www.cypherpunks.to/faq/cyphernomicron/cyphernomicon.html)*».
+
