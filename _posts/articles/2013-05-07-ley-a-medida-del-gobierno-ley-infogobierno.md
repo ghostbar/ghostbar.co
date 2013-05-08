@@ -7,6 +7,8 @@ categories:
 type: post
 date: 2013-05-07 23:23:17
 ---
+**Actualización 2013-05-08 13:19:26 UTC-0430**: Erróneamente dije que desde el 2013 la Ley del Registro Civil contempla la digitalización del registro civil, es desde finales de 2009, fecha en la cuál fue aprobada la ley.
+
 Mi intención desde el principio era asistir a las discusiones públicas del proyecto de Ley de Infogobierno, pero dado que la fecha se aproxima y mi agenda no se desocupa, no podré estar.
 
 A pesar de eso, estoy condensando mis observaciones en este post para que, idealmente, lo lean en las discusiones públicas que se den.
@@ -62,7 +64,7 @@ Aquí hace falta ser más explícito. Dice que la certificación tendrá una dur
 
 ## Finalmente
 
-Queremos **realidades**, no leyes bonitas. Desde el 2013 la Ley del Registro Civil contempla la digitalización del registro civil venezolano, la otorgación de un número único de identidad desde el nacimiento a los venezolanos y la vacatio legis era de 12 meses apenas.
+Queremos **realidades**, no leyes bonitas. Desde el 2009 la Ley del Registro Civil contempla la digitalización del registro civil venezolano, la otorgación de un número único de identidad desde el nacimiento a los venezolanos y la vacatio legis era de 12 meses apenas.
 
 Ya es mitad del año 2013 y nada de esto está si quiera en los planes de los burócratas.
 
