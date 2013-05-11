@@ -6,6 +6,8 @@ categories:
 - planeta-debian
 type: post
 ---
+**Actualización [2013-05-10 22:22:16 UTC-0430]**: Para entender un poco más de cómo funciona el internet pueden ver [este vídeo precisamente sobre IXP y de donde sale el internet junto a sus interconexiones](https://www.youtube.com/watch?v=a5837LcDHfE).
+
 Hoy ha salido a relucir, gracias a [@uraisa](https://twitter.com/uraisa), que [el CENIT reducirá el ancho de banda a las universidades venezolanas](http://periodistasandinos.blogspot.com/2013/05/el-cenit-reducira-el-ancho-de-banda-las.html), mediante orden de la OPSU.
 
 ## Un poco de background sobre la red universitaria
