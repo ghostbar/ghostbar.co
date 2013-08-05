@@ -1,4 +1,4 @@
-[ghostbar.ath.cx](http://ghostbar.ath.cx)
+[ghostbar.co](http://ghostbar.co)
 =================
 
-Source-code for [ghostbar.ath.cx](http://ghostbar.ath.cx). Built with Jekyll.
+Source-code for [ghostbar.co](http://ghostbar.co). Built with Jekyll.
