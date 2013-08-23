@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Too many authentication failures on SSH"
-categories
+categories:
 - ssh
 - quick-fix
 - planet-debian
