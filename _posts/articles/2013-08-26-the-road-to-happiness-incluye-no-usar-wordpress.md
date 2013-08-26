@@ -28,6 +28,14 @@ Rapidez
 -------
 Para cualquier servidor tan sólo servir un archivo estático es mucho más rápido que generar un archivo y servirlo.
 
+Hacer templates es mucho más sencillo
+-------------------------------------
+En vez de un día en 1 hora puedes tener todo el template de un blog listo. TODO.
+
+Es simple HTML
+--------------
+¿Qué más fácil de hacer debugging que de simple HTML?!
+
 Extra: GitHub da hosting gratuito
 ---------------------------------
 [GitHub](https://github.com/) tiene un servicio llamado GitHub Pages el cuál te permite hospedar archivos estáticos y mantenerlos organizados en un repositorio `git`. Además, si usas Jekyll puedes simplemente subirlo a GitHub y GitHub Pages los generará y publicará. Además puedes usar dominios personalizados, por lo que al menos que no estés usando un `A record` en tu DNS sino un `CNAME` o la persona se sepa la IP de GitHub, nadie se dará cuenta que el servidor que lo está sirviendo es de GitHub.
