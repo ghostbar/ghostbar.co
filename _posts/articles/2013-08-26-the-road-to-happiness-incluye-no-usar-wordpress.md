@@ -8,7 +8,7 @@ categories:
 type: post
 date: 2013-08-26 03:03:23 UTC-0430
 ---
-Ayer hubo una interesante conversa en Twitter sobre WordPress, lo mínimo para correro y opciones para *gente pobre* (como dijo Faneyth).[0](https://twitter.com/phenobarbital/status/371819458421346304) [1](https://twitter.com/LuisAlejandro/status/371821008681852930) [2](https://twitter.com/zentraedi/status/371821336706166786).
+Ayer hubo una interesante conversa en Twitter sobre WordPress, lo mínimo para correrlo y opciones para *gente pobre* (como dijo Faneyth).[0](https://twitter.com/phenobarbital/status/371819458421346304) [1](https://twitter.com/LuisAlejandro/status/371821008681852930) [2](https://twitter.com/zentraedi/status/371821336706166786).
 
 Yo soy exponente de la *opción para gente pobre* (LOL) con Jekyll y GitHub Pages. Migré en [diciembre del 2012](http://ghostbar.co/2012/12/15/switched-to-jekyll/) y no fué por pobreza exactamente sino porque WordPress (junto con la mayoría de opciones para blogging como Drupal), al menos para mi, no tiene sentido con las tecnologías disponibles actualmente.
 
