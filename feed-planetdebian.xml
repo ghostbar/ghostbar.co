@@ -9,6 +9,30 @@
       
         <item>
           
+          <title>angular-geocomplete's first version</title>
+          <link>/2014/05/13/angular-geocomplete</link>
+          <guid isPermaLink="true">/2014/05/13/angular-geocomplete</guid>
+          
+          <pubDate>Tue, 13 May 2014 07:08:41 -0500</pubDate>
+          <description>&lt;p&gt;So I was needing a resulting JSON array with possible solutions for a given address or city name and then &lt;a href=&quot;https://github.com/ghostbar/angular-geocomplete/&quot;&gt;angular-geocomplete&lt;/a&gt; was made.&lt;/p&gt;
+
+&lt;p&gt;The great thing is that you can use it together with &lt;code&gt;typeahead&lt;/code&gt; and now you have address/location autocomplete, just like the one on Google Maps.&lt;/p&gt;
+
+&lt;p&gt;And yes, it does uses Google Maps&#39;s API.&lt;/p&gt;
+
+&lt;p&gt;What&#39;s the advantage of this thing? You get coordinates together with all the names.&lt;/p&gt;
+
+&lt;p&gt;Installable via &lt;code&gt;bower&lt;/code&gt; as well with &lt;code&gt;bower install angular-geocomplete&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Any issue: to &lt;a href=&quot;https://github.com/ghostbar/angular-geocomplete/issues&quot;&gt;the GitHub tracker&lt;/a&gt;.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
           <title>MongoDB: $pull from an embedded document array</title>
           <link>/2013/08/26/mongodb-pull-from-embedded-document-array</link>
           <guid isPermaLink="true">/2013/08/26/mongodb-pull-from-embedded-document-array</guid>
