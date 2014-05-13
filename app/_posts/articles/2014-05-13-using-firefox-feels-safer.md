@@ -2,7 +2,6 @@
 layout: post
 title: "Using Firefox feels safer"
 categories:
-- Planet Debian
 - English
 - Firefox
 - Privacy
