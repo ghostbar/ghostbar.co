@@ -9,6 +9,32 @@
       
         <item>
           
+          <title>Primera versión de angular-geocomplete</title>
+          <link>/2014/05/13/angular-geocomplete-es</link>
+          <guid isPermaLink="true">/2014/05/13/angular-geocomplete-es</guid>
+          
+          <pubDate>Tue, 13 May 2014 07:02:37 -0500</pubDate>
+          <description>&lt;p&gt;Esta es la historia de un día que necesitaba con una dirección o el nombre de una ciudad conseguir un array JSON que me diese los posibles lugares donde eso fuese cierto.&lt;/p&gt;
+
+&lt;p&gt;Y entonces nació &lt;a href=&quot;https://github.com/ghostbar/angular-geocomplete&quot;&gt;angular-geocomplete&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lo fino es que se puede combinar con algún &lt;code&gt;typeahead&lt;/code&gt; y se obtiene un autocompletado demasiado genial como el de Google Maps.&lt;/p&gt;
+
+&lt;p&gt;Y sí, usa el API de Google Maps.&lt;/p&gt;
+
+&lt;p&gt;¿Cuál es la gran ventaja? Que obtienes no sólo el nombre del lugar sino sus coordenadas.&lt;/p&gt;
+
+&lt;p&gt;Instalable vía &lt;code&gt;bower&lt;/code&gt; también con &lt;code&gt;bower install angular-geocomplete&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Problemas a los &lt;a href=&quot;https://github.com/ghostbar/angular-geocomplete/issues&quot;&gt;issues de GitHub&lt;/a&gt;.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
           <title>The Road to Happiness incluye no usar WordPress</title>
           <link>/2013/08/26/the-road-to-happiness-incluye-no-usar-wordpress</link>
           <guid isPermaLink="true">/2013/08/26/the-road-to-happiness-incluye-no-usar-wordpress</guid>
