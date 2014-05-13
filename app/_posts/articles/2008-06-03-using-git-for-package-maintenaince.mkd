@@ -1,0 +1,17 @@
+---
+layout: post
+title: Using git for package maintenaince
+tags: []
+status: publish
+type: post
+published: true
+meta: {}
+---
+Sometimes I just mixed packages, got <em>debdiffs</em>, re-mixed and finish with a not-so-clean working directory with a lot of <em>diffs</em> applied and not knowing which one was what and who did what. Now, that I'm maintaining <a href="http://packages.qa.debian.org/x/xscreensaver.html"><code>xscreensaver</code></a> with Tormod (and should be maintained with more people anyway...) and that more of my packages may require attention from other people besides me I decided to start working with git on <a href="http://qa.debian.org/developer.php?login=ghostbar38@gmail.com">my debian packages</a> so you can find them at <a href="http://git.rivco.info">my <code>git</code> bare repository</a>, they're all under <code>debian/</code>, all of them are build with <code>git-buildpackage</code> <em>tree-structure</em> except <code>libtorrent</code> and <code>rtorrent</code> <em>experimental-branch</em> that are <a href="http://git.rivco.info/?p=misc/git-buildpackage-extra-tools.git;a=blob;f=git-buildpackage-experimental;h=2cd6013db25ba6051726126e7452222bbcdfa009;hb=master">built with another <em>args</em></a>.
+
+If you want to co-maintain some of my packages please send me your <code>ssh-rsa</code> key for push access, anyway you can have anonymous access too by using:
+
+<blockquote><code>git clone git://git.rivco.info/debian/package.git</code></blockquote>
+
+<strong>UPDATE:</strong> now using <a href="http://git.debian.org"><code>git.debian.org</code></a> as suggested by <em>Raphael Hertzog</em> but keeping my packages in my bare-repo as well.
+<!--break-->

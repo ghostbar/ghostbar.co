@@ -1,0 +1,18 @@
+---
+layout: post
+title: Mi disco está entre la vida y la muerte
+tags:
+- Español
+- Linux
+- Planeta Linux
+- UPS
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '123331867'
+---
+Gracias a los apagones de la gloriosa revolución bolivariana los discos duros de mis computadoras de escritorio están entre la vida y la muerte.
+
+¿Alguien tiene experiencia con UPS baratos enviando señales a las máquinas para apagarlas en caso de apagones?

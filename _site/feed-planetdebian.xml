@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GHOSTBAR</title>
+    <description>Random thoughts on technology and hacking written by Jose Luis Rivas</description>
+    <link></link>
+    <atom:link href="/feed-planetdebian.xml" rel="self" type="application/rss+xml" />
+    
+      
+        <item>
+          
+          <title>MongoDB: $pull from an embedded document array</title>
+          <link>/2013/08/26/mongodb-pull-from-embedded-document-array</link>
+          <guid isPermaLink="true">/2013/08/26/mongodb-pull-from-embedded-document-array</guid>
+          
+          <pubDate>Mon, 26 Aug 2013 02:43:25 -0430</pubDate>
+          <description>&lt;p&gt;TL;DR: &lt;code&gt;db.collection.update({_id: &#39;x&#39;}, {$pull: {embedded_doc: {_id: &#39;y&#39;}}})&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;Queries are wrote for the &lt;code&gt;mongo&lt;/code&gt; shell&lt;/small&gt;&lt;/p&gt;
+
+&lt;h2&gt;Dot based access&lt;/h2&gt;
+
+&lt;p&gt;If you have been using &lt;a href=&quot;http://mongodb.org&quot;&gt;MongoDB&lt;/a&gt; for some time, then there are big chances that you will know the &quot;dot-based access&quot; on the &lt;code&gt;find&lt;/code&gt; queries. This is the easier way to write those queries and will probably want to keep using that. Like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.collection.find({_id: &#39;x&#39;, &#39;embedded_doc._id&#39;: &#39;y&#39;})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The thing is that does not work with everything, like: Arrays of embedded documents!&lt;/p&gt;
+
+&lt;h2&gt;Little example schema&lt;/h2&gt;
+
+&lt;p&gt;Let&#39;s suppose the following little schema (written for &lt;a href=&quot;http://mongoosejs.com&quot;&gt;Mongoose&lt;/a&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;A = new Schema({
+  w: String,
+  x: String
+});
+
+Document = new Schema({
+  embedded_doc: [A]
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The collection of &lt;code&gt;Document&lt;/code&gt; is called &lt;code&gt;documents&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Updating arrays&lt;/h2&gt;
+
+&lt;p&gt;If the arrays are not embedded documents I can actually just use a regular &lt;code&gt;update&lt;/code&gt; like with any other field combined with a &lt;code&gt;$set&lt;/code&gt; and change all the array like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.documents.update({_id: &#39;x&#39;, {$set: {array: [
+  {a: 1}, 
+  {a: 2}, 
+  {a: 3}
+]}}})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And using conveniently &lt;code&gt;$pull&lt;/code&gt; and &lt;code&gt;$addToSet&lt;/code&gt;. But when it comes to embedded documents the history is very different. You can&#39;t make a simple &lt;code&gt;$set&lt;/code&gt; because it will give you an error related to &lt;code&gt;ModId&lt;/code&gt; which you can&#39;t change. So you really need to use &lt;code&gt;$push&lt;/code&gt;, &lt;code&gt;$addToSet&lt;/code&gt;, &lt;code&gt;$pull&lt;/code&gt; and it&#39;s friends.&lt;/p&gt;
+
+&lt;p&gt;So all those you can do it as in the manual, but what if you want to make a &lt;code&gt;$pull&lt;/code&gt; over an array of objects and &lt;code&gt;w&lt;/code&gt; and &lt;code&gt;x&lt;/code&gt; are not unique? Well, that&#39;s why you probably made them an embedded document! Then you have the &lt;code&gt;_id&lt;/code&gt; and you try to use the dot notation like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.documents.update({_id: &#39;x&#39;}, {$pull: {&quot;embedded_doc._id&quot;: &#39;y&#39;})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And it looks good, except that it wont work. You have to use the complete syntax like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;db.documents.update({_id: &#39;x&#39;}, {$pull: {embedded_doc: {_id: &#39;y&#39;}}})
+&lt;/code&gt;&lt;/pre&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Too many authentication failures on SSH</title>
+          <link>/2013/08/22/too-many-authentication-failures-ssh</link>
+          <guid isPermaLink="true">/2013/08/22/too-many-authentication-failures-ssh</guid>
+          
+          <pubDate>Thu, 22 Aug 2013 21:08:25 -0430</pubDate>
+          <description>&lt;p&gt;It seems like having several SSH keys on the same system starts giving issues with some SSH servers. The issue is that while connecting it returns:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Too many authentication failures for xxxxxx.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The fix for this is very simple and quick. Open up your &lt;code&gt;~/.ssh/config&lt;/code&gt; and put:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;IdentitiesOnly yes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can add that per-host or wide (without indents, even as the first line in the config file!).&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Starting a Raspbery Pi without a display</title>
+          <link>/2013/08/22/starting-raspberry-without-display</link>
+          <guid isPermaLink="true">/2013/08/22/starting-raspberry-without-display</guid>
+          
+          <pubDate>Thu, 22 Aug 2013 02:12:22 -0430</pubDate>
+          <description>&lt;p&gt;Recently (actually 3 weeks ago) &lt;a href=&quot;http://instagram.com/p/cdELMsNxk-/&quot;&gt;I bought a Raspberry Pi for myself&lt;/a&gt; and it wasn&#39;t until today that I power it on by the first time. Call it RealLife™ for simplicity.&lt;/p&gt;
+
+&lt;p&gt;Anyway, one of my first issues was that I do not own any display with RCA or HDMI inputs, and all I have is a router that works as my WiFi hotspot as well. Since this starter kit comes with &lt;a href=&quot;http://raspbian.org&quot;&gt;Raspbian&lt;/a&gt; by default I made some research and found that the default &lt;code&gt;user:password&lt;/code&gt; is &lt;code&gt;pi:raspberry&lt;/code&gt;, &lt;code&gt;ssh-server&lt;/code&gt; is on by default and the network interface &lt;code&gt;eth0&lt;/code&gt; tries to grab an IP automatically via DHCP.&lt;/p&gt;
+
+&lt;p&gt;So starting my Raspberry Pi was as easy as connect a wire to my device and the router, then a quick &lt;code&gt;nmap -sP 192.168.0.0/24&lt;/code&gt; and there it was, under the hostname &lt;code&gt;raspberry&lt;/code&gt; my brand new raspberry.&lt;/p&gt;
+
+&lt;p&gt;After a &lt;code&gt;ssh pi@192.168.0.X&lt;/code&gt; a nice &lt;code&gt;raspi-conf&lt;/code&gt; was receiving me to start setting up my device.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Less Swap</title>
+          <link>/2013/01/27/less-swap</link>
+          <guid isPermaLink="true">/2013/01/27/less-swap</guid>
+          
+          <pubDate>Sun, 27 Jan 2013 12:26:02 +0000</pubDate>
+          <description>&lt;p&gt;My old X61 has 2G in RAM and 3G in Swap. It seems my using-habit for Google Chrome is heavy (more than 20 tabs open most of the time) so my swap is normally being used above the 1.8G-mark. That means, my disk is constantly being written and read, and since this is the original hard-drive scare comes to my mind: &lt;em&gt;will I blow-up my disk if I continue doing this?&lt;/em&gt; and the heat this disk-use&#39;s generating was absurd.&lt;/p&gt;
+
+&lt;p&gt;That&#39;s not good, at all, I prefer having cache used than swap; in Venezuela is not that easy to get a good sale on hard-drives (you know, is hard to get dollars here, since is illegal to buy them unless the govt gives you permission).&lt;/p&gt;
+
+&lt;p&gt;So the first thing that comes to my mind is &lt;code&gt;sysctl&lt;/code&gt;. If I wanted to cofigure swap it would be with a kernel parameter. So running &lt;code&gt;sysctl -a | grep swap&lt;/code&gt; throws me &lt;code&gt;vm.swappiness = 60&lt;/code&gt;, and a little google search tells me more about it.&lt;/p&gt;
+
+&lt;p&gt;If the swappiness is close to 0 then it will use the swap only if it is really necessary, if it is close to 100 then it will use the swap aggressively. Mine was at 60, and it was really aggressive.&lt;/p&gt;
+
+&lt;p&gt;The next steps for me was doing &lt;code&gt;sudo echo &#39;vm.swappiness = 1&#39; &amp;gt;&amp;gt; /etc/sysctl.conf &amp;amp;&amp;amp; sudo sysctl -p&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now my system is really smooth and using Chrome + Terminal + Tmux + Rhythmbox is acceptable.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Why Jekyll</title>
+          <link>/2012/12/15/why-jekyll</link>
+          <guid isPermaLink="true">/2012/12/15/why-jekyll</guid>
+          
+          <pubDate>Sat, 15 Dec 2012 00:00:00 -0430</pubDate>
+          <description>&lt;h2&gt;Why?&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ghostbar.ath.cx/2012/12/15/switched-to-jekyll/&quot;&gt;I switched to Jekyll&lt;/a&gt; but it wasn&#39;t a fast decision. I really tried to give WordPress a chance, again, but I&#39;m not getting along pretty well with PHP since like 2 years ago. In fact, is a headache to maintain on my server. In the course of the years I have had several downtimes on my PHP-based sites because of changes like PHP-FPM. Some sites just dropped working for me while others kept doing OK. This is in the same server, with the same database and the same codebase (WordPress).&lt;/p&gt;
+
+&lt;p&gt;After a lot of time programming on Node.js and been learning more Ruby (&lt;em&gt;CoffeeScript made me love the syntax&lt;/em&gt;) I just got tired of using more resources of what I really needed, and with a regular CMS that means a database. Why would I need a database if I just update like once a day? For a comment-system? There&#39;s Disqus already, and people can just comment you on Twitter or make a &lt;a href=&quot;http://branch.com&quot;&gt;Branch&lt;/a&gt; for it, or just write you an email! Plain simple.&lt;/p&gt;
+
+&lt;h2&gt;Jekyll&lt;/h2&gt;
+
+&lt;p&gt;So there was Jekyll, a pretty nice tool creating static-sites very fast and easy to learn. It didn&#39;t needed a database and because all is static is pretty fast. Even the hosting requirements got lowered to the point I could (&lt;a href=&quot;https://github.com/eserre/ghostbar.ath.cx&quot;&gt;and I did&lt;/a&gt;) just upload this to GitHub and served it from there as a GitHub Page!&lt;/p&gt;
+
+&lt;h2&gt;One more thing&lt;/h2&gt;
+
+&lt;p&gt;One thing made me decided to upload to GitHub as well was &lt;a href=&quot;http://prose.io&quot;&gt;Prose.io&lt;/a&gt;, a simple text-editor for GitHub with support for MarkDown made by the guys @ &lt;a href=&quot;http://developmentseed.com&quot;&gt;developmentseed.com&lt;/a&gt;. So while it was made for being updated on my terminal I could just do it as well from the web, from anywhere with just my GitHub account and having previews on-the-fly.&lt;/p&gt;
+
+&lt;h2&gt;The downside&lt;/h2&gt;
+
+&lt;p&gt;Since I don&#39;t control this server I couldn&#39;t setup redirections for my old feeds. Of course, I could have just copied the same pattern in a folder and put there an XML feeding the category X, but I think is easier to update the planets being feeded to the new URIs.&lt;/p&gt;
+
+&lt;h2&gt;On the bright-side&lt;/h2&gt;
+
+&lt;p&gt;I even could put pretty-permalinks to work! So the structure for my old links kept the same.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Switched to Jekyll</title>
+          <link>/2012/12/15/switched-to-jekyll</link>
+          <guid isPermaLink="true">/2012/12/15/switched-to-jekyll</guid>
+          
+          <pubDate>Sat, 15 Dec 2012 00:00:00 -0430</pubDate>
+          <description>&lt;p&gt;After long-time without updating my blog, I decided to give it life again, but this time I wanted it to look different and started to make a new theme. Remembering the good-bad old days with WordPress was not an option, so I started prototyping right away with &lt;a href=&quot;http://jekyllrb.com&quot;&gt;jekyll&lt;/a&gt; and things were fast, considering my 30-minutes a day approach since 3 days ago.&lt;/p&gt;
+
+&lt;p&gt;Of course, is yet a work-in-progress, and in the meantime I wrote &lt;a href=&quot;https://github.com/ghostbar/320Stylus&quot;&gt;320Stylus&lt;/a&gt; so things could came up faster working mobile-first. But I will write more about that later.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+  </channel>
+</rss>

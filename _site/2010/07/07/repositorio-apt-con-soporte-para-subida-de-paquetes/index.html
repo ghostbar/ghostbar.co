@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel='shortcut icon' href='/img/favicon.ico' type='image/x-icon'>
+    <link rel='apple-touch-icon' href='/img/favicon-apple-57x57.png'>
+    <link rel='apple-touch-icon' sizes='72x72' href='/img/favicon-apple-72x72.png'>
+    <link rel='apple-touch-icon' sizes='114x114' href='/img/favicon-apple-114x114.png'>
+
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:300,300italic,600,600italic|Alegreya:400italic,700italic,400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+  
+    <title>Repositorio APT con soporte para subida de paquetes &mdash; GHOSTBAR</title>
+    
+  </head>
+
+  <body>
+
+
+  <header id="header" class='container'>
+
+  <div class='row'>
+
+    <div id='logo' class='twocol'>
+      <a href=''><img src='/img/logo-128x128.png'></a>
+    </div> <!-- end of #logo -->
+
+    <div id='title' class='sixcol'>
+      <a href=''><h1 class='leaguegothic'>ghostbar</h1></a>
+      <p id='tagline'>Random thoughts on technology written by <a href='http://joseluisrivas.net/'>Jose Luis Rivas</a></p>
+    </div> <!-- end of #title -->
+
+  </div> <!-- end of .row -->
+  
+</header> <!-- end of #header.container -->
+
+
+    <div id='post' class='container'>
+  <div class='row container'>
+
+    <article class='twelvecol post'>
+      <header>
+        <h1>Repositorio APT con soporte para subida de paquetes</h1>
+        <div class='date'>
+          July 07, 2010
+        </div>
+      </header>
+
+      <div class='content'>
+        <p>¿No les ha pasado que quisieran montar su propio repositorio APT donde monten los paquetes con <tt>dput</tt> o <tt>dupload</tt> como si lo hiciesen directamente a Debian o Ubuntu pero con la ventaja de que se actualice en 5 minutos? Bueno, realmente es fácil hacerlo y les explicaré como en este artículo. También podrán tener, opcionalmente, otra ubicación o ruta donde coloquen un histórico de todos los paquetes que han subido aparte del pool como <a href="http://repo.rivco.net/debian">éste</a>.</p>
+
+<h3>¿Qué necesitas?</h3>
+
+
+<p>Usaremos <tt>reprepro</tt> para manejar el repositorio y para la administración unos scripts en <tt>bash</tt>, además necesitarás el paquete <tt>devscripts</tt> pues necesitaremos del script <tt>dcmd</tt>.</p>
+
+<h3>Instalar y Configurar</h3>
+
+
+<p>Facilisto:
+<tt># aptitude install reprepro devscripts</tt></p>
+
+<p>Para configurar: en el directorio seleccionado para hospedar el repositorio crea la carpeta <tt>conf</tt> donde crearás el archivo llamado <tt>distributions</tt>, en éste último archivo colocaremos información sobre el repositorio en el siguiente formato:
+<tt>Origin: Jose Luis Rivas
+Label: Jose Luis Rivas for Debian
+Suite: unstable
+Codename: sid
+Architectures: i386 all source
+Components: main non-free contrib
+Description: Jose Luis Rivas's repo for Debian-related work</p>
+
+<p>Origin: Jose Luis Rivas
+Label: Jose Luis Rivas for Debian
+Suite: testing
+Codename: squeeze
+Architectures: i386 all source
+Components: main non-free contrib
+Description: Jose Luis Rivas's repo for Debian-related work</tt></p>
+
+<p>Esa es la configuración de mi repositorio, tengo lugar para <tt>testing</tt> y para <tt>unstable</tt>. Así mismo para subir tengo dos directorios diferentes, uno para <tt>unstable</tt> y otro para <tt>testing</tt>.</p>
+
+<p>Los archivos para sincronizar los directorios de subida con el repositorio son diferentes para cada distribución configurada; el script es el siguiente:
+<tt>#!/bin/sh</p>
+
+<p>DCRET=/home/ghostbar/incoming
+DCROT=/srv/dl.rivco.net/debian/</p>
+
+<p>for i in $( find $DCRET | grep ".changes" ); do
+        reprepro -Vb $DCROT include unstable $i
+        for j in $( dcmd $i ); do
+        rm $j
+        done
+done</tt></p>
+
+<p>Lo obvio, en <tt>DCRET</tt> va el directorio donde subiran los archivos y <tt>DCROT</tt> es donde está ubicado el repositorio APT. Si quieres además llevar el histórico como comenté más arriba el script entonces se vería más como:</p>
+
+<p><tt>#!/bin/sh</p>
+
+<p>DCRET=/home/ghostbar/incoming-unstable
+DCROT=/srv/dl.rivco.net/debian/
+HISTORICREPO=/srv/repo.rivco.net/debian</p>
+
+<p>for i in $( find $DCRET | grep ".changes" ); do
+        reprepro -Vb $DCROT include sid $i
+        mkdir -p $HISTORICREPO/$( grep "Source: " $i | sed 's/Source: //' )/$( grep "Version: " $i | sed 1's/Version: //' | grep --max-count=1 - )
+        for j in $( dcmd $i ); do
+                mv $j $HISTORICREPO/$( grep "Source: " $i | sed 's/Source: //' )/$( grep "Version: " $i | sed 1's/Version: //' | grep --max-count=1 - )/
+        done
+done</tt></p>
+
+<p>Para que sea automático y que revise cada 5 minutos el <tt>incoming</tt> simplemente se coloca en <tt>cron</tt> una línea como esta:</p>
+
+<p><tt><em>/5 *   * * * /usr/local/bin/incoming-unstable.sh
+</em>/5 *   * * * /usr/local/bin/incoming-testing.sh</tt></p>
+
+<h3>Soporte para subidas</h3>
+
+
+<p>Yo uso <tt>dput</tt> y mi configuración es la siguiente en <tt>~/.dput.cf</tt>:
+<tt>[rivco]
+fqdn            = rivco.net
+login           = ghostbar
+incoming        = /home/ghostbar/incoming-unstable
+method          = scp
+run_dinstall        = 0</p>
+
+<p>[rivco-testing]
+fqdn            = rivco.net
+login           = ghostbar
+incoming        = /home/ghostbar/incoming-testing
+method          = scp
+run_dinstall        = 0</tt></p>
+
+<p>El método que uso es <tt>scp</tt> y lo único que necesito tener configurado en mi servidor es <tt>sshd</tt>; creo que el resto de los parámetros son autoexplicativos.</p>
+
+<h3>Ajá ¿y ahora?</h3>
+
+
+<p><tt>dput rivco package_file.changes</tt></p>
+
+<p>Y esperar unos 5 minutos para que los scripts hagan su trabajo y ¡disfrutar!</p>
+
+      </div>
+
+      <footer>
+        <small>
+          <em>You should follow me on twitter <a href='http://twitter.com/ghostbar'>here</a></em>.
+        </small>
+      </footer>
+
+    </article>
+
+  </div> <!-- end .row -->
+</div> <!-- end .container -->
+
+
+<div class='clearfix'></div>
+<footer id='footer' class='container'>
+
+  <div class='row'>
+
+    <div class='twelvecol last'>
+
+      <small>© 2012-2013, Jose Luis Rivas. Built with <a href='http://jekyllrb.com'>Jekyll</a> by <a href='http://joseluisrivas.net'>Jose Luis Rivas</a> from <a href='http://eserre.com'>Eserre</a>.</small>
+
+      <small class='pull-right'><a href='/feed.xml'>RSS</a></small>
+
+    </div> <!-- end of .twelvecol -->
+
+  </div> <!-- end of .row -->
+</footer>
+
+<div>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1022716-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>  
+</div>
+
+</body>
+</html>
+

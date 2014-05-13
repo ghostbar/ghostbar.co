@@ -1,0 +1,30 @@
+---
+layout: post
+title: libtorrent 0.12.3 and rtorrent 0.8.3 released! (beta)
+tags:
+- Debian
+- English
+- LibTorrent
+- Planet Debian
+- rTorrent
+- Software
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _oembed_25babcd831ffdbbd1b0f5280846e4958: ! '{{unknown}}'
+  _oembed_c8646b107a294b1aa544a87680d2e79e: ! '{{unknown}}'
+  dsq_thread_id: '124504567'
+---
+So between yesterday and today I packaged the new upstream version of libtorrent/rtorrent 0.12.3 and 0.8.3 as beta. I still need to do some testing on the packages and maybe change libtorrent from OpenSSL to TLS.
+
+Anyway, in the meantime you can grab the binaries (only 386) and sources from my debian-playground:
+<pre>http://debian.rivco.info/libtorrent/0.12.3-1~b2.exp/
+http://debian.rivco.info/rtorrent/0.8.3-1~b1.exp/</pre>
+<em>(there may be new beta versions at the time you read this so please check as well the parent directory)</em>
+
+Or my repo:
+<pre>deb http://reprepro.deb.rivco.info/ experimental main</pre>
+
+Hopefully they'll be available soon from the Debian Archive, just need to check some stuff before that. Anyway, they're fully working right now.

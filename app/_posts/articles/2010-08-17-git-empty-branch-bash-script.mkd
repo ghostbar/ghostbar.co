@@ -1,0 +1,33 @@
+---
+layout: post
+title: Git empty branch bash script
+tags:
+- English
+- Git
+- git-empty-branch
+- Planet Debian
+- Software
+status: publish
+type: post
+published: true
+meta:
+  _flattr_post_language: en_GB
+  _flattr_post_category: text
+  _flattr_post_hidden: '0'
+  _flattr_btn_disabled: ''
+  _edit_last: '1'
+  _wp_old_slug: ''
+  dsq_thread_id: '130616352'
+---
+Sometimes I create empty branchs while designing some webs and I got tired of making all the thing manually; so, some time ago I wrote a little bash script that may work for any of you to do this task. It takes the first parameter as the name of the new branch to be created, here's the code:
+
+<pre>#!/bin/sh
+# creating a git empty branch
+# it takes as arg the name for the new branch
+
+git-symbolic-ref HEAD refs/heads/$1
+rm .git/index
+git clean -fdx
+git commit --allow-empty -m "Initial empty branch commit"</pre>
+
+Hope it works for someone.

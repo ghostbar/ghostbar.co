@@ -1,0 +1,12 @@
+---
+layout: post
+title: Arrrrrg! Perdí todo!
+tags: []
+status: publish
+type: post
+published: true
+meta: {}
+---
+Sí, lo perdí, luego explicaré el porque, por eso está ahorita esto. En fin, será empezar de nuevo y con más entusiasmo :)
+
+De momento lo más importante lo tengo montado, es mi <a href="http://git.ghostbar.ath.cx">servidor git</a>, chequeenlo :D

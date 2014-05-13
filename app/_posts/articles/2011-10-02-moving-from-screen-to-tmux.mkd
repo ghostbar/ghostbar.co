@@ -1,0 +1,34 @@
+---
+layout: post
+title: Moving from Screen to Tmux
+tags:
+- English
+- Free Software
+- Linux
+- Open Source
+- Planet Debian
+- productivity
+- screen
+- Software
+- Tecnología
+- tmux
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '432428446'
+---
+I've been a long-time user of GNU Screen, as almost every person I know that spend a lot of time in a terminal.
+
+I must admit I was happy, I really was. I was used to my workflow with 4 terminals 8x25 and a bunch of screens, with several nested-screens. I used awesome-wm before, so definitely I felt I wasn't using all the space in my laptop screen (my laptop is a ThinkPad X61, so 1024x768 in a 12 inches-screen) but that was OK, after all my workflow was, well, good.
+
+Until 2 days ago, I was told to try tmux, in fact, I was told «<em>and why are you using screen? use tmux</em>». As a daily-user of Screen my first reaction was «<em>I'm used to</em>», «<em>I can use it as I want</em>», and a lot of excuses for just not trying something new. But then I made a little research (on Google, of course). In about 30 minutes I ended up with a multiplexer working as I wanted and as I never got Screen to work. Finally I was using just a terminal and using all the space available in my tiny-laptop-screen and plus: saving a lot of bandwidth with my permanent <abbr title="Secure Shell">SSH</abbr> connection (a really big plus now that I'm living with a capped link to the net with a GSM-modem).
+
+<a href="http://ghostbar.ath.cx/wp-content/uploads/2011/10/tmux-fullscreen.png"><img src="http://ghostbar.ath.cx/wp-content/uploads/2011/10/tmux-fullscreen-300x225.png" alt="" title="tmux-fullscreen" width="300" height="225" class="aligncenter size-medium wp-image-618" /></a>
+
+I changed the Ctrl-b shortcut to Ctrl-a (b is too far for using it with only one hand), configured so I could use nested tmux'es like screen when I push Ctrl-a a, activated visual monitoring and even got to use the tmux's buffer along with my X11 buffer when I press Ctrl-a >!!
+
+It's all in my <a href="https://github.com/ghostbar/userdotfiles/blob/master/tmux.conf">~/.tmux.conf</a>, use it at will. Later I will make a screencast about using tmux, so more people can get a working tmux easily.
+
+ATM, I'm even more happy than I was with GNU Screen, so, any other recommendation, people?

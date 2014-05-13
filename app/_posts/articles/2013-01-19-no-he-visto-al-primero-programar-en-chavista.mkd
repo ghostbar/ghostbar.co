@@ -1,0 +1,22 @@
+---
+layout: post
+title: No he visto al primero programar en Chavista
+categories:
+- planeta-linux
+type: post
+date: 2013-01-19 22:38:43
+published: true
+---
+Hoy leí, por casualidad, todo el drama armado en [la lista de discusiones de Canaima](http://listas.canaima.softwarelibre.gob.ve/pipermail/discusion/2013-January/) y recordé porqué decidí, afortunadamente, dejar toda lista de correo sobre "linux" venezolana. Y coloco linux entre comillas porque ahí se habla de todo, menos de siquiera, cultura libre.
+
+Resulta que en el software libre se programa, y si se la pasan todo el día discutiendo de politiquería, pues eso es lo que tendrán en la cabeza ¿y saben qué? No he visto al primero programar en Chavista ni en Caprilista.
+
+Está bien que programen inspirados en, por, para cualquier ideal político que tengan, o que lo hagan para volverse millonarios, o simplemente porque les dió la gana. Lo que está mal es que **no lo hagan** y además se la pasen jodiendo a los que **sí lo hacen**, únicamente por su inclinación política. Y esto no pasó sólo en Canaima, ha pasado en eventos, ha pasado en proyectos, **y ya está buena la joda**.
+
+Yo entiendo que puedan haber problemas entre personas, entre grupos, ¿pero por politiquería? **¡Ustedes ni siquiera les importan a ellos!**
+
+Si quieren hacer, **hagan**. Sino, busquen algo que de verdad les guste y hagan allá, pero dejen en paz.
+
+PD: *Un ejemplo de lo que pasa cuando se mezcla política con software: [Objectivist-C](http://fdiv.net/2012/04/01/objectivist-c)*.
+
+Edit(2013-01-20 00:40:27 UTC-0430): Pueden complementar con esta lectura de mi amigo Miguel: [El software libre y su mezcla con la política en Venezuela](http://skatox.com/blog/2011/03/13/el-software-libre-y-su-mezcla-con-la-politica-en-venezuela/).

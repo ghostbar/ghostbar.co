@@ -1,0 +1,33 @@
+---
+layout: post
+title: new libtorrent and rtorrent (beta, again!)
+tags:
+- Debian
+- English
+- LibTorrent
+- Open Source
+- Planet Debian
+- Release
+- rTorrent
+- Software
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _oembed_0348f3dfd036251e33e5fe6fced1c519: ! '{{unknown}}'
+  _oembed_048be3bdf3ad7230c1319e65a3ca484f: ! '{{unknown}}'
+  _oembed_cd4b443238b04b4601b5ae1d4072c9bf: ! '{{unknown}}'
+  _oembed_1598e0227ee266e79046e1f5e7a49b5b: ! '{{unknown}}'
+  dsq_thread_id: '124389129'
+---
+I think Jari reads my blog haha. There are shiny new packages for libtorrent and rtorrent. The same place as ever:
+
+My debian-playground: http://debian.rivco.info/
+
+My private repo:
+<code>deb{,-src} http://reprepro.deb.rivco.info/ experimental main</code>
+
+And of course, git (checkout master-experimental and upstream-experimental):
+http://git.debian.org/?p=collab-maint/libtorrent.git
+http://git.debian.org/?p=collab-maint/rtorrent.git

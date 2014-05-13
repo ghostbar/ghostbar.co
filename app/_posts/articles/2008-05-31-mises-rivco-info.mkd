@@ -1,0 +1,13 @@
+---
+layout: post
+title: mises.rivco.info
+tags: []
+status: publish
+type: post
+published: true
+meta: {}
+---
+<code><a href="http://mises.rivco.info">mises.rivco.info</a></code> es mi servidor <code>Debian/kFreeBSD</code>. Durante mucho tiempo estuvo sólo para pruebas por falta de memoria, ahora le agregué otro pequeño disco de <code>4G</code> (ahora es <code>7G</code>+<code>4G</code>) y le agregué más memoria para que tenga ahora <code>298M</code>. A pesar de ser un <code>PII@300Mhz</code> espero sacarle provecho para pequeñas pruebas portando código a <code>debian/kfreebsd</code> y pruebas de mi código.
+
+Eventualmente migraré todo eso a una máquina virtual en mi nuevo servidor (aún comprando partes) y <code>mises</code> quedará para firewall y para tener unos bots en IRC que voy a crear a lo largo de este semestre así como un pequeño backup de algunos servicios de datos. Quizás además lo coloque como <code>DNS</code>...
+<!--break-->

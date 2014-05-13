@@ -1,0 +1,17 @@
+---
+layout: post
+title: Creative Commons Plus y las libertades
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '122916354'
+---
+Carlos Galisteo escribe sobre las <a href="http://blog.k-rolus.net/index.php?/archives/217-Creative-Commons-Plus.html">CCPlus</a> y las compara con una licencia libre lo cuál es técnicamente incorrecto.
+
+Las <a href="http://www.creativecommons.org/">CC</a> tienen como objetivo básico la distribución de contenido con una licencia fácilmente entendible lo cuál sin duda es cualquier licencia CC, sin que el autor tenga necesidad de hacer su propia licencia o por desconocimiento haga de que tenga todos los derechos reservados y no puedas hacer que el contenido se distribuya fácilmente bajo ciertas condiciones.
+
+El problema, precisamente es que esta CC a veces no es <strong>todo</strong> lo que el publicador quisiera así que puede agregar más condiciones de una manera sencilla y entendible con CCPlus. El objetivo, entonces, no es hacer una licencia libre sino una licencia que el autor o publicante pueda armar fácilmente en base a las CC y otros acuerdos o licencias existentes.
+
+Por cierto, la comunidad de software libre usa <strong>muy poco</strong> licencias CC y usa más licencias como la GPL, New-BSD y MIT por lo que creo es erróneo afirmar que el modelo de negocio del Software Libre sea débil por acciones sobre licencias que son más usadas sobre contenido.

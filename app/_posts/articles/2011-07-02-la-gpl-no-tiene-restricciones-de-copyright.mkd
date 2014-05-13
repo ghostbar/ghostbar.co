@@ -1,0 +1,28 @@
+---
+layout: post
+title: ! '"La GPL no tiene restricciones de copyright"'
+tags:
+- Derecho
+- Español
+- GPL
+- Licencia
+- Licencias
+- Planeta Debian
+- Planeta Linux
+- Software
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '347872806'
+---
+Eso es lo que unos <del>intento de</del> abogados <a href="http://laforge.gnumonks.org/weblog/2011/06/27/#20110627-gpl_surpreme_court_mauritius">han dicho en una respuesta ante la Corte Suprema</a> de <a href="http://es.wikipedia.org/wiki/Mauricio">Mauritius/Mauricio</a>. Un <em>copy&paste</em> de parte de lo que alegan:
+
+<blockquote>5. Licenses of open-source software like "Linux" and "Asterisk" have no copyright restrictions which in effect puts no restrictions on their use or distribution. As a consequence, any work which is derived from the open source software as conceptualized, created, installed and managed, by the Applicant becomes the ownership of the Applicant.
+
+6. In the light of the above, therefore, the applications, configuration files and features so developed by the Applicant are the sole property of the Applicant, make up the knowledge base of the Applicant, make the basis of its business operations, and are highly confident in nature. The applications, configurations and features have been built and acquired by the Applicant through important capital investments and manpower over a period of time.</blockquote>
+
+Lo que no terminan de <em>joder</em> con el punto 5, lo terminan de joder definitivamente con el punto 6. Así que, para ellos, lo que se haga de manera derivada de software GPL termina siendo propiedad única y exclusiva de quien lo hizo, supuestamente eliminando la propiedad de los <em>copyright-holders</em> del software base.
+
+Sólo queda recomendarle al demandante que se busque unos abogados que al menos sepan leer licencias.

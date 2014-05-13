@@ -1,0 +1,28 @@
+---
+layout: post
+title: Dropbox para Debian
+tags:
+- Debian
+- Dropbox
+- Español
+- Nautilus
+- Planeta Debian
+- Planeta Linux
+- Repositorio
+- Software
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wp_old_slug: ''
+  dsq_thread_id: '123001303'
+---
+Cansado del problemita con la versión de nautilus entre Debian y Ubuntu y las consecuencias de esto para instalar Dropbox en Debian decidí armar el paquete por mi cuenta y mantenerlo en mi repositorio privado.
+
+Pueden tomarlo desde <a href="http://repo.rivco.net/debian/nautilus-dropbox/0.6.2-1/">aquí</a> o agregar mi repositorio:
+<tt>deb http://dl.rivco.net/debian sid main</tt>
+También está para testing/squeeze:
+<tt>deb http://dl.rivco.net/debian squeeze main</tt>
+
+Sólo para i386, sin embargo pueden bajar las fuentes, sólo agreguen el <tt>deb-src</tt> para su distribución y compilen con <tt>dpkg-buildpackage</tt>

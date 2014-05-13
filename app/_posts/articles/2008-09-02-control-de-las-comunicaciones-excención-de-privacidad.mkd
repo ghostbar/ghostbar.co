@@ -1,0 +1,16 @@
+---
+layout: post
+title: Control de las comunicaciones, excención de privacidad
+tags: []
+status: publish
+type: post
+published: true
+meta: {}
+---
+Temprano vi la noticia de que se han capturado <a href="http://www.noticias24.com/actualidad/?p=17152">las conversaciones entre Luis Miquilena con otros políticos como Teodoro Petkoff</a> y fue sacado al aire en un programa de <a href="http://es.wikipedia.org/wiki/Venezolana_de_Televisi%C3%B3n">VTV</a>.
+
+Valga la pena acotar que estas conversaciones no pretenden una falla a la seguridad nacional ni algo parecido sino a la estabilidad en el poder de un grupo político por lo tanto el hecho de que se graben estas conversaciones de esta manera supone en primer lugar la violación a la privacidad de los individuos en cuestión además de un abuso de poder sin duda por funcionarios públicos que trabajan en la empresa de telecomunicaciones del Estado <a href="http://es.wikipedia.org/wiki/Cantv">CANTV</a> (mejor conocida desde su nacionalización como <em>ChANTV</em>) sin no antes, por supuesto, pensar de que sea una línea seguida por instrucciones generales. Y así pretenden que los venezolanos no se alarmen al buscar la monopolización de la salida de cualquier comunicación transmitida por red por un punto administrado por el Estado.
+
+Además de que por cierto sea ilegal difundir conversaciones privadas entre individuos sin su previo consentimiento a menos que tenga permiso legal por un juez dados ciertos requerimientos y en tal caso estas investigaciones son llevadas a cabo por organismos de seguridad en los que la coerción viene incluída por tratarse de inminente crímenes con víctimas de por medio.
+
+Lamentable que sucedan estas cosas y más en el canal de "todos los venezolanos" que es pagado por los impuestos de todos los venezolanos.

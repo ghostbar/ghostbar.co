@@ -1,0 +1,29 @@
+---
+layout: post
+title: ! '413: Request Entity Too Large with nginx'
+tags:
+- '413'
+- client_max_body_size
+- English
+- error
+- nginx
+- Planet Debian
+- Software
+- Tecnología
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '201665502'
+  _wp_old_slug: ''
+---
+I'm working on a big site, importing a lot of files to a WordPress installation and started to get a bunch of 413's. After a little bit of googling I found out what was happening:
+
+What needs to be done is on <code>/etc/nginx/nginx.conf</code> write:
+<pre>http {
+    client_max_body_size 20M;
+    include       /etc/nginx/mime.types;
+    A LOT MORE SETTINGS...</pre>
+
+Yes, just add <code>client_max_body_size</code> and restart your webserver. This by default is 1M, so anything beyond this will be refused.

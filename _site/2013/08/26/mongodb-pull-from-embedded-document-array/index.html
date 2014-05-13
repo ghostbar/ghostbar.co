@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel='shortcut icon' href='/img/favicon.ico' type='image/x-icon'>
+    <link rel='apple-touch-icon' href='/img/favicon-apple-57x57.png'>
+    <link rel='apple-touch-icon' sizes='72x72' href='/img/favicon-apple-72x72.png'>
+    <link rel='apple-touch-icon' sizes='114x114' href='/img/favicon-apple-114x114.png'>
+
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:300,300italic,600,600italic|Alegreya:400italic,700italic,400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+  
+    <title>MongoDB: $pull from an embedded document array &mdash; GHOSTBAR</title>
+    
+  </head>
+
+  <body>
+
+
+  <header id="header" class='container'>
+
+  <div class='row'>
+
+    <div id='logo' class='twocol'>
+      <a href=''><img src='/img/logo-128x128.png'></a>
+    </div> <!-- end of #logo -->
+
+    <div id='title' class='sixcol'>
+      <a href=''><h1 class='leaguegothic'>ghostbar</h1></a>
+      <p id='tagline'>Random thoughts on technology written by <a href='http://joseluisrivas.net/'>Jose Luis Rivas</a></p>
+    </div> <!-- end of #title -->
+
+  </div> <!-- end of .row -->
+  
+</header> <!-- end of #header.container -->
+
+
+    <div id='post' class='container'>
+  <div class='row container'>
+
+    <article class='twelvecol post'>
+      <header>
+        <h1>MongoDB: $pull from an embedded document array</h1>
+        <div class='date'>
+          August 26, 2013
+        </div>
+      </header>
+
+      <div class='content'>
+        <p>TL;DR: <code>db.collection.update({_id: 'x'}, {$pull: {embedded_doc: {_id: 'y'}}})</code></p>
+
+<p><small>Queries are wrote for the <code>mongo</code> shell</small></p>
+
+<h2>Dot based access</h2>
+
+<p>If you have been using <a href="http://mongodb.org">MongoDB</a> for some time, then there are big chances that you will know the "dot-based access" on the <code>find</code> queries. This is the easier way to write those queries and will probably want to keep using that. Like:</p>
+
+<pre><code>db.collection.find({_id: 'x', 'embedded_doc._id': 'y'})
+</code></pre>
+
+<p>The thing is that does not work with everything, like: Arrays of embedded documents!</p>
+
+<h2>Little example schema</h2>
+
+<p>Let's suppose the following little schema (written for <a href="http://mongoosejs.com">Mongoose</a>):</p>
+
+<pre><code>A = new Schema({
+  w: String,
+  x: String
+});
+
+Document = new Schema({
+  embedded_doc: [A]
+});
+</code></pre>
+
+<p>The collection of <code>Document</code> is called <code>documents</code>.</p>
+
+<h2>Updating arrays</h2>
+
+<p>If the arrays are not embedded documents I can actually just use a regular <code>update</code> like with any other field combined with a <code>$set</code> and change all the array like:</p>
+
+<pre><code>db.documents.update({_id: 'x', {$set: {array: [
+  {a: 1}, 
+  {a: 2}, 
+  {a: 3}
+]}}})
+</code></pre>
+
+<p>And using conveniently <code>$pull</code> and <code>$addToSet</code>. But when it comes to embedded documents the history is very different. You can't make a simple <code>$set</code> because it will give you an error related to <code>ModId</code> which you can't change. So you really need to use <code>$push</code>, <code>$addToSet</code>, <code>$pull</code> and it's friends.</p>
+
+<p>So all those you can do it as in the manual, but what if you want to make a <code>$pull</code> over an array of objects and <code>w</code> and <code>x</code> are not unique? Well, that's why you probably made them an embedded document! Then you have the <code>_id</code> and you try to use the dot notation like:</p>
+
+<pre><code>db.documents.update({_id: 'x'}, {$pull: {"embedded_doc._id": 'y'})
+</code></pre>
+
+<p>And it looks good, except that it wont work. You have to use the complete syntax like:</p>
+
+<pre><code>db.documents.update({_id: 'x'}, {$pull: {embedded_doc: {_id: 'y'}}})
+</code></pre>
+
+      </div>
+
+      <footer>
+        <small>
+          <em>You should follow me on twitter <a href='http://twitter.com/ghostbar'>here</a></em>.
+        </small>
+      </footer>
+
+    </article>
+
+  </div> <!-- end .row -->
+</div> <!-- end .container -->
+
+
+<div class='clearfix'></div>
+<footer id='footer' class='container'>
+
+  <div class='row'>
+
+    <div class='twelvecol last'>
+
+      <small>© 2012-2013, Jose Luis Rivas. Built with <a href='http://jekyllrb.com'>Jekyll</a> by <a href='http://joseluisrivas.net'>Jose Luis Rivas</a> from <a href='http://eserre.com'>Eserre</a>.</small>
+
+      <small class='pull-right'><a href='/feed.xml'>RSS</a></small>
+
+    </div> <!-- end of .twelvecol -->
+
+  </div> <!-- end of .row -->
+</footer>
+
+<div>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1022716-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>  
+</div>
+
+</body>
+</html>
+

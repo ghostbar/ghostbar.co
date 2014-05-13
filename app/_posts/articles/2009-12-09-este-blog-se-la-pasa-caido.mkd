@@ -1,0 +1,17 @@
+---
+layout: post
+title: Este blog se la pasa caído
+tags:
+- Blog
+- Español
+- Venezuela
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '123117525'
+---
+Y no es que el servidor sea malo, es que CORPOELEC no es capaz de dar un servicio eficaz por más de 8 horas, sólo eso diré.
+
+De cualquier forma intentaré que esté encendido la mayor cantidad de tiempo posible.

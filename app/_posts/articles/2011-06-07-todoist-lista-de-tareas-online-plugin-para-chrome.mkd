@@ -1,0 +1,37 @@
+---
+layout: post
+title: Todoist, lista de tareas online + Plugin para Chrome
+tags:
+- Chrome
+- Español
+- Google Chrome
+- Planeta Debian
+- Planeta Linux
+- Software
+- task list
+- Tecnología
+- todo
+- todo list
+- Todoist
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '324297091'
+---
+Las llamadas ToDo-lists, task-lists o en español listas de tareas, abundan en la internet, con varios enfoques, como <a href="http://strikeapp.com">Strikeapp</a> (el hermano pequeño de Resolve, una aplicación web para manejar proyectos) con un enfoque a la sencillez, no-reusable y gran diseño; <a href="http://tadalist.com">Tada-lists</a> (el hermano pequeño de Basecamp) siguiendo el modelo de Basecamp; <a href="http://teuxdeux.com">TeuxDeux</a> con genial diseño e implementación, incluyendo pasar al día actual las tareas que quedaron por hacer y <a href="http://todoist.com">Todoist</a>, una aplicación hecha de manera flexible, simple y sobretodo: funcional.
+
+Después de haberlas probado todas, definitivamente me quedé con ésta última, Todoist. <strong>¿Por qué?</strong> Voy a enumerarlas para facilidad:
+
+<ul>
+<li><strong>Integración con mi navegador</strong> Casi todo el tiempo me la paso en Chrome y la mayoría del tiempo olvido tanto las direcciones web como las cosas por hacer (¡no por nada necesito una lista de pendientes!). Todoist me coloca un recordatorio de cuantas cosas tengo por hacer HOY y puedo marcarlas hechas, editarlas, moverlas de día, darles prioridad sin tener que ir a la web de ellos.</li>
+
+<li><strong>Puedo ver links</strong> Con TeuxDeux no podía ver ni siquiera la tarea completa! Tenía que colocar el cursor encima para recordar exactamente lo que tenía por hacer. Mucho consumo de tiempo valioso, además que se me hacía imposible ir a un enlace haciendole simplemente click.</li>
+
+<li><strong>Separación por etiquetas</strong> Es como proyectos, así puedo tener claro a qué va relacionado esa tarea, ya sea de la universidad, el trabajo o incluso simplemente tiempo libre. Esta última es de las que más he usado, ya que recuerdo en que usar mi tiempo libre de forma útil.</li>
+
+<li><strong>Disponible hasta para móviles</strong> Puedes entrar con un navegador móvil a todoist.com y nunca perder de vista tus pendientes.</li>
+</ul>
+
+<strong>¿Qué no me gusta?</strong> Su diseño. Aunque no es que sea MAAAALO, si le falta más innovación comparado con Strikeapp, por ejemplo.

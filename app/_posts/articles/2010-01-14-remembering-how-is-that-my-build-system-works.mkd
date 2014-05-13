@@ -1,0 +1,20 @@
+---
+layout: post
+title: Remembering how is that my build system works
+tags:
+- Build System
+- Debian
+- English
+- Linux
+- Software
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+Today I was remembering that, thinking on writing about it.
+
+Frankly, I love that works because sometimes I don't understand what I did. A bunch of shell scripts, perl, cowbuilder, local apt-proxy and...
+
+Maybe next time I feel like writing about my build system it will be trivial, not this time. Haha.

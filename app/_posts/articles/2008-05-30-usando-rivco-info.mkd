@@ -1,0 +1,16 @@
+---
+layout: post
+title: Usando RIVCO.INFO
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '124380266'
+---
+Ayer compré el dominio <code>rivco.info</code> (<em>RIVasCOntreras</em>) para usarlo en la mayoría de mis servicios ya que es mucho más corto que <code>ghostbar.ath.cx</code> sin embargo este blog lo dejaré en este dominio.
+
+Ya el servidor <code>git</code> lo tengo en <a href="http://git.rivco.info"><code>git.rivco.info</code></a>, colocaré mi página personal, el repositorio de mis paquetes debian y otras cosas en <code>rivco.info</code> y tendré <code>ghostbar.ath.cx</code> como backup para todos esos servicios.
+
+Ahora lo que me falta es migrar este blog a un <code>cgi</code> en <code>perl</code> que se alimente por <code>feeds</code> de mis otros blogs (cada uno va a ser especializado), quitarme el <code>Drupal</code> de encima junto con el <code>MySQL</code>. Objetivo a corto plazo: Crear el script de prueba de la implementación.
+<!--break-->

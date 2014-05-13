@@ -1,0 +1,14 @@
+---
+layout: post
+title: ¡Al fin arrancando mi Firefox!
+tags: []
+status: publish
+type: post
+published: true
+meta: {}
+---
+Mi decepción había sido grande al intentar usar firefox en mi recién instalada notebook y no poder hacerlo sin ninguna razón aparente por lo que <a href="http://ghostbar.ath.cx/node/48">empecé a usar Opera como alternativa</a> a la cuál lamentablemente no me termino de acostumbrar aunque me parece en algunos aspectos mucho más poderosa.
+
+Sin embargo, ayer revisando un poco eliminé un directorio <code>.mozilla</code> que misteriosamente no tenía los permisos correctos sino que no podía ni leer ni escribir en ella. Entonces justo ahora me da por probar y <strong>¡funciona Firefox!</strong>
+
+Ahora sí, a probar con cuál me quedo :)

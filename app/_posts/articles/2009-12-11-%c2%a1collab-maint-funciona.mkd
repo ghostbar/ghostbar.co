@@ -1,0 +1,24 @@
+---
+layout: post
+title: ¡Collab-maint funciona!
+tags:
+- Alioth
+- collab-maint
+- Debian
+- Español
+- Git
+- Planeta Debian
+- Planeta Linux
+- VCS
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '123386710'
+---
+Todos los paquetes que mantengo en <a href="http://www.debian.org">Debian</a> (menos los de <a href="http://wiki.debian.org/Teams/DebianPerlGroup/Bienvenido">pkg-perl</a>) los tengo en un repositorio <code>git</code> de Alioth que se llama <code>collab-maint</code>.
+
+<code>collab-maint</code> es un proyecto en Alioth al cuál te puedes unir para tener los paquetes en <code>VCS</code> con acceso para todos los miembros del proyecto (incluyendo todos los Desarrolladores Debian) lo cuál facilita que si otra persona quiere agregar algún patch lo haga directamente allí en un <code>branch</code> diferente lo cuál garantiza comodidad al momento de trabajar y luego el mantenedor en su casa verifica el trabajo y lo une al <code>branch</code> principal si lo considera bueno.
+
+Y sí funciona, ya me ha sucedido que varias personas llenan un reporte y ven que está en <code>collab-maint</code> así que deciden hacer ellos mismos el trabajo y sólo me notifican en que <code>branch</code> lo colocaron para yo revisarlo cuando llegue a casa. Les recomiendo altamente unirse al proyecto <a href="https://alioth.debian.org/projects/collab-maint/"><code>collab-maint</code></a> y disfrutar de las ventajas del mantenimiento colaborativo.

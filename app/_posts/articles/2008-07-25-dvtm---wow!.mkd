@@ -1,0 +1,14 @@
+---
+layout: post
+title: dvtm - Wow!
+tags: []
+status: publish
+type: post
+published: true
+meta: {}
+---
+<a href="http://fc04.deviantart.com/fs31/f/2008/195/c/e/dvtm__irssi__w3m__vim_by_ghostbar.png"><img src="http://fc04.deviantart.com/fs31/f/2008/195/c/e/dvtm__irssi__w3m__vim_by_ghostbar.png" width=100% /></a>
+
+A principios de mes leí sobre <code><a href="http://www.brain-dump.org/projects/dvtm/">dvtm</a>+<a href="http://www.gnu.org/software/screen/">screen</a></code>, hace mucho que uso <code><a href="http://www.gnu.org/software/screen/">screen</a></code> para todo pero de <code><a href="http://www.brain-dump.org/projects/dvtm/">dvtm</a></code> jamás había escuchado, ni sabía que era, aún cuando sus acrónimos lo dicen: <em>Dynamic Virtual Terminal Manager</em>.
+
+Apenas lo empecé a usar me di cuenta que es <strong>genial</strong>! Tener varias terminales en <code>dvtm</code> ciertamente es mucho más práctico que tener varias terminales abiertas una al lado de la otra. ¿Por qué? Es mucho más sencillo dirigirse a alguna de ella, tienes shortcuts, tienes maneras de arreglarlas <strong>automáticamente</strong> (layouts) y te puedes mover de una a otra además de que son perfectas para trabajarlas en conjunto con <code>screen</code>. Es basado en como funciona <a href="http://dwm.suckless.org">dwm</a> y sus derivados. Luego de un tiempo me acostumbré tanto que ahora terminé usando <a href="http://awesome.naquadah.org/"><code>awesome3</code></a> pero eso ya será tema de otro post. El manpage de <code>dvtm</code> tiene <strong>todo</strong> lo que puedas preguntar, el único inconveniente es que no puedes ver historial de lo que hiciste (es decir, no funciona el Shift+PgUp).

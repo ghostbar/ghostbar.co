@@ -1,0 +1,19 @@
+---
+layout: post
+title: Sacada de contexto la crisis crediticia para hacer noticias
+tags: []
+status: publish
+type: post
+published: true
+meta: {}
+---
+La crisis de los <em>subprime</em>, esos créditos inmobiliarios otorgados a personas con poca capacidad para pagar su crédito afectó hace poco el mercado financiero global de manera enorme pues se escondieron estos créditos débiles en paquetes de inversión aparentemente seguros y con crecimiento asegurado que los bancos fueron comprando entre ellos mismos al tiempo de sacarlos de USA a bancos mundiales buscando donde invertir. Cuando reventó la realidad, que los acreditados no podían pagar sus créditos, los bancos se quedaron con inversiones frías. Con tantas casas como garantía y con la necesidad de los bancos de tener liquidez monetaria para sus clientes optaron por vender las casas de inmediato, sólo que no era un único banco, eran todos los bancos de USA que habían participados en estos créditos para personas con poca capacidad de pago lo que hizo que la cantidad de casas por vender fuera enorme y así mismo bajara el precio para poder vender incluso más rápido y obtener su anhelada liquidez monetaria. Como consecuencia los precios del mercado inmobiliario en USA cayeron enormemente con una consecuencia fatal en las finanzas globales que habían comprados paquetes de inversión con estos créditos débiles.
+
+Hoy en la BBC han publicado un artículo <em><a href="http://news.bbc.co.uk/hi/spanish/business/newsid_7564000/7564211.stm">La casa de US$736 millones</a></em> donde una de las cosas que decía en el correo como descripción era <em>¿Crisis? ¿Qué crisis?</em> e incluso colocan dentro del texto del artículo lo siguiente:
+
+<blockquote>Tomando en consideración el enorme impacto que ha tenido la crisis crediticia en la comunidad financiera mundial y la caída general en los precios de las casas uno esperaría que el comprador hubiese tenido que regatear un poco.</blockquote>
+
+Sólo hay algo que decirle a la Redacción de la BBC: ¡Es un <strong>multi-millonario</strong>, él no pide créditos para comprarse una casa enorme!
+
+Al parecer el amarillismo o FUD es una cantidad exponencial del raciocinio usado para escribir artículos en la redacción de la BBC.
+<!--break-->

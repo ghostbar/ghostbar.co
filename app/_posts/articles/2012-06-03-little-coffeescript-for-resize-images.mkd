@@ -1,0 +1,29 @@
+---
+layout: post
+title: Little CoffeeScript to resize images
+tags:
+- CoffeeScript
+- English
+- Image
+- imagemagick
+- Node.js
+- Planet Debian
+- resize
+- resize image
+- script
+- Software
+- Tecnología
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '712292090'
+---
+I needed to resize about 300 images and couldn't find an easier way to do this than with help of node + CoffeeScript. So here's my script, it requires you to install (via npm) imagemagick and underscore:
+
+<script src="https://gist.github.com/2862235.js?file=resize.coffee"></script>
+
+<a href="https://gist.github.com/2862235">Grab it</a> if you want, is under Do Whatever You Want license.
+
+As you can see from the shebang (that's the first line of the script, with the #!) I ran it from my command-line, this was not used in a website, although it could without too much modifications (the magic of JavaScript).

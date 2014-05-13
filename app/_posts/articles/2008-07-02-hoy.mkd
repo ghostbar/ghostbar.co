@@ -1,0 +1,10 @@
+---
+layout: post
+title: Hoy
+tags: []
+status: publish
+type: post
+published: true
+meta: {}
+---
+Hoy señores, hoy es el día. Hoy es el día en que me siento mejor que nunca, en el que veo que vale la pena, en que sigue valiendo la pena joderme por mi país. De verdad lo vale, aún hay gente que vale la pena, gracias.
