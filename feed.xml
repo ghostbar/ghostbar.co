@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ghostbar</title>
+    <description>Random thoughts on technology</description>
+    <link></link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    
+      
+        <item>
+          
+          <title>Sí, nos bloquearon</title>
+          <link>/2014/02/15/si-nos-bloquearon</link>
+          <guid isPermaLink="true">/2014/02/15/si-nos-bloquearon</guid>
+          
+          <pubDate>Sat, 15 Feb 2014 03:43:26 -0500</pubDate>
+          <description>&lt;p&gt;Tanto CONATEL como CANTV han negado que haya habido censura en el Internet venezolano estos últimos dos días, aquí están las pruebas que sí lo han hecho.&lt;/p&gt;
+
+&lt;p&gt;El primer bloqueo fue del servidor de imágenes de Twitter bajo &lt;code&gt;pbs.twimg.com&lt;/code&gt; el 13 de febrero de 2014. Bajo este dominio se sirven las imágenes de Twitter, tanto imágenes de perfil como imágenes de contenido generado por el usuario.&lt;/p&gt;
+
+&lt;p&gt;Este bloqueo fue por CANTV, únicamente. Pueden ver los resultados de intentar descargar una imágen y luego hacer &lt;code&gt;traceroute&lt;/code&gt; tanto &lt;a href=&quot;http://pastebin.com/P8h71vTV&quot;&gt;en Inter (que sí funcionó)&lt;/a&gt; como &lt;a href=&quot;http://pastebin.com/E7eYTZNp&quot;&gt;con CANTV (que tenía bloqueado)&lt;/a&gt;. (Si no pueden ver los archivos, es porque pastebin.com aún está siendo bloqueado, como lo es al momento de escribir esto: 04:49:13 UTC-0430).&lt;/p&gt;
+
+&lt;p&gt;Los reportes no fueron aislados y se dejaron sentir por gran cantidad de usuarios. Los reportes confirmaron que sólo CANTV era el ISP con problemas. Al cambiar a Movistar, Digitel e Inter, las imágenes cargaban con normalidad.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/planwac&quot;&gt;William Castillo&lt;/a&gt;, presidente de CONATEL, &lt;a href=&quot;http://laiguana.tv/noticias/2014/02/14/12304/DESDE-TELESUR-WILLIAM-CASTILLO-LE-MANDO-UN-MENSAJE-A-LOS-MEDIOS-INTERNACIONALES.html&quot;&gt;dió declaraciones a Telesur TV&lt;/a&gt; donde afirmó que &lt;em&gt;la falla&lt;/em&gt; se dió en muchos países de latinoamérica también. No consigo fuentes para confirmar eso. Este argumento lo repite CANTV en un comunicado, donde dicen que la falla se dió también en varios países de latinoamérica. Incluso, fuentes mexicanas cubren la censura de las imágenes en Twitter de Venezuela y nunca se menciona que haya habido fallas en México. El comunicado, emitido por CANTV, &lt;a href=&quot;http://www.cantv.com.ve/seccion.asp?pid=1&amp;amp;sid=144&amp;amp;NotID=6460&quot;&gt;repite ese argumento&lt;/a&gt;, sin fuentes.&lt;/p&gt;
+
+&lt;p&gt;Así mismo, &lt;a href=&quot;https://twitter.com/wexler&quot;&gt;Nu Wexler&lt;/a&gt;, &lt;a href=&quot;http://www.linkedin.com/in/nwexler&quot;&gt;portavoz de Twitter&lt;/a&gt;, &lt;a href=&quot;http://www.bloomberg.com/news/2014-02-14/twitter-says-venezuela-blocks-its-images-amid-protest-crackdown.html&quot;&gt;confirmó a Bloomberg que sus imágenes estaban siendo bloqueadas en Venezuela&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Más pruebas de las trazas que muestran a CANTV deteniendo la ruta para llegar a &lt;code&gt;pbs.twimg.com&lt;/code&gt; están &lt;a href=&quot;https://twitter.com/lorissantamaria/status/434153609781981184/photo/1&quot;&gt;aquí&lt;/a&gt; &lt;a href=&quot;https://twitter.com/lorissantamaria/status/434154104621760514&quot;&gt;aquí&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pero los bloqueos no terminan allí, &lt;a href=&quot;https://twitter.com/planwac/status/434388069349748737&quot;&gt;el presidente de CONATEL en su cuenta de Twitter confirma que se han bloqueado varios sitios desde donde se atacan a sitios gubernamentales&lt;/a&gt; y horas después se empiezan a sentir quejas por el bloqueo a &lt;a href=&quot;http://pastebin.com&quot;&gt;pastebin.com&lt;/a&gt;. Pastebin es un sitio donde se comparte texto plano. Desde este sitio no se puede ejecutar ningún ataque. Sin embargo, se confirma que está bloqueado y no sólo por CANTV, sino por Inter también.&lt;/p&gt;
+
+&lt;p&gt;Al hacer trazas y hacer pruebas de resolución de dominio se consigue que: &lt;a href=&quot;https://twitter.com/yondri/status/434456214978564096/photo/1&quot;&gt;CANTV bloqueó&lt;/a&gt; &lt;a href=&quot;https://gist.github.com/ghostbar/9010495&quot;&gt;la resolución del dominio pastebin.com desde sus DNS&lt;/a&gt; (&lt;a href=&quot;https://i.cloudup.com/oyiwqpFsIw-2000x2000.png&quot;&gt;no así resolver &lt;code&gt;pbs.twimg.com&lt;/code&gt; o &lt;code&gt;google.com&lt;/code&gt;&lt;/a&gt;) y que &lt;a href=&quot;https://gist.github.com/ghostbar/9012910&quot;&gt;intentar llegar a la IP mediante una traza es imposible&lt;/a&gt;. Estos servidores DNS son controlados directamente por CANTV. Otros servidores DNS resuelven correctamente el dominio &lt;code&gt;pastebin.com&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ahora, &lt;a href=&quot;http://pastebin.com/4QaK7jag&quot;&gt;Inter no sacó &lt;code&gt;pastebin.com&lt;/code&gt; de sus DNS&lt;/a&gt; sino que &lt;a href=&quot;https://twitter.com/anibalrojas/status/434477751790489600&quot;&gt;únicamente bloqueó&lt;/a&gt; &lt;a href=&quot;https://twitter.com/ghostbar/status/434452582849732608&quot;&gt;la IP&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A todas estas, William Castillo afirma en su perfil de Twitter: &lt;a href=&quot;https://twitter.com/planwac/status/434468976563740672&quot;&gt;«Expertos informáticos d oposiciòn han reconocido hoy en radio q es improbable un bloqueo de Twitter desde Venezuela #GuerraDeDesinformación»&lt;/a&gt;. No sé quiénes serán, pero eso es una mera opinión y la realidad es que en Venezuela, los ISP han estado bloqueando páginas web enteras. Ante los hechos (y no las opiniones) vale la pena hacer saber &lt;a href=&quot;http://www.oas.org/es/cidh/expresion/showarticle.asp?artID=848&amp;amp;lID=2&quot;&gt;la declaración conjunta que hiciesen los relatores sobre libertad de expresión y opinión de las Naciones Unidas el 1 de junio de 2011&lt;/a&gt; (no está demás).&lt;/p&gt;
+
+&lt;p&gt;Para detener ataques informáticos no es necesario bloquear sitios web, mucho menos sitios como pastebin.com que sólo almacenan información. Se detiene con infraestructura sólida, con balance de cargas y contenido distribuido por regiones (CDN). Igualmente usando software con las actualizaciones de seguridad. Pastebin.com es un sitio que sólo almacena información y bloquear información constituye censura.&lt;/p&gt;
+
+&lt;p&gt;La censura es inconstitucional, establecido así en el artículo 57. El bloqueo es un acto de censura. No sólo eso, no hay transparencia sobre qué están bloqueando ni por qué. El mismo artículo 57 de la constitución prohíbe la censura a los funcionarios para dar cuenta de los asuntos bajo sus responsabilidades y la recién aprobada ley de infogobierno en su artículo 13 habla del principio de transparencia y la publicidad máxima que debe dársele a sus actuaciones. Espero que los funcionarios públicos den ejemplo de ciudadanía y hagan cumplir las leyes a cabalidad. Ya hay leyes de delitos informáticos, no es necesario romper una ley (ni la constitución) para hacer cumplir otra.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Serendipities of the day</title>
+          <link>/2014/01/22/serendipity</link>
+          <guid isPermaLink="true">/2014/01/22/serendipity</guid>
+          
+          <pubDate>Wed, 22 Jan 2014 18:31:18 -0500</pubDate>
+          <description>&lt;p&gt;So today has been a fairly good day of serendipities and I thought it would make for an awesome post.&lt;/p&gt;
+
+&lt;p&gt;I&#39;m starting to love having io9.com in my reading-list everyday.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://io9.com/12-of-the-most-astounding-living-fossils-known-to-sci-1506539384&quot;&gt;12 of the most astounding living fossils known to science&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://io9.com/a-white-dwarf-just-exploded-creating-the-closest-super-1506539405&quot;&gt;A white dwarf just exploded and created a supernova&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://io9.com/the-time-gateway-is-open-move-to-neutropolis-before-pr-1506383451&quot;&gt;Futuristic cities concept art&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>The Road to Happiness incluye no usar WordPress</title>
+          <link>/2013/08/26/the-road-to-happiness-incluye-no-usar-wordpress</link>
+          <guid isPermaLink="true">/2013/08/26/the-road-to-happiness-incluye-no-usar-wordpress</guid>
+          
+          <pubDate>Mon, 26 Aug 2013 03:03:23 -0500</pubDate>
+          <description>&lt;p&gt;Ayer hubo una interesante conversa en Twitter sobre WordPress, lo mínimo para correrlo y opciones para &lt;em&gt;gente pobre&lt;/em&gt; (como dijo Faneyth).&lt;a href=&quot;https://twitter.com/phenobarbital/status/371819458421346304&quot;&gt;0&lt;/a&gt; &lt;a href=&quot;https://twitter.com/LuisAlejandro/status/371821008681852930&quot;&gt;1&lt;/a&gt; &lt;a href=&quot;https://twitter.com/zentraedi/status/371821336706166786&quot;&gt;2&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Yo soy exponente de la &lt;em&gt;opción para gente pobre&lt;/em&gt; (LOL) con Jekyll y GitHub Pages. Migré en &lt;a href=&quot;http://ghostbar.co/2012/12/15/switched-to-jekyll/&quot;&gt;diciembre del 2012&lt;/a&gt; y no fué por pobreza exactamente sino porque WordPress (junto con la mayoría de opciones para blogging como Drupal), al menos para mi, no tiene sentido con las tecnologías disponibles actualmente.&lt;/p&gt;
+
+&lt;h2&gt;¿Bases de datos en un blog? ¿Para qué?&lt;/h2&gt;
+
+&lt;p&gt;Esto es algo que no tiene sentido. Si bien las bases de datos ayudan a organizar información de manera ordenada eso es algo que un blog NO necesita. El contenido es estático en su mayoría, lo único dinámico son los comentarios y con lo fácil que es usar un servicio tipo &lt;a href=&quot;http://disqus.com&quot;&gt;Disqus&lt;/a&gt; ya esa información no es necesaria almacenarla en un sistema propio.&lt;/p&gt;
+
+&lt;h2&gt;Usar un CMS es renderizar, una y otra vez la misma cosa. ¿Tiene sentido?&lt;/h2&gt;
+
+&lt;p&gt;En mi opinión es desperdiciar poder de procesamiento. ¿Por qué? Porque es el mismo HTML, una y otra vez, y otra vez, y otra vez. La única forma de cambiar esto es colocando un caché por encima, lo cuál es aún más overhead, más cosas que mantener, menos tiempo para hacer cosas que de hecho sean útiles y no simple &lt;em&gt;mantenimiento&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Seguridad&lt;/h2&gt;
+
+&lt;p&gt;Todos sabemos que un CMS es propenso a tener problemas de seguridad, alguien consigue un bug y lo explota. Con Jekyll y los otros generadores de contenido estático eso no pasa. El problema de seguridad pasa a ser en el hosting y es mucho más fácil controlar un punto que dos.&lt;/p&gt;
+
+&lt;h2&gt;Rapidez&lt;/h2&gt;
+
+&lt;p&gt;Para cualquier servidor tan sólo servir un archivo estático es mucho más rápido que generar un archivo y servirlo.&lt;/p&gt;
+
+&lt;h2&gt;Hacer templates es mucho más sencillo&lt;/h2&gt;
+
+&lt;p&gt;En vez de un día en 1 hora puedes tener todo el template de un blog listo. TODO.&lt;/p&gt;
+
+&lt;h2&gt;Es simple HTML&lt;/h2&gt;
+
+&lt;p&gt;¿Qué más fácil de hacer debugging que de simple HTML?!&lt;/p&gt;
+
+&lt;h2&gt;Extra: GitHub da hosting gratuito&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt; tiene un servicio llamado GitHub Pages el cuál te permite hospedar archivos estáticos y mantenerlos organizados en un repositorio &lt;code&gt;git&lt;/code&gt;. Además, si usas Jekyll puedes simplemente subirlo a GitHub y GitHub Pages los generará y publicará. Además puedes usar dominios personalizados, por lo que al menos que no estés usando un &lt;code&gt;A record&lt;/code&gt; en tu DNS sino un &lt;code&gt;CNAME&lt;/code&gt; o la persona se sepa la IP de GitHub, nadie se dará cuenta que el servidor que lo está sirviendo es de GitHub.&lt;/p&gt;
+
+&lt;p&gt;También puede ser servidor por un simple NGINX o &lt;em&gt;ponga aquí el nombre de su servidor HTTP favorito&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;El tiempo del &lt;em&gt;dynamic blog engine&lt;/em&gt; pasó&lt;/strong&gt;.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>MongoDB: $pull from an embedded document array</title>
+          <link>/2013/08/26/mongodb-pull-from-embedded-document-array</link>
+          <guid isPermaLink="true">/2013/08/26/mongodb-pull-from-embedded-document-array</guid>
+          
+          <pubDate>Mon, 26 Aug 2013 02:43:25 -0500</pubDate>
+          <description>&lt;p&gt;TL;DR:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;    &lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;collection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$pull&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;embedded_doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;small&gt;Queries are wrote for the &lt;code&gt;mongo&lt;/code&gt; shell&lt;/small&gt;&lt;/p&gt;
+
+&lt;h2&gt;Dot based access&lt;/h2&gt;
+
+&lt;p&gt;If you have been using &lt;a href=&quot;http://mongodb.org&quot;&gt;MongoDB&lt;/a&gt; for some time, then there are big chances that you will know the &quot;dot-based access&quot; on the &lt;code&gt;find&lt;/code&gt; queries. This is the easier way to write those queries and will probably want to keep using that. Like:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;    &lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;collection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;embedded_doc._id&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The thing is that does not work with everything, like: Arrays of embedded documents!&lt;/p&gt;
+
+&lt;h2&gt;Little example schema&lt;/h2&gt;
+
+&lt;p&gt;Let&#39;s suppose the following little schema (written for &lt;a href=&quot;http://mongoosejs.com&quot;&gt;Mongoose&lt;/a&gt;):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;    &lt;span class=&quot;nx&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Schema&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Schema&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;embedded_doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The collection of &lt;code&gt;Document&lt;/code&gt; is called &lt;code&gt;documents&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Updating arrays&lt;/h2&gt;
+
+&lt;p&gt;If the arrays are not embedded documents I can actually just use a regular &lt;code&gt;update&lt;/code&gt; like with any other field combined with a &lt;code&gt;$set&lt;/code&gt; and change all the array like:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;    &lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;documents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; 
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; 
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;]}}})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And using conveniently &lt;code&gt;$pull&lt;/code&gt; and &lt;code&gt;$addToSet&lt;/code&gt;. But when it comes to embedded documents the history is very different. You can&#39;t make a simple &lt;code&gt;$set&lt;/code&gt; because it will give you an error related to &lt;code&gt;ModId&lt;/code&gt; which you can&#39;t change. So you really need to use &lt;code&gt;$push&lt;/code&gt;, &lt;code&gt;$addToSet&lt;/code&gt;, &lt;code&gt;$pull&lt;/code&gt; and it&#39;s friends.&lt;/p&gt;
+
+&lt;p&gt;So all those you can do it as in the manual, but what if you want to make a &lt;code&gt;$pull&lt;/code&gt; over an array of objects and &lt;code&gt;w&lt;/code&gt; and &lt;code&gt;x&lt;/code&gt; are not unique? Well, that&#39;s why you probably made them an embedded document! Then you have the &lt;code&gt;_id&lt;/code&gt; and you try to use the dot notation like:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;    &lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;documents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$pull&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;embedded_doc._id&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And it looks good, except that it wont work. You have to use the complete syntax like:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;    &lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;documents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$pull&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;embedded_doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Too many authentication failures on SSH</title>
+          <link>/2013/08/22/too-many-authentication-failures-ssh</link>
+          <guid isPermaLink="true">/2013/08/22/too-many-authentication-failures-ssh</guid>
+          
+          <pubDate>Thu, 22 Aug 2013 21:08:25 -0500</pubDate>
+          <description>&lt;p&gt;It seems like having several SSH keys on the same system starts giving issues with some SSH servers. The issue is that while connecting it returns:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Too many authentication failures for xxxxxx.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The fix for this is very simple and quick. Open up your &lt;code&gt;~/.ssh/config&lt;/code&gt; and put:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;IdentitiesOnly yes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can add that per-host or wide (without indents, even as the first line in the config file!).&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Starting a Raspbery Pi without a display</title>
+          <link>/2013/08/22/starting-raspberry-without-display</link>
+          <guid isPermaLink="true">/2013/08/22/starting-raspberry-without-display</guid>
+          
+          <pubDate>Thu, 22 Aug 2013 02:12:22 -0500</pubDate>
+          <description>&lt;p&gt;Recently (actually 3 weeks ago) &lt;a href=&quot;http://instagram.com/p/cdELMsNxk-/&quot;&gt;I bought a Raspberry Pi for myself&lt;/a&gt; and it wasn&#39;t until today that I power it on by the first time. Call it RealLife™ for simplicity.&lt;/p&gt;
+
+&lt;p&gt;Anyway, one of my first issues was that I do not own any display with RCA or HDMI inputs, and all I have is a router that works as my WiFi hotspot as well. Since this starter kit comes with &lt;a href=&quot;http://raspbian.org&quot;&gt;Raspbian&lt;/a&gt; by default I made some research and found that the default &lt;code&gt;user:password&lt;/code&gt; is &lt;code&gt;pi:raspberry&lt;/code&gt;, &lt;code&gt;ssh-server&lt;/code&gt; is on by default and the network interface &lt;code&gt;eth0&lt;/code&gt; tries to grab an IP automatically via DHCP.&lt;/p&gt;
+
+&lt;p&gt;So starting my Raspberry Pi was as easy as connect a wire to my device and the router, then a quick &lt;code&gt;nmap -sP 192.168.0.0/24&lt;/code&gt; and there it was, under the hostname &lt;code&gt;raspberry&lt;/code&gt; my brand new raspberry.&lt;/p&gt;
+
+&lt;p&gt;After a &lt;code&gt;ssh pi@192.168.0.X&lt;/code&gt; a nice &lt;code&gt;raspi-conf&lt;/code&gt; was receiving me to start setting up my device.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>postinstall script on heroku with different environment than production</title>
+          <link>/2013/05/16/postinstall-script-on-heroku-with-env-different-to-production</link>
+          <guid isPermaLink="true">/2013/05/16/postinstall-script-on-heroku-with-env-different-to-production</guid>
+          
+          <pubDate>Thu, 16 May 2013 00:00:00 -0500</pubDate>
+          <description>&lt;p&gt;While trying to push a little project to &lt;a href=&quot;http://heroku.com&quot;&gt;Heroku&lt;/a&gt; based on &lt;a href=&quot;http://brunch.io&quot;&gt;Brunch&lt;/a&gt;, I ran into a difficult problem: I needed to move some files according to the environment being built, so, if it was &lt;code&gt;staging&lt;/code&gt; should &lt;code&gt;mv&lt;/code&gt;/&lt;code&gt;cp&lt;/code&gt; a different set of files than if were &lt;code&gt;production&lt;/code&gt;. I used &lt;code&gt;npm&lt;/code&gt;&#39;s &lt;code&gt;postinstall&lt;/code&gt; script field and everything ran OK, until I saw that it actually was copying the &lt;code&gt;production&lt;/code&gt; files.&lt;/p&gt;
+
+&lt;p&gt;After digging a lot, I saw the reason: Heroku uses &lt;em&gt;buildpacks&lt;/em&gt; and the Node.js buildpack runs &lt;code&gt;npm install --production&lt;/code&gt; which forces &lt;code&gt;NODE_ENV&lt;/code&gt; to be production. Not only that, it actually runs the script in an isolated shell, so all the configs you pass to heroku via &lt;code&gt;heroku config:set&lt;/code&gt; are not available. You can customize this buildpack, so I went ahead, &lt;a href=&quot;https://github.com/eserre/heroku-buildpack-nodejs-staging&quot;&gt;forked the buildpack&lt;/a&gt; and made a simple addition: added a &lt;code&gt;REAL_ENV=staging&lt;/code&gt; variable to the &lt;code&gt;bin/compile:46&lt;/code&gt; and made the scripts that are being launched from &lt;code&gt;postinstall&lt;/code&gt; to check &lt;code&gt;REAL_ENV&lt;/code&gt; instead of &lt;code&gt;NODE_ENV&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Why not use &lt;code&gt;NODE_ENV&lt;/code&gt; directly? Because my tests showed my that &lt;code&gt;npm install --production&lt;/code&gt; forces &lt;code&gt;NODE_ENV&lt;/code&gt; and got it rewritten.&lt;/p&gt;
+
+&lt;p&gt;After this change, using this buildpack was pretty easy, just:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;heroku config:set BUILDPACK_URL=https://github.com/eserre/heroku-buildpack-nodejs-staging
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Done, push and get it rebuilt.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Desde el CENIT anuncian plan de Retroceso Tecnológico para las universidades</title>
+          <link>/2013/05/10/desde-el-cenit-anuncian-plan-de-retroceso-tecnologico</link>
+          <guid isPermaLink="true">/2013/05/10/desde-el-cenit-anuncian-plan-de-retroceso-tecnologico</guid>
+          
+          <pubDate>Fri, 10 May 2013 00:00:00 -0500</pubDate>
+          <description>&lt;p&gt;&lt;strong&gt;Actualización [2013-05-11 14:31:11 UTC-0430]&lt;/strong&gt;: Justamente 1 día antes de producirse esta noticia en Venezuela, en Chile anuncia el &lt;a href=&quot;http://www.reuna.cl/index.php/es/noticias-nuestros-socios/2308-reuna-cuadruplico-su-capacidad-de-conexion-a-las-redes-internacionales&quot;&gt;REUNA (el Reacciun chileno) que cuadruplicaron su capacidad hasta 1.35Gbps &lt;strong&gt;hacia el extranjero&lt;/strong&gt;&lt;/a&gt; para que los investigadores y científicos tengan más con que trabajar, así como anunciaron que han unido más universidades con IXPs locales.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Actualización [2013-05-10 22:22:16 UTC-0430]&lt;/strong&gt;: Para entender un poco más de cómo funciona el internet pueden ver &lt;a href=&quot;https://www.youtube.com/watch?v=a5837LcDHfE&quot;&gt;este vídeo precisamente sobre IXP y de donde sale el internet junto a sus interconexiones&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hoy ha salido a relucir, gracias a &lt;a href=&quot;https://twitter.com/uraisa&quot;&gt;@uraisa&lt;/a&gt;, que &lt;a href=&quot;http://periodistasandinos.blogspot.com/2013/05/el-cenit-reducira-el-ancho-de-banda-las.html&quot;&gt;el CENIT reducirá el ancho de banda a las universidades venezolanas&lt;/a&gt;, mediante orden de la OPSU.&lt;/p&gt;
+
+&lt;h2&gt;Un poco de background sobre la red universitaria&lt;/h2&gt;
+
+&lt;p&gt;El CENIT ofrece -- entre varios otros servicios -- un enlace dedicado a la Red Académica venezolana llamada &lt;a href=&quot;http://www2.reacciun.ve/&quot;&gt;Reacciun&lt;/a&gt;. Esta red es lo que se llama un &lt;a href=&quot;https://en.wikipedia.org/wiki/National_research_and_education_network&quot;&gt;NREN&lt;/a&gt;, un ISP dedicado a apoyar las &lt;strong&gt;necesidades&lt;/strong&gt; de las comunidades de investigación y educación en un país.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;No entiendo cómo degradar un servicio apoya las necesidades de comunidad alguna, mucho menos de investigación y educación donde más bien se necesita estar adelantados al resto de los servicios para permitir la innovación&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2&gt;La excusa&lt;/h2&gt;
+
+&lt;p&gt;Según un monitoreo que hicieron desde la OPSU, aún sin publicar, se subutiliza el ancho de banda y debido a eso decidieron «&lt;em&gt;sincerar&lt;/em&gt;» su uso, porque muchas universidades no lo «&lt;em&gt;aprovechan adecuadamente&lt;/em&gt;».&lt;/p&gt;
+
+&lt;h2&gt;¿Pero qué es el ancho de banda digital?&lt;/h2&gt;
+
+&lt;p&gt;El ancho de banda es la capacidad máxima de transferencia entre un punto y otro. Esta capacidad depende de la infraestructura instalada, por lo cuál el ancho de banda en una red hogareña &lt;strong&gt;cableada&lt;/strong&gt; suele estar entre los 10Mbps y los 100Mbps, pero cuando hacemos uso del internet nuestro ISP limita el ancho de banda basado en cuanto hemos contratado y esos planes están limitados por su &lt;strong&gt;propia capacidad instalada&lt;/strong&gt;. Es decir, para que CANTV mejore sus planes tiene que crear una mejor infraestructura &lt;strong&gt;y&lt;/strong&gt; comprar más tráfico a algún Internet Transit Provider o crear un enlace a algún Internet Exchange Point (o IXP, el cuál suele salir mucho más barato que un Internet Transit Provider, pues consiste en hacer peering en una infraestructura común y evitar pasar por un Transit Provider).&lt;/p&gt;
+
+&lt;p&gt;Ahora, si Reacciun es una red propia, con una capacidad de ancho de banda &lt;strong&gt;instalada ya&lt;/strong&gt;, suficiente para proveer el actual ancho de banda, y el Internet Transit Provider o IXP limita es la cantidad de datos consumidos y no el ancho de banda, que está limitada sí por la capacidad instalada en el enlace Reacciun/ISP ➜ ITP/IXP (es decir, cuánta data por segundo aguanta el cable que conecta Reacciun a su proveedor de tráfico), ¿entonces cuál es la verdadera razón para bajar el ancho de banda?&lt;/p&gt;
+
+&lt;h2&gt;¿Por qué no más bien se conectan a otro IXP o cobran bajo consumo?&lt;/h2&gt;
+
+&lt;p&gt;Es difícil ver un aumento en el costo de mantener una infraestructura ya montada, siendo el costo mayor siempre la creación y no el mantenimiento.&lt;/p&gt;
+
+&lt;p&gt;Si se está cobrando por un servicio donde sobra capacidad significa que se está cobrando demás, deberían más bien bajar los precios ¿no? O invertir ese extra en conectarse a otro IXP y aumentar el tráfico por peering y abaratar aún más los costos mientras se mejora el servicio.&lt;/p&gt;
+
+&lt;p&gt;O incluso, para sincerar, cobren simplemente por consumo y no por ancho de banda, dejen que las universidades puedan conectarse tan rápido como les permita su hardware.&lt;/p&gt;
+
+&lt;h2&gt;¿Por qué no mejor implementan IPv6?&lt;/h2&gt;
+
+&lt;p&gt;Son un NREN, deberían estar adelantados. Más cuando sus clientes son tan pocos a nivel tal que pueden reunirse con todos ellos en una sala.&lt;/p&gt;
+
+&lt;h2&gt;¿Por qué propongo mejorar el ancho de banda?&lt;/h2&gt;
+
+&lt;p&gt;Porque es falso que las universidades no la usen, más bien ha sido una limitante constante. Raisa muy bien lo dice en su artículo y cuando fui estudiante en la UNET también era un punto que surgía una y otra vez al proponer servicios con salida al internet.&lt;/p&gt;
+
+&lt;p&gt;Les explico: proponer un repositorio Debian al que se tenga acceso desde la internet en una universidad venezolana es casi prohibitivo, sólo la ULA tiene uno. Mientras que en otros países es precisamente la academia la que ha prestado apoyo a la comunidad open source para replicarse y tener infraestructura donde desarrollarse.&lt;/p&gt;
+
+&lt;p&gt;De igual forma, la limitación de ancho de banda ha hecho que en muchas universidades se apliquen reglas de calidad del servicio para evitar el abotellamiento de paquetes en la red.&lt;/p&gt;
+
+&lt;p&gt;¿Y nos van a decir que no se usa? ¡Si más bien la poca que hay es una enorme limitante para más y mejores desarrollos!&lt;/p&gt;
+
+&lt;h1&gt;Degradar un servicio es retrógrado&lt;/h1&gt;
+
+&lt;p&gt;Es retrógrado degradar un servicio, es retrógrado ofrecer peor conexión, es retrógrado cuando hay más y más data cada vez rondando en la internet. Es retrógrado cuando entramos en la era de la BigData y no se puede hacer uso de ella porque nos están limitando más en vez de ampliar capacidad. Es retrógrado porque la capacidad instalada para soportar esto &lt;strong&gt;ya está instalada&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Es retrógrado, es absurdo y habla mucho de las intenciones del gobierno para con las universidades: atraso.&lt;/strong&gt;&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Ley de Infogobierno: ley a medida del gobierno</title>
+          <link>/2013/05/07/ley-a-medida-del-gobierno-ley-infogobierno</link>
+          <guid isPermaLink="true">/2013/05/07/ley-a-medida-del-gobierno-ley-infogobierno</guid>
+          
+          <pubDate>Tue, 07 May 2013 23:23:17 +0000</pubDate>
+          <description>&lt;p&gt;&lt;strong&gt;Actualización 2013-05-08 13:19:26 UTC-0430&lt;/strong&gt;: Erróneamente dije que desde el 2013 la Ley del Registro Civil contempla la digitalización del registro civil, es desde finales de 2009, fecha en la cuál fue aprobada la ley.&lt;/p&gt;
+
+&lt;p&gt;Mi intención desde el principio era asistir a las discusiones públicas del proyecto de Ley de Infogobierno, pero dado que la fecha se aproxima y mi agenda no se desocupa, no podré estar.&lt;/p&gt;
+
+&lt;p&gt;A pesar de eso, estoy condensando mis observaciones en este post para que, idealmente, lo lean en las discusiones públicas que se den.&lt;/p&gt;
+
+&lt;h2&gt;¿Basado en software libre?&lt;/h2&gt;
+
+&lt;p&gt;Lo primero que me preocupa es el uso de la frase «&lt;em&gt;basado en software libre&lt;/em&gt;» en vez de «&lt;em&gt;ser software libre&lt;/em&gt;». El software usado en la administración pública venezolana &lt;strong&gt;tiene que ser software libre&lt;/strong&gt;, no basado. ¿Por qué no dejar el «basado en»? Porque hay licencias de software libre como la MIT y la BSD que permiten el relicenciamiento de código derivado a cualquier otra licencia, entre las cuáles se incluyen licencias cerradas.&lt;/p&gt;
+
+&lt;p&gt;Igualmente, el artículo 12 debería obligar a la &lt;em&gt;autoridad competente&lt;/em&gt; a publicar ese registro de programas informáticos que poseen los poderes públicos venezolanos, en conjunto con su licenciamiento y proveedores. Esto es vital sobretodo en las excepciones que permite el artículo 51. Necesitamos transparencia, necesitamos saber qué software se está usando que no es software libre y qué razones se dieron. Igualmente se necesita un mecanismo para apelar estas excepciones previamente y posterior a su otorgamiento.&lt;/p&gt;
+
+&lt;p&gt;(Artículo 35)&lt;/p&gt;
+
+&lt;h2&gt;Sobre la &quot;transferencia del conocimiento asociado para su comprensión&quot;&lt;/h2&gt;
+
+&lt;p&gt;Hay una apreciación errónea sobre las libertades en los programas libres, en la ley aparece repetidamente la frase «&lt;em&gt;y la transferencia del conocimiento asociado para su comprensión&lt;/em&gt;» en conjunto con la definición de software libre. Esto no es cierto y de hecho se contradice con lo escrito en muchas licencias de software libre, que el software es entregado «&lt;em&gt;AS IS&lt;/em&gt;», sin garantías de que funcione y con cláusula de desprendimiento de responsabilidad en caso de que algo funcione mal y cree un gran problema (o incluso un pequeño problema). Además transferir el conocimiento asociado para su comprension requeriría que el programa el enseñara a las personas a programar, pues si alguien no programa no lo comprenderá, o hacer una documentación extensiva de la aplicación lo cuál no es cierto. Entiendo que esto esta incluído en la multitud de contratos que ha tenido el gobierno con proveedores, pero ahí es donde pertenece, en los contratos, no en la ley de infogobierno, mucho menos en las deficiones sobre software libre.&lt;/p&gt;
+
+&lt;p&gt;El artículo 36 incluso lo dice explícitamente como parte de las «&lt;em&gt;Licencias&lt;/em&gt;», cuestión que en ninguna licencia de software libre actual podrán encontrar.&lt;/p&gt;
+
+&lt;p&gt;(Artículo 36)&lt;/p&gt;
+
+&lt;h2&gt;Queremos más transparencia&lt;/h2&gt;
+
+&lt;p&gt;Lo poco que llegamos a ver sobre transparencia no obliga en ninguna forma a nadie a publicar. No sólo no obliga sino que en las partes donde no se limita a citar una ley que regula el acceso a la información pública, lo que hace es pedir a burócratas quienes históricamente no han sido transparentes en sus actuaciones a que promuevan la transparencia (41.5); por lo que tendremos que unirnos a las propuestas de &lt;a href=&quot;http://espaciopublico.org&quot;&gt;Espacio Público&lt;/a&gt; y &lt;a href=&quot;http://transparencia.org.ve&quot;&gt;Transparencia Venezuela&lt;/a&gt; para lograr más en ese campo, quienes ya entregaron un proyecto de Ley Orgánica de Transparencia y Acceso a la Información Pública.&lt;/p&gt;
+
+&lt;h2&gt;¿Cómo es la cooperación?&lt;/h2&gt;
+
+&lt;p&gt;El artículo 30 habla del principio de cooperación entre el Poder Público y el Poder Popular, sin embargo, nada dice de cómo debe ejercerse esto. Dejar este tema para el reglamento de la ley es excluir al poder popular de voz al momento de establecer los mecanismos para esta cooperación. Ha sido histórico el conflicto Poder Popular vs. Poder Público en este tema, incluso entre grupos del mismo factor político, por lo que establecer de inmediato en la ley, que es consultada al pueblo, los mecanismos daría certeza y una gran muestra de verdadero deseo cooperativo.&lt;/p&gt;
+
+&lt;h2&gt;Es excluyente&lt;/h2&gt;
+
+&lt;p&gt;Y este no es un problema de esta ley nada más, es un problema de interpretación de quién es el Poder Popular. Según la interpretación del gobierno nacional y la mayoría de los gobiernos regionales el Poder Popular sólo está representado mediante los consejos comunales y las comunas. Aquí quedan por fuera las comunidades organizadas en esquemas diferentes a consejo comunal/comuna, mucho menos las ONGs. Esto hace que la colaboración y cooperación entre pueblo y gobierno se vea limitado a solo los que componen y coinciden en ese «Poder Popular». Se está excluyendo a los que no participan y se deja de apreciar las cooperaciones por su valor para pasar a apreciarse por su origen.&lt;/p&gt;
+
+&lt;h2&gt;Del comité de tecnología sin tecnólogos&lt;/h2&gt;
+
+&lt;p&gt;El anteproyecto contempla la creación de un Comité Nacional para el Uso de Tecnologías de Información, cuyo fin sería promover y consolidar el uso y aprovechamiento de las TI en la APN. ¿Quienes espera uno que conformen ese comité? &lt;strong&gt;Personas expertas en promover el uso y expertas en uso de TI&lt;/strong&gt;, sin embargo, está conformado por burócratas que si acaso serán usuarios casuales de TI, y que de todos sólo uno es de la materia de TI (el Ministro con competencia en tecnología de información).&lt;/p&gt;
+
+&lt;p&gt;¿Qué puede lograr un comité que no tiene ni idea de lo que le corresponde promover? Y no es sólo promover, ¡inclusive le corresponde «&lt;em&gt;establecer lineamientos y estrategias pra el desarrollo de las tecnologías de información&lt;/em&gt;»! (41.2)&lt;/p&gt;
+
+&lt;p&gt;Sí, hay «unidades de apoyo», pero ¿por qué no son esas unidades de apoyo los miembros permanentes de ese comité y los que toman las decisiones? ¿Por qué hay que seguir dependiendo de la cima de la pirámide jerárquica para tomar decisiones si la idea es ir aplanando esa pirámide y volver las decisiones tan horizontales como sean posibles? ¿Por qué darle más funciones a burócratas que &lt;strong&gt;ya&lt;/strong&gt; no son capaces de cumplir a cabalidad con las funciones que tienen asignadas? ¿Qué eficiencia se puede esperar entonces?&lt;/p&gt;
+
+&lt;p&gt;Y si la excusa es que se necesitan tomar decisiones políticas entonces les recuerdo que las cabezas de los ministerios no se llenan con personas capaces en la materia sino ya están son personas que tomen decisiones políticas y no técnicas, los técnicos son los asesores.&lt;/p&gt;
+
+&lt;p&gt;(Artículo 39 en adelante).&lt;/p&gt;
+
+&lt;h2&gt;Los conflictos de competencia&lt;/h2&gt;
+
+&lt;p&gt;El capítulo I del título III tiene conflicto &lt;strong&gt;absoluto&lt;/strong&gt; con el capítulo II del mismo título (inclusive con el capítulo III donde habla del CNTI). Este segundo capítulo empodera con capacidad de decisión al ministerio con competencia en tecnologías de información, sin embargo, tiene mucha de las mismas competencias que el comité de tecnología sin tecnólogos.&lt;/p&gt;
+
+&lt;p&gt;Sin competencias claras no es que se hacen las cosas 2 y 3 veces sino que ¡&lt;strong&gt;no se hacen y se tienen 2 y 3 excusas&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;h2&gt;Queremos privacidad&lt;/h2&gt;
+
+&lt;p&gt;En la ley se menciona que todas las actuaciones se harán bajo el respeto a la vida privada y confidencialidad de los ciudadanos, sin embargo, esto sólo es demostrable si las actuaciones del poder público son auditables. Más cuando el artículo 53 en su numeral 9 permite a la SUSCERT «Extraer, revisar y analizar las trazas y bitácoras de equipos y herramientas de redes.», siendo evidente que estas incluyen las de CANTV y probablemente cualquier otro ISP. Tiene que ser pública la razón de esa extracción de datos así como la información a menos que amerite ser privado. La única forma de que se extraiga información privada sobre un ciudadano debería ser por solicitud judicial y para atender una causa ya en proceso.&lt;/p&gt;
+
+&lt;h2&gt;Sobre la homologación de equipos y aplicaciones con soporte criptográfico&lt;/h2&gt;
+
+&lt;p&gt;Aquí hace falta ser más explícito. Dice que la certificación tendrá una duración de tres años pero ¿esto soporta cambio de versiones? ¿Qué cambios se cubren y qué cambios no? ¿Qué hace que una aplicación o equipo califique para que se haga de nuevo la revisión para la homologación?&lt;/p&gt;
+
+&lt;h2&gt;Correcciones menores&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Artículo 5.2: Documento electrónico no es un documento digitalizado, es un documento digital.&lt;/li&gt;
+&lt;li&gt;Artículo 27: la certificación solicitada para documentos que deberían ser impresos por ley debe aplicar a todos los documentos electrónicos, incluso aquellos que no estén destinados por ley a ser impresos. Otorgar una certificación y un repositorio digital desde donde se pueda bajar una copia para la comprobación de su autenticidad es básica para dejar atrás el ciclo del papel.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;Finalmente&lt;/h2&gt;
+
+&lt;p&gt;Queremos &lt;strong&gt;realidades&lt;/strong&gt;, no leyes bonitas. Desde el 2009 la Ley del Registro Civil contempla la digitalización del registro civil venezolano, la otorgación de un número único de identidad desde el nacimiento a los venezolanos y la vacatio legis era de 12 meses apenas.&lt;/p&gt;
+
+&lt;p&gt;Ya es mitad del año 2013 y nada de esto está si quiera en los planes de los burócratas.&lt;/p&gt;
+
+&lt;p&gt;No queremos una ley que esté hecha a medida del gobierno, un gobierno que le encanta la propaganda, firmar papelitos y mostrarlos como hechos. Queremos hechos que se hagan conocidos porque son &lt;strong&gt;realidad&lt;/strong&gt; no porque los repiten y los repiten en los micros del gobierno pero que al ir a una institución pública no tienen ni idea de qué se les está hablando. (Que es lo que pasa con los registros y la ley del Registro Civil).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Comentarios a &lt;a href=&quot;https://twitter.com/joseluisrivas&quot;&gt;@joseluisrivas&lt;/a&gt; o &lt;a href=&quot;https://twitter.com/ghostbar&quot;&gt;@ghostbar&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Less Swap</title>
+          <link>/2013/01/27/less-swap</link>
+          <guid isPermaLink="true">/2013/01/27/less-swap</guid>
+          
+          <pubDate>Sun, 27 Jan 2013 12:26:02 +0000</pubDate>
+          <description>&lt;p&gt;My old X61 has 2G in RAM and 3G in Swap. It seems my using-habit for Google Chrome is heavy (more than 20 tabs open most of the time) so my swap is normally being used above the 1.8G-mark. That means, my disk is constantly being written and read, and since this is the original hard-drive scare comes to my mind: &lt;em&gt;will I blow-up my disk if I continue doing this?&lt;/em&gt; and the heat this disk-use&#39;s generating was absurd.&lt;/p&gt;
+
+&lt;p&gt;That&#39;s not good, at all, I prefer having cache used than swap; in Venezuela is not that easy to get a good sale on hard-drives (you know, is hard to get dollars here, since is illegal to buy them unless the govt gives you permission).&lt;/p&gt;
+
+&lt;p&gt;So the first thing that comes to my mind is &lt;code&gt;sysctl&lt;/code&gt;. If I wanted to cofigure swap it would be with a kernel parameter. So running &lt;code&gt;sysctl -a | grep swap&lt;/code&gt; throws me &lt;code&gt;vm.swappiness = 60&lt;/code&gt;, and a little google search tells me more about it.&lt;/p&gt;
+
+&lt;p&gt;If the swappiness is close to 0 then it will use the swap only if it is really necessary, if it is close to 100 then it will use the swap aggressively. Mine was at 60, and it was really aggressive.&lt;/p&gt;
+
+&lt;p&gt;The next steps for me was doing &lt;code&gt;sudo echo &#39;vm.swappiness = 1&#39; &amp;gt;&amp;gt; /etc/sysctl.conf &amp;amp;&amp;amp; sudo sysctl -p&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now my system is really smooth and using Chrome + Terminal + Tmux + Rhythmbox is acceptable.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Sobre las Tecnologías Libres</title>
+          <link>/2013/01/23/sobre-las-tecnologias-libres</link>
+          <guid isPermaLink="true">/2013/01/23/sobre-las-tecnologias-libres</guid>
+          
+          <pubDate>Wed, 23 Jan 2013 15:54:40 +0000</pubDate>
+          <description>&lt;p&gt;Ayer el diputado Leomagno Flores ha dado unas lamentables palabras en la 2da. Discusión de la Ley de Infogobierno en la Asamblea Nacional de Venezuela:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;(...) El Software Libre es la dictadura de un sistema informático, violando el principio básico de la neutralidad tecnológica (...)&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Lo que es más triste del caso es que él es el presidente de la Comisión de Ciencia y Tecnología de la Asamblea Nacional. ¿Cómo puede haber tanta ignorancia en una sola frase? Aprovechando que es de Táchira le ofrecí, a través del único medio de comunicación que tiene público -- su twitter --, ir a su despacho y explicarle mejor qué es el software libre y pueda estar mejor informado, pero no ha respondido. Quizás pensó que era una amenaza, luego de la cayapa que le han dado (y no es que no se la merezca). Por eso aprovecho a explicarle por este medio a él, y a cualquiera que llegue a leer, qué es el software libre y las tecnologías libres; así como los beneficios que supondrían para cualquier país.&lt;/p&gt;
+
+&lt;h2&gt;Un poco de contexto&lt;/h2&gt;
+
+&lt;p&gt;El Software Libre está muy atado a la cultura hacker y al internet desde sus inicios¹. Algo que diferencia a las comunidades hackers de otro tipo de comunidades es que tienen una cultura de compartir conocimiento e información, pues después de todo, un hacker es alguien ávido de conocimiento especializado. Los inicios de esta cultura hacker podemos establecerla en 1961 en el MIT, cuando adquirieron la primera PDP-1. Estos primeros hackers se convertirían en el Laboratorio de Inteligencia Artificial del MIT y gracias a la red ARPA se extendió su influencia por todo EEUU y el mundo por el año 1969. Gracias a esta red, pudieron compartir información entre laboratorios y el Laboratorio de AI de Stanford así como el de Carnegie-Mellon pasaron a ser casi tan importantes como el notorio LAI del MIT.&lt;/p&gt;
+
+&lt;p&gt;Estos hackers para aprovechar al máximo las PDP-10 que producía NEC empezaron a hacer sus propios sistemas operativos (compitiendo y colaborando entre ellos), y gracias a esto lograron generar técnicas innovadoras que marcan muchos principios de cómo funcionan nuestras computadoras hoy en día. De ahí también salió UNIX, sistema operativo en el que se basan todos los sistemas operativos hoy en día menos Windows, y quien lo hizo su misión era poder usarlo desde afuera de los laboratorios.&lt;/p&gt;
+
+&lt;p&gt;Estas personas compartieron información y conocimiento para crear cosas mejores, fuera de las imposiciones de los creadores de hardware, el cuál definitivamente sería una dictadura de un sistema informático.&lt;/p&gt;
+
+&lt;h2&gt;¿En qué resultó todo eso?&lt;/h2&gt;
+
+&lt;p&gt;Hoy en día esto ha devengado en 2 grandes movimiento, el del Free Software Foundation y el de la Open Source Initiative. Ambos promueven el conocimiento libre, pero tienen filosofías y culturas diferentes. Uno defiende el software libre por sus libertades, otro por las ventajas prácticas que traen al modelo de desarrollo del software. ¿Ve qué dictadura es esta?&lt;/p&gt;
+
+&lt;p&gt;Un desarrollo posterior de UNIX es Linux, que hoy en día cuenta con una fundación para apoyar su desarrollo donde entre sus patrocinantes se cuentan: Fujitsu, HP, NEC, Intel, IBM, Samsung, Cisco, Google, Sony, Toyota, Nokia, Adobe, Dell, JPMorgan, Siemens, Motorola y &lt;a href=&quot;http://www.linuxfoundation.org/about/members&quot;&gt;muchísimos más&lt;/a&gt;. Y Linux es apenas una parte de lo que ha significado avances como Android y ¡el Internet!. Internet no habría sido posible de no haber sido por filosofías como esta, que aún ayudan y mantienen el desarrollo de la internet y sus protocolos ¿Ve qué dictadura es esta? Es una donde los gobiernos no intervienen, porque no pueden, a pesar de que lo han intentado. Usted hoy puede conseguir software libre en EEUU y en Siria, a pesar de haber un bloqueo económico entre estas naciones. De hecho, parte del objetivo de otros movimientos de hackers como el cypherpunk consistió en hacktivismo para eliminar absurdos como estos que los políticos tan &lt;em&gt;amablemente&lt;/em&gt; interponen a los ciudadanos para ayudar al absurdo de sus gestiones. ¿Se fija quién promueve la neutralidad tecnológica? No han sido los gobiernos desde sus leyes sino las personas desde sus actividades en comunidades como la del software libre. Ahora, que usted diga que el software libre viola &lt;em&gt;el principio de la neutralidad tecnológica&lt;/em&gt;. ¿De dónde ha sacado eso?&lt;/p&gt;
+
+&lt;p&gt;Primero, hay diferentes acepciones de &lt;em&gt;neutralidad tecnológica&lt;/em&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Como actitud de proveedores de información (gobiernos, empresas, individuos)&lt;/strong&gt;, es donde se usan formatos y protocolos de libre acceso a todas las personas, de tal forma que no se limita el acceso de estas personas a la información por no contar con cierta tecnología proveída por X organización o individuo. Hay muchísimos formatos libres que permiten que esto no suceda, como ODT, HTML, ePUB, XML. Como verá, esto es vital para un gobierno, pues todos sus ciudadanos deben ser capaces de acceder a la información sin necesidad de tecnologías especiales para hacerlo.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Como función política del software (esto es parte del pensamiento determinista sobre la tecnología)&lt;/strong&gt;, hay algunos que consideran el software y tecnologías libres en general son parte de un modelo político y resultado de ello, entre esos están muchos de los que promueven el software libre dentro de la administración pública nacional. Como en todo, hay desacuerdos, y yo me cuento entre aquellos que está en desacuerdo con este concepto. Para resumir mi posición, en español lo neutro se define como aquello indiferente a la política o que se abstiene de interferir en ella, y la tecnología, en una sociedad abierta y globalizada como la que tenemos actualmente, sugerir determinismos regionales en base a respuestas globales, en las cuáles además los determinismos necesarios se presentan en pocos lugares de donde se han desarrollado gran parte de estas tecnologías no están presentes, lo considero un absurdo. La tecnología es neutra, pues quien le da sentido político es el individuo que la implementa. El software libre ha sido desarrollado tanto por intereses altruistas como por intereses económicos, y no se ha hecho diferenciación entre ellos. Por lo tanto, por más argumentación que se haga al respecto, la realidad demuestra algo de manera constante y repetible: la tecnología no forma parte de corriente política alguna. Les recuerdo que modelos &lt;em&gt;comunales&lt;/em&gt; ya habían desarrollado tecnologías y no se había desarrollado culturas de compartir información, por el contrario, se consideraban secretos de Estado. La mejor demostración de que la tecnología es neutra en moralidad y política es que se puede usar una llave GPG para enviar información cifrada para hacer un acto terrorista así como para simplemente enviar una carta de amor, y la tecnología no hace diferencias entre esto, ni previo al uso ni durante.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;¿Y ahora qué?&lt;/h2&gt;
+
+&lt;p&gt;Venezuela está en un momento crítico en su política. Los unos dicen apoyar el software libre y la sociedad del conocimiento libre pero no son capaces de darnos presupuestos explicativos a los ciudadanos de en qué gastaron los reales (ni siquiera datos en frío, sin procesar); y los otros quieren transparencia pero están en contra del conocimiento libre. Lo quieren para ellos solos.&lt;/p&gt;
+
+&lt;p&gt;Hay países en las que esto ha sido tomado en serio y se han concretado hubs de data como &lt;a href=&quot;http://data.gov.uk&quot;&gt;data.gov.uk&lt;/a&gt; donde se publica información del gobierno de cuantos datasets se consigan y puedan hacerse públicos. Aquí en CNE ni siquiera es capaz de lanzarnos los resultados en un simple CSV. En EEUU las elecciones de la Casa de Representantes (la cámara baja del poder legislativo) es accesible en tiempo real vía un API. Aquí liberan información, pero no la concerniente a su gestión como gobierno y esa es la que le concierne principalmente como gobierno. Incluso, cuando alguien libera información que no le gusta entonces hacen leyes para volver esa información &lt;em&gt;ilegal&lt;/em&gt;, como el valor del dólar en el mercado abierto.&lt;/p&gt;
+
+&lt;p&gt;Lo que nos queda a los ciudadanos, sobre todos a aquellos en la comunidad hacker venezolana, es hacer hacktivismo para liberar la información a la que podamos acceder, y aquella información que no tenemos conseguirla de alguna forma. Una buena plataforma para esto es &lt;a href=&quot;http://openve.github.com/&quot;&gt;OpenVE&lt;/a&gt; que ha estado un poco detenida últimamente pero a la que invito a contribuir con código y conocimiento para construir una mejor sociedad, ya que evidentemente con los políticos no contamos.&lt;/p&gt;
+
+&lt;p&gt;Hoy, en vez de invitarlos a la crítica fácil, los invito al trabajo por una sociedad libre y abierta, sin esperar por nadie ni el permiso de alguien.&lt;/p&gt;
+
+&lt;p&gt;Recuerden, no porque las cosas sean ley significan que estén bien.&lt;/p&gt;
+
+&lt;p&gt;Happy hacking.&lt;/p&gt;
+
+&lt;p&gt;¹ &lt;strong&gt;Lecturas relacionadas&lt;/strong&gt;: «&lt;em&gt;:(){ :|:&amp;amp; };: Internet, hackers y software libre&lt;/em&gt;», «&lt;em&gt;En el principio... fue la línea de comandos&lt;/em&gt;», «&lt;em&gt;La Catedral y El Bazar&lt;/em&gt;» y «&lt;em&gt;&lt;a href=&quot;http://www.cypherpunks.to/faq/cyphernomicron/cyphernomicon.html&quot;&gt;Cyphernomicon&lt;/a&gt;&lt;/em&gt;».&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>No he visto al primero programar en Chavista</title>
+          <link>/2013/01/19/no-he-visto-al-primero-programar-en-chavista</link>
+          <guid isPermaLink="true">/2013/01/19/no-he-visto-al-primero-programar-en-chavista</guid>
+          
+          <pubDate>Sat, 19 Jan 2013 22:38:43 +0000</pubDate>
+          <description>&lt;p&gt;Hoy leí, por casualidad, todo el drama armado en &lt;a href=&quot;http://listas.canaima.softwarelibre.gob.ve/pipermail/discusion/2013-January/&quot;&gt;la lista de discusiones de Canaima&lt;/a&gt; y recordé porqué decidí, afortunadamente, dejar toda lista de correo sobre &quot;linux&quot; venezolana. Y coloco linux entre comillas porque ahí se habla de todo, menos de siquiera, cultura libre.&lt;/p&gt;
+
+&lt;p&gt;Resulta que en el software libre se programa, y si se la pasan todo el día discutiendo de politiquería, pues eso es lo que tendrán en la cabeza ¿y saben qué? No he visto al primero programar en Chavista ni en Caprilista.&lt;/p&gt;
+
+&lt;p&gt;Está bien que programen inspirados en, por, para cualquier ideal político que tengan, o que lo hagan para volverse millonarios, o simplemente porque les dió la gana. Lo que está mal es que &lt;strong&gt;no lo hagan&lt;/strong&gt; y además se la pasen jodiendo a los que &lt;strong&gt;sí lo hacen&lt;/strong&gt;, únicamente por su inclinación política. Y esto no pasó sólo en Canaima, ha pasado en eventos, ha pasado en proyectos, &lt;strong&gt;y ya está buena la joda&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Yo entiendo que puedan haber problemas entre personas, entre grupos, ¿pero por politiquería? &lt;strong&gt;¡Ustedes ni siquiera les importan a ellos!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Si quieren hacer, &lt;strong&gt;hagan&lt;/strong&gt;. Sino, busquen algo que de verdad les guste y hagan allá, pero dejen en paz.&lt;/p&gt;
+
+&lt;p&gt;PD: &lt;em&gt;Un ejemplo de lo que pasa cuando se mezcla política con software: &lt;a href=&quot;http://fdiv.net/2012/04/01/objectivist-c&quot;&gt;Objectivist-C&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Edit(2013-01-20 00:40:27 UTC-0430): Pueden complementar con esta lectura de mi amigo Miguel: &lt;a href=&quot;http://skatox.com/blog/2011/03/13/el-software-libre-y-su-mezcla-con-la-politica-en-venezuela/&quot;&gt;El software libre y su mezcla con la política en Venezuela&lt;/a&gt;.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Why Jekyll</title>
+          <link>/2012/12/15/why-jekyll</link>
+          <guid isPermaLink="true">/2012/12/15/why-jekyll</guid>
+          
+          <pubDate>Sat, 15 Dec 2012 00:00:00 -0500</pubDate>
+          <description>&lt;h2&gt;Why?&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ghostbar.ath.cx/2012/12/15/switched-to-jekyll/&quot;&gt;I switched to Jekyll&lt;/a&gt; but it wasn&#39;t a fast decision. I really tried to give WordPress a chance, again, but I&#39;m not getting along pretty well with PHP since like 2 years ago. In fact, is a headache to maintain on my server. In the course of the years I have had several downtimes on my PHP-based sites because of changes like PHP-FPM. Some sites just dropped working for me while others kept doing OK. This is in the same server, with the same database and the same codebase (WordPress).&lt;/p&gt;
+
+&lt;p&gt;After a lot of time programming on Node.js and been learning more Ruby (&lt;em&gt;CoffeeScript made me love the syntax&lt;/em&gt;) I just got tired of using more resources of what I really needed, and with a regular CMS that means a database. Why would I need a database if I just update like once a day? For a comment-system? There&#39;s Disqus already, and people can just comment you on Twitter or make a &lt;a href=&quot;http://branch.com&quot;&gt;Branch&lt;/a&gt; for it, or just write you an email! Plain simple.&lt;/p&gt;
+
+&lt;h2&gt;Jekyll&lt;/h2&gt;
+
+&lt;p&gt;So there was Jekyll, a pretty nice tool creating static-sites very fast and easy to learn. It didn&#39;t needed a database and because all is static is pretty fast. Even the hosting requirements got lowered to the point I could (&lt;a href=&quot;https://github.com/eserre/ghostbar.ath.cx&quot;&gt;and I did&lt;/a&gt;) just upload this to GitHub and served it from there as a GitHub Page!&lt;/p&gt;
+
+&lt;h2&gt;One more thing&lt;/h2&gt;
+
+&lt;p&gt;One thing made me decided to upload to GitHub as well was &lt;a href=&quot;http://prose.io&quot;&gt;Prose.io&lt;/a&gt;, a simple text-editor for GitHub with support for MarkDown made by the guys @ &lt;a href=&quot;http://developmentseed.com&quot;&gt;developmentseed.com&lt;/a&gt;. So while it was made for being updated on my terminal I could just do it as well from the web, from anywhere with just my GitHub account and having previews on-the-fly.&lt;/p&gt;
+
+&lt;h2&gt;The downside&lt;/h2&gt;
+
+&lt;p&gt;Since I don&#39;t control this server I couldn&#39;t setup redirections for my old feeds. Of course, I could have just copied the same pattern in a folder and put there an XML feeding the category X, but I think is easier to update the planets being feeded to the new URIs.&lt;/p&gt;
+
+&lt;h2&gt;On the bright-side&lt;/h2&gt;
+
+&lt;p&gt;I even could put pretty-permalinks to work! So the structure for my old links kept the same.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Switched to Jekyll</title>
+          <link>/2012/12/15/switched-to-jekyll</link>
+          <guid isPermaLink="true">/2012/12/15/switched-to-jekyll</guid>
+          
+          <pubDate>Sat, 15 Dec 2012 00:00:00 -0500</pubDate>
+          <description>&lt;p&gt;After long-time without updating my blog, I decided to give it life again, but this time I wanted it to look different and started to make a new theme. Remembering the good-bad old days with WordPress was not an option, so I started prototyping right away with &lt;a href=&quot;http://jekyllrb.com&quot;&gt;jekyll&lt;/a&gt; and things were fast, considering my 30-minutes a day approach since 3 days ago.&lt;/p&gt;
+
+&lt;p&gt;Of course, is yet a work-in-progress, and in the meantime I wrote &lt;a href=&quot;https://github.com/ghostbar/320Stylus&quot;&gt;320Stylus&lt;/a&gt; so things could came up faster working mobile-first. But I will write more about that later.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Finally a workaround for htop drawing issue inside tmux!</title>
+          <link>/2012/09/02/finally-a-workaround-for-htop-drawing-issue-inside-tmux</link>
+          <guid isPermaLink="true">/2012/09/02/finally-a-workaround-for-htop-drawing-issue-inside-tmux</guid>
+          
+          <pubDate>Sun, 02 Sep 2012 00:00:00 -0500</pubDate>
+          <description>&lt;p&gt;I was tired that htop didn&#39;t showed up the info as is, and started to google about it.&lt;/p&gt;
+
+&lt;p&gt;Aparently there&#39;s an issue with the drawing stuff for bold and not-bold fonts, and most workarounds consists on making htop showing things on black and white.&lt;/p&gt;
+
+&lt;p&gt;Then, lazyness came to my mind and used:&lt;/p&gt;
+
+&lt;pre&gt;TERM=screen htop&lt;/pre&gt;
+
+
+&lt;p&gt;Wala! It worked, and showed htop with colors! 12 colors of course, but I don&#39;t need more!!&lt;/p&gt;
+
+&lt;p&gt;So after that I just echoed that line to my ~/.bash_aliases and is pretty much done for a while, at least for me. It works!&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Newer Node.js + NPM installed separately, execvp() error</title>
+          <link>/2012/06/30/newer-node-js-npm-installed-separately-execvp-error</link>
+          <guid isPermaLink="true">/2012/06/30/newer-node-js-npm-installed-separately-execvp-error</guid>
+          
+          <pubDate>Sat, 30 Jun 2012 00:00:00 -0500</pubDate>
+          <description>&lt;p&gt;I got an awfull bug with npm after installing Node.js 0.8.0 and trying to do an &lt;code&gt;npm -g update&lt;/code&gt;. The solution was deleting npm from /usr/local and with nave reinstall 0.8.0. After this my npm was working perfectly but that made me loose like 12 hours. (I thought was a bug in an app I&#39;m writing, I totally forgot I ran npm -g update.)&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>La culpa es de YouTube y del Imperialismo</title>
+          <link>/2012/06/07/la-culpa-es-de-youtube-y-del-imperialismo</link>
+          <guid isPermaLink="true">/2012/06/07/la-culpa-es-de-youtube-y-del-imperialismo</guid>
+          
+          <pubDate>Thu, 07 Jun 2012 00:00:00 -0500</pubDate>
+          <description>&lt;p&gt;Hace 3 días escribí unos &lt;a href=&#39;http://ghostbar.ath.cx/2012/06/04/comentarios-sobre-el-internet-en-venezuela-cantv-nic-ve-y-el-gobierno/&#39;&gt;comentarios sobre el internet en Venezuela, CANTV, NIC.ve y el gobierno&lt;/a&gt; y como soy una persona &lt;em&gt;cegada políticamente&lt;/em&gt;, un &lt;em&gt;radical&lt;/em&gt;, pues no me di cuenta de lo evidente: &lt;a href=&#39;http://lubrio.blogspot.com/2012/06/youtube-tiene-algo-de-culpa-en-la.html&#39;&gt;la culpa de la lentitud de nuestro internet es YouTube y el imperialismo&lt;/a&gt;. Es que Google toma decisiones que nos afectan negativamente, ¡como mejorar la calidad de los servicios que ofrecen!&lt;/p&gt;
+
+&lt;p&gt;Dígame ahora con el Google Drive, toda la gente sincronizando parte de sus discos con servidores en EEUU.&lt;/p&gt;
+
+&lt;p&gt;Es que la solución, sin duda, es colocar servicios regionales, en el cono sur, pero eso sí, no que publiquen lo que la gente quiera, sino solamente lo que es culturalmente correcto para quiénes quieren crearlo. Hay que crear un Amazon regional para vender liquiliqui y alpargatas, ruanas y maracas. Igualmente con el YouTube latinoamericano. Lo peor es que puede que no esté limitado a eso que es &lt;em&gt;culturalmente correcto&lt;/em&gt; sino a lo que &lt;strong&gt;ellos&lt;/strong&gt; (véase el gobierno, quien controla más dinero en el país que todos los venezolanos juntos) consideren &lt;em&gt;culturalmente correcto&lt;/em&gt;. Es decir, no Chino y Nacho, no Oscarcito, porque eso es transculturización. El HipHop en cambio, no es transculturización, aunque viene directamente del imperio.&lt;/p&gt;
+
+&lt;p&gt;Ya hablando en serio, dejando el chiste de &lt;em&gt;artículo&lt;/em&gt; de lado, crear una infraestructura como esta requiere de &lt;strong&gt;dinero&lt;/strong&gt;, y en general requiere de dólares, los cuáles son acaparados mediante diferentes mecanismos por el gobierno. Eso explica porqué no tenemos un Baidu en Venezuela, o servicios de correo regionales, a pesar que es relativamente fácil, a nivel técnico, pero no a nivel económico.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lo que tiene que hacerse, repito, es aumentar las conexiones al hub principal más cercano: EEUU&lt;/strong&gt;. No es algo de retórica, de llevar la contraria, de imperialismo ni de ideología política, ni que sea un agente de la CIA; &lt;strong&gt;es sentido común&lt;/strong&gt;. El usuario está haciendo solicitudes es a servidores en EEUU, no en Argentina, ni en Cuba, ni la antártica, sino a EEUU. Y si no son hacia allá son hacia Asia o Europa, y EEUU tiene los mejores enlaces hacia ambos.&lt;/p&gt;
+
+&lt;p&gt;Ahora, ¿quieren que esto lo haga la empresa privada? &lt;strong&gt;Perfecto, yo también.&lt;/strong&gt; ¿Por qué no lo hacen? Porque no tienen garantías de que su inversión, su riesgo económico, va a ser respetado en caso de que todo salga bien. Para hacerles más fácil la cosa, una analogía: En varios barrios de la ciudad ustedes tienen bodeguitas, y un barrio decidió que todo el dinero que entrara al barrio se quedaba en el barrio, a menos que ellos den el permiso de salida. Ustedes ya invirtieron en su bodeguita y se quedan ahí, porque es mejor tener algo que tener nada. Para comprar sus productos tienen que pedirle permiso al barrio, y medio les aprueban para productos. Ahora: ¿con qué ganas queda esta persona de mejorar la bodega y convertirlo en un minimercado? ¿Aumentar el stock de productos? Si el dinero que gana con eso no puede usarlo para lo que quiera sino para dejarlo en el barrio o sacar lo que el barrio le apruebe.&lt;/p&gt;
+
+&lt;p&gt;Es decir, quiten CADIVI que sólo les funciona a los chavistas apalancados (porque ni siquiera a todos les funciona), y lo que hace es joder al país. Con la garantía de que sus ganancias son respetadas, créanme que &lt;strong&gt;razones hay de sobra para reinvertir en Venezuela&lt;/strong&gt; en vez de sacar los dólares del país, una de las primeras es que &lt;strong&gt;al venezolano le encanta la tecnología y gasta en eso, al precio que sea&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Eso es lo que pasa, y las empresas de telecomunicaciones no son las primeras que dejan de invertir más dinero en Venezuela porque no tienen motivación para hacerlo, sino todas las empresas buscan salvar sus ganancias antes que las expropien y les paguen con papelitos de deuda a cobrar en 20 años (y si al deudor, es decir, el gobierno, le da por pagar).&lt;/p&gt;
+
+&lt;p&gt;Pero les recuerdo, que para la fecha de la &lt;em&gt;nacionalización&lt;/em&gt; de CANTV, era la más grande proveedora de servicios del país, y como el dueño de CANTV también es dueño del coroto y sus ramificaciones, como CADIVI, entonces ellos sí tienen dólares, y tienen una deuda con sus usuarios. Así que &lt;strong&gt;CANTV debería dar el ejemplo&lt;/strong&gt; de lo que sus propagandistas le piden a la empresa privada de telecomunicaciones (y todas las empresas en general): &lt;strong&gt;reinvertir en mejorar el servicio, en el país&lt;/strong&gt;. Pero, CANTV desde el año pasado no ofrece módem 3G por saturación, y de ABA jamás tienen pares, y el ancho de banda se lo lleva todo YouTube y el imperialismo en general. Si ellos, la empresa que no le importa el dinero sino su función, no cumple su función de mejorar el servicio, ¿con qué moral le exige a aquellos que entre sus funciones también está responderle a sus inversionistas? Lo peor es que son los únicos que instalan más repetidoras, aumentan sus servicios e intentan entre sus capacidades mejorar la oferta que existe en el país, CANTV en cambio se estancó en lo que construyó la CANTV privada.&lt;/p&gt;
+
+&lt;p&gt;Es mucho más fácil dar excusas, a pesar de tener la capacidad -- al menos económica -- de hacer. &lt;strong&gt;Eliminen CADIVI&lt;/strong&gt;, para que vean como a CANTV le toca bailar joropo.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Comentarios sobre el Internet en Venezuela, CANTV, NIC.VE y el gobierno</title>
+          <link>/2012/06/04/comentarios-sobre-el-internet-en-venezuela-cantv-nic-ve-y-el-gobierno</link>
+          <guid isPermaLink="true">/2012/06/04/comentarios-sobre-el-internet-en-venezuela-cantv-nic-ve-y-el-gobierno</guid>
+          
+          <pubDate>Mon, 04 Jun 2012 00:00:00 -0500</pubDate>
+          <description>&lt;p&gt;&lt;strong&gt;Advertencia: este artículo tiene alto contenido contra-gobierno. Si puede sentirse afectado por ello no lo lea, o réce unos 10 Chávez-Nuestro antes y después.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;No me gusta usar esto para escribir sobre política, por eso había dejado de usarlo un buen tiempo, pero necesito sacarme este tema de la cabeza y mi otro blog tiene unas fallas que no tengo ni el tiempo ni las ganas de corregir (está en PHP, no pregunten). La verdad es que pude haber dejado un comentario en &lt;a href=&#39;http://lubrio.blogspot.com/&#39;&gt;el blog del susodicho&lt;/a&gt;, pero como en anteriores ocasiones me ha filtrado las respuestas ni siquiera intenté, esta vez, responder por ese medio.&lt;/p&gt;
+
+&lt;p&gt;El tema en cuestión es sobre &lt;a href=&#39;http://lubrio.blogspot.com/2012/05/las-peores-velocidades-de-internet.html&#39;&gt;la velocidad de Internet en Venezuela&lt;/a&gt; y desde el título se puede notar la falacia panfletaria que iba a resultar de tal escrito: &lt;em&gt;¿Las peores velocidades de Internet están en Venezuela? Sí, pero...&lt;/em&gt;. &lt;strong&gt;Sin peros&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Les advierto desde ya que si van a empezar a leer esto necesitan paciencia, y mucha, porque para tener la imágen completa deben leer el artículo del susodicho primero, y si pueden los primeros comentarios, que hay dos que valen la pena. Si no tienen la paciencia suficiente se los resumo en una frase: &lt;strong&gt;Nuestro gobierno no tiene la capacidad suficiente para operar, algo más, que sus propias oficinas burócraticas, mucho menos va a tener capacidad para operar un proveedor de servicio de cualquier tipo, ni siquiera los relacionados con su función como gobierno (véase Seguridad, Justicia y Obras Públicas) porque no saben de servicio, saben es de propaganda&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ahora la versión larga (paciencia, recuerden):&lt;/p&gt;
+
+&lt;p&gt;Venezuela tiene las velocidades más lentas de internet en el mundo, más precisamente está de 150 entre 176 países. Países en guerra y empobrecidos tienen mejor velocidad que Venezuela y que en Latinoamérica sólo supera a Perú y Bolivia, el primero un país que hace pocos años empezó a crecer económicamente y el segundo es uno que no tiene línea costera propia, que además tiene como vecino a Perú, lo cuál en parte podría justificar su mala velocidad. &lt;strong&gt;¿Por qué?&lt;/strong&gt; quizás se pregunten: la razón es que la mayoría de las conexiones con hubs grandes son hechas mediante cables de fibra óptica submarinos, y la mayoría de estos cables se dirigen hacia Estados Unidos, el hub más grande de tráfico global en internet, en el mundo. Los cables de fibra óptica sobre tierra son más costosos de implementar y riesgosos, pues suelen robarlos confundiéndolos con cobre.&lt;/p&gt;
+
+&lt;p&gt;Ya habiendo hablado del tema de los cables submarinos necesito acotar que Venezuela tiene una posición privilegiada en Sur América y bien no debería tener problemas con esto ¿verdad? Estamos en la cima del cono sur. Sin embargo, el último cable submarino lanzado a Venezuela para aumentar nuestra capacidad fue en 2001, antes de eso fue otro en 2001 y uno en el 2000. En total hay 5 conexiones submarinas hacia ese gran hub de tráfico que es EEUU y un cable submarino que nos resta capacidad, costó USD$70MM y fue lanzado hacia Cuba en el 2011. Pueden confirmar esta información en &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_international_submarine_communications_cables&quot;&gt;Wikipedia&lt;/a&gt; y &lt;a href=&quot;https://www.google.com/search?sourceid=chrome&amp;ie=UTF-8&amp;q=submarine+cable+list+venezuela&quot;&gt;otras fuentes si quieren&lt;/a&gt;. Recuerden bien estas fechas, por favor, luego verán por qué.&lt;/p&gt;
+
+&lt;p&gt;De la información que conseguí de esos cables en &lt;a href=&quot;http://www.telegeography.com/&quot;&gt;TeleGeography&lt;/a&gt;, pude ver que los últimos fueron consorcios con CANTV, cuando aún era privada, valga la pena acotar. Así que de aquí es de donde los ISP compran tráfico y por estos cables, del 2001 hacia atrás es que logramos usar internet los venezolanos. Cuando algún ISP libera tráfico de algún cable es que un ISP venezolano puede comprar más tráfico. Es decir, estamos limitados a que alguien deje de usar un cable viejo y sustituirlo por uno nuevo, y eso no suele pasar, sino que se contrata un nuevo para aumentar, no para disminuir lo que ya se tenía.&lt;/p&gt;
+
+&lt;p&gt;Si por casualidad están leyendo, al mismo tiempo, el artículo al que respondo, por favor pasen el tema de la penetración (bien pavoso) y lleguen a la parte donde dice en grande que el 40% de los venezolanos tienen internet. Primero yo no suelo fiarme de cualquier dato que veo por ahí, menos si proviene de un gobierno populista como éste.&lt;/p&gt;
+
+&lt;p&gt;Si revisamos los datos conseguiremos que hay, para el 2012 en &lt;strong&gt;cifras estimadas&lt;/strong&gt; 3.403.219 suscriptores a algún servicio de internet, y de esto concluyen que hay unos 11.992.440. ¿Cómo lo calculan? Según dicen ellos mismos: &quot;Valores estimados en función de los suscriptores&quot;. ¿Pero cómo creerles siquiera si en el campo de suscriptores dicen que no cuentan a los usuarios de telefonía movil o teléfonos inteligentes, sin embargo en posteriores estadísticas los cuentan para el total de 3millones y medio de suscriptores. Pueden verlo en los PDF de CONATEL &lt;a href=&quot;http://www.conatel.gob.ve/files/Indicadores/indicadores_2012_trimestral/internet_I.pdf&quot;&gt;aquí&lt;/a&gt;, &lt;a href=&quot;http://www.conatel.gob.ve/files/Indicadores/indicadores_2012_trimestral/internet_mod_I.pdf&quot;&gt;aquí&lt;/a&gt; y &lt;a href=&quot;http://www.conatel.gob.ve/files/Indicadores/indicadores_2012_trimestral/Suscriptores_de_Internet_residencial.pdf&quot;&gt;aquí&lt;/a&gt;. De esas mismas estadísticas se desprende que 1.552.000 (no es exacto, es algo más, revisen las cifras ustedes mismos) tienen una conexión por debajo de 1Mbps. ¿Por qué? 250.000 son de dial-up y el resto, 1MM 300 mil y algo son banda ancha móvil. Como este millón 300 mil no viven todo ni en Chacao ni en las zonas más pudientes del país, podemos deducir fácilmente que la velocidad a la que navegan estas personas es equivalente a dial-up y que ellos equivalen a unos 800 mil suscriptores.&lt;/p&gt;
+
+&lt;p&gt;¿La calidad de los servicios de banda ancha móvil en Venezuela? Paupérrima, que cualquier usuario de los mismos lo confirme. Eso nos deja con que según las cuentas de CONATEL, habría 5.250.000 usuarios de esos flamantes 11 millones que no pueden navegar al mismo tiempo de su suscripción compartida, de hecho, quizás ni puedan navegar ellos mismos en la mayoría de los casos. Definitivamente eso baja mucho el 1.86Mbps que se cita en el susodicho artículo como velocidad promedio,  ¿no les parece? (Claro, aparece 1.86Mbps en NetIndex porque seguro cuenta es a los que de hecho se logran conectar).&lt;/p&gt;
+
+&lt;p&gt;Lo peor de esto, es el precio. No voy a hablar de los servicios cableados, porque van a empezar a decir que es muy costoso y difícil montar un servicio cableado en un país tan poco desarrollado como Venezuela, pero voy a compararlo es con otros servicios, en otros países, inalámbricos. Hace un año en España pagué €3 semanales a Vodafone por el servicio BlackBerry + internet ilimitado en un chip prepago. Eso, al cambio oficial, son unos 72 bolívares mensuales. Yo iba en el metro y navegaba a más de 4Mbps, estaba en un área rural de Madrid y navegaba a casi 6Mbps, y no es que tengan pocos usuarios. Aquí pago 180 bolívares mensuales por 6GB de tráfico a cuánto me pueda dar el servicio, que en sus mejores momentos en donde vivo es de 70Kbps, a las 3AM. Aunque admito que no vivo en una zona céntrica, así que comparémoslo con una zona céntrica, relativamente, como El Hatillo, donde constantemente se cae el servicio, del mismo operador. De hecho, &lt;strong&gt;de todos los operadores&lt;/strong&gt;. Por cierto, en el metro de Caracas no tengo señal ni siquiera para mi celular, pero claro (siempre hay un pero, como el del susodicho), los operadores hacen eso para que no roben celulares en el metro por estar usándolos.&lt;/p&gt;
+
+&lt;p&gt;¿Por qué en España (y el resto del mundo) sí les da para operar decentemente y en Venezuela no? Ya les dí una pista, les pedí recordar las fechas de los últimos cables submarinos que empezaron a funcionar en Venezuela para &lt;strong&gt;mejorar&lt;/strong&gt; nuestra conectividad: 2000-2001. Luego de esos años empezó un régimen nefasto para el dinero de todos los venezolanos, incluídos los empresarios: CADIVI. (Gracias comandante) Recuerdo hace unos años los titulares donde Telefónica llevaba rogando varios años dólares para poder sacar sus ganancias del país. Si ruegan para los equipos que van a vender, ahora imagínense para los que usan para sus operaciones, evidentemente menos les van a dar para sus ganancias. ¿Por qué un empresario querría dejar perder su dinero en un barril sin fondo, de donde no va a poder sacar de nuevo ese dinero, al menos en corto plazo?&lt;/p&gt;
+
+&lt;p&gt;Pero CANTV sí consigue dólares, pero ¿saben qué pasa con el dinero que ustedes pagan por servicios a CANTV? Un extracto del susodicho artículo:
+&lt;em&gt;El resultado de todo esto es que Cantv tiene unas enormes ganancias: 2.100 millones de BsF (488 millones de dólares) en dividendos en 2011, según informó Jorge Arreaza, ministro de Ciencia y Tecnología. En total, la telefónica ha dado 6.600 millones de bolívares de utilidades ($1.534 millones) desde que fue nacionalizada hace 5 años.&lt;/p&gt;
+
+&lt;p&gt;Nuestro consuelo es que estas elevadas ganancias no van para el bolsillo de accionistas privados, sino que se reinvierten en programas sociales...&lt;/p&gt;
+
+&lt;p&gt;En otras palabras: &lt;strong&gt;el alto costo de nuestro Internet es una especie de impuesto para financiar importantes proyectos sociales&lt;/strong&gt;...&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Déjenme resaltarles las mejores joyitas de esa &lt;em&gt;justificación&lt;/em&gt; en la incapacidad para administrar un negocio nuestro apreciadísimo gobierno: &lt;strong&gt;Nuestro consuelo es que estas elevadas ganancias no van para el bolsillo de accionistas privados&lt;/strong&gt; y &lt;strong&gt;el alto costo de nuestro Internet es una especie de impuesto para financiar importantes proyectos sociales&lt;/strong&gt;. El primero me produjo una gracia que no les puedo explicar, y el siguiente me dejó entender que no le teme al absurdo. Si pagas por un servicio recibes un servicio, no pagas por un servicio para que destinen ese dinero a otra cosa, eso se llama desviación de fondos y es &lt;strong&gt;corrupción&lt;/strong&gt;, sea en cosas públicas o privadas. (Cómico esto del tema de los vicios, según el susodicho artículo esto viene de la CANTV privatizada, lamentablemente viene realmente de la &lt;em&gt;cultura&lt;/em&gt; venezolana, en la cuál la cosa pública da enormes muestras de tener más &lt;em&gt;cultura&lt;/em&gt; venezolana que en la cosa privada).&lt;/p&gt;
+
+&lt;p&gt;Para que tengan una idea, pequeñita: el cable hasta Cuba costó USD$ 70MM, uno de Cuba hasta Miami cuesta USD$ 18MM. Si de esos USD$ 1.534MM que dejó en utilidades desde hace 5 años CANTV se hubiesen destinado 88 MM (DE MIL QUINIENTOS), &lt;strong&gt;sólo 88MM&lt;/strong&gt;, tendríamos otra gran fuente, actualizada, de tráfico desde y hacia el mayor hub de tráfico en el mundo: EEUU.&lt;/p&gt;
+
+&lt;p&gt;Lo cuál nos deja con el siguiente tema, ya no técnico, sino una mera excusa para la incapacidad: &lt;strong&gt;¡HAY OTROS TEMAS MÁS IMPORTANTES QUE EL INTERNET!&lt;/strong&gt;. Definitivamente, para alguien que va a gobernar un país hay temas mucho más importantes que la velocidad del internet, el problema es que fue el mismo gobierno quien decidió agarrarse el mayor proveedor de comunicaciones en el país para sí mismo, por lo que si no puede con el problema: declárese incapaz y deje que lo haga quién debe, quién lo hizo mejor, sin duda alguna: esos accionistas privados que se metían las ganancias al bolsillo, o donde les cupiesen. Obviamente no son capaces de llevar las riendas de las telecomunicaciones en Venezuela &lt;strong&gt;¡si ni siquiera pueden poner orden en sus propias oficinas!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;No sólo eso, que estos políticos no se meten este dinero en su bolsillo como los accionistas privados (sí claro) porque no les duele, porque no es de ellos, porque es, como dirían en Economía Política: plata de nadie. Y es que una característica sí tienen en común los políticos: ellos saben de gastar, pero no de invertir, no de producir. Por ello es absurdo que cualquiera piense que de una administración gobiernista salga eficiencia, a menos que el objetivo sea gastar sin tener retorno jamás, como evidentemente es evaluada la gestión de CANTV: gastar sin invertir, &lt;em&gt;somos chéveres, estamos gastando en los problemas que no le corresponden a CANTV&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para justificar aún más la incapacidad: &lt;em&gt;hay saboteos internos&lt;/em&gt;. Sí, y en el metro también y en PDVSA, y en Corpoelec, y en Agropatria; no es que sean incapaces de controlar si quiera sus propias oficinas, claro.&lt;/p&gt;
+
+&lt;p&gt;¿Más justificaciones? Por supuesto: &lt;strong&gt;CANTV no es el único proveedor de servicios&lt;/strong&gt;, sí, no es el único, pero sí es el único que tiene acceso a dólares preferenciales, y comprar y/o usar dólares no preferenciales es delito (gracias comandante).&lt;/p&gt;
+
+&lt;p&gt;Y el remate: el tema de NIC.VE, sobre lo cuál, por cierto, quiero establecer posición: 217000*90 = BsF. 19.530.000. Eso es lo que anualmente ingresa a NIC.VE por concepto de dominios. Supongamos que hay 17.000 que no pagan porque son ONG, el gobierno o algo similar, BsF 18.000.000 al año, USD$ 4.200.000, que al parecer no son suficientes para tener suficientes discos duros, servidores, plantes de energía y baterias de respaldo para más de 200.000 sitios web. ¿Y en serio hay gente que quiere que los ayudemos porque pobrecitos? ¿Seguir justificando la incapacidad? (Y ojo, hago énfasis en la capacidad de los administradores financieros, pues desconozco el tema técnico en NIC.VE pero sí sé del tema económico por simple matemática y evidentemente se está fallando, y mucho). Me rehúso a ayudar a menos que monten una fundación y que sea autónoma de los regentes en incapacidad: nuestros gobernantes.&lt;/p&gt;
+
+&lt;p&gt;Ni les cuento de los comentarios en el susodicho artículo, sólo puedo resaltar mi apoyo a lo dicho por Luis Carlos y por Raisa, afortunadamente siempre se me modera en ése blog por lo que me ahorro muchísimo tiempo en responder varios artículos, pero éste tenía que responderlo.&lt;/p&gt;
+
+&lt;p&gt;Definitivamente no hay peros, lo único para lo que sirven es para justificar la ineficacia y decadencia de nuestros gobernantes y sus súbditos. &lt;strong&gt;Sí, pero nada&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;PD: Irónicamente, el &lt;em&gt;menos mal masificado&lt;/em&gt; internet disponible me dejó varado al escribir este artículo, por lo que no lo publiqué apenas lo terminé de escribir, sino que tuve que esperar horas a que volviese el servicio. ¡Pero menos mal y está masificado y tenemos a CADIVI! Quien sabe, quizás hasta estuviese navegando mejor por menos, como pasa en el resto del mundo.&lt;/p&gt;
+
+&lt;p&gt;PD2: Este artículo no tiene imágenes como el susodicho, porque soy parte de los 5 millones de &#39;usuarios&#39; que está en la categoría sub-0.7Mbps, es decir, &#39;Internet de porquería, pero masificado&#39;. Pero en Google seguro pueden conseguir &lt;a href=&#39;https://www.google.com/search?q=places+with+good+internet&amp;hl=en&amp;prmd=imvns&amp;source=lnms&amp;tbm=isch&amp;ei=n2TMT6iUBMShOs3nsQY&amp;sa=X&amp;oi=mode_link&amp;ct=mode&amp;cd=2&amp;ved=0CEYQ_AUoAQ&amp;biw=1024&amp;bih=680&#39;&gt;muchas imágenes para acompañarlo&lt;/a&gt; y/o &lt;a href=&#39;https://www.google.com/search?q=kitty+cat&amp;btnG=Search&amp;hl=en&amp;tbm=isch&amp;ct=mode&amp;cd=2&amp;biw=1024&amp;bih=680&#39;&gt;para darle belleza estética&lt;/a&gt;.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Little CoffeeScript to resize images</title>
+          <link>/2012/06/03/little-coffeescript-for-resize-images</link>
+          <guid isPermaLink="true">/2012/06/03/little-coffeescript-for-resize-images</guid>
+          
+          <pubDate>Sun, 03 Jun 2012 00:00:00 -0500</pubDate>
+          <description>&lt;p&gt;I needed to resize about 300 images and couldn&#39;t find an easier way to do this than with help of node + CoffeeScript. So here&#39;s my script, it requires you to install (via npm) imagemagick and underscore:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/2862235.js?file=resize.coffee&quot;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/2862235&quot;&gt;Grab it&lt;/a&gt; if you want, is under Do Whatever You Want license.&lt;/p&gt;
+
+&lt;p&gt;As you can see from the shebang (that&#39;s the first line of the script, with the #!) I ran it from my command-line, this was not used in a website, although it could without too much modifications (the magic of JavaScript).&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
+          <title>Tracker eating my memory cache</title>
+          <link>/2012/04/28/tracker-eating-my-memory-cache</link>
+          <guid isPermaLink="true">/2012/04/28/tracker-eating-my-memory-cache</guid>
+          
+          <pubDate>Sat, 28 Apr 2012 00:00:00 -0500</pubDate>
+          <description>&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt; I removed tracker, when I rebooted my machine again my memory cache got ~1000M again, and again, and again.&lt;/p&gt;
+
+&lt;p&gt;I didn&#39;t knew it existed until recently, that I saw all my memory was eaten up and suddenly I was using my SWAP instead of my memory, and it was fully loaded.&lt;/p&gt;
+
+&lt;p&gt;What&#39;s my surprise? I have 2G in memory and 1113M of it was cache, and 1G of swap full as well. The worst thing is that I reboot my machine and without starting anything I get 903M of cache full, out of nowhere!&lt;/p&gt;
+
+&lt;p&gt;I start to track what&#39;s the issue, where&#39;s the leak, and found that if I killed tracker-store early then my memory stopped being loaded of cache.&lt;/p&gt;
+
+&lt;p&gt;There&#39;s a bug, already reported, it&#39;s &lt;a href=&#39;http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=612242&#39;&gt;#612242&lt;/a&gt; and the workaround given is to nuke the database with &lt;code&gt;tracker-control -r&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;It worked. Now my cache is not full, but since I just did it I don&#39;t know if in some days my tracker-cache will be full again and eating all my memory.&lt;/p&gt;
+
+&lt;p&gt;Just wanted people know there was a work-around at least and you could use your computer again.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+  </channel>
+</rss>
