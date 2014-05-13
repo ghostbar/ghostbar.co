@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using Firefox feels safer"
-categories
+categories:
 - Planet Debian
 - English
 - Firefox
@@ -14,7 +14,7 @@ For the last couple of years I was using Chrome, the main reasons were:
 
 + Faster
 + Less memory
-+ Better rendering (I used to complain a lot about [Firefox's text rendering][ff-text])
++ Better rendering (I used to complain a lot about [Firefox's text rendering][fftext])
 
 But now, all those issues are long gone and there are bigger issues to face, and one of the biggest is: privacy.
 
@@ -26,4 +26,4 @@ That kind of things makes me feel less safer using Chrome and a lot safer using 
 
 I used to complain a lot about Firefox: slow, bloated, consuming all my memory, crashing randomly. Now it just works as it should and even better: **makes me feel safe**.
 
-[ff-text]: http://ghostbar.co/2009/12/18/firefox-with-chrome-font-rendering-engine-no-way/
+[fftext]: http://ghostbar.co/2009/12/18/firefox-with-chrome-font-rendering-engine-no-way/
