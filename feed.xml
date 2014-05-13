@@ -9,6 +9,37 @@
       
         <item>
           
+          <title>Using Firefox Feels Safer</title>
+          <link>/2014/05/13/using-firefox-feels-safer</link>
+          <guid isPermaLink="true">/2014/05/13/using-firefox-feels-safer</guid>
+          
+          <pubDate>Tue, 13 May 2014 00:00:00 -0500</pubDate>
+          <description>&lt;p&gt;For the last couple of years I was using Chrome, the main reasons were:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Faster&lt;/li&gt;
+&lt;li&gt;Less memory&lt;/li&gt;
+&lt;li&gt;Better rendering (I used to complain a lot about &lt;a href=&quot;http://ghostbar.co/2009/12/18/firefox-with-chrome-font-rendering-engine-no-way/&quot;&gt;Firefox&#39;s text rendering&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;But now, all those issues are long gone and there are bigger issues to face, and one of the biggest is: privacy.&lt;/p&gt;
+
+&lt;p&gt;The thing is, while Chrome is a modified and branded version of Google there&#39;s a huge issue with your privacy. Specially when they require you to be logged into your Google account to install some extensions and keep you logged &quot;syncing&quot; your data.&lt;/p&gt;
+
+&lt;p&gt;They know how to avoid extensions to be usable at certain URLs and they actually do it at their Chrome Store, so it just takes a pair of seconds to know they may disable your privacy enhancing extensions on their &lt;code&gt;*google.com&lt;/code&gt; domains.&lt;/p&gt;
+
+&lt;p&gt;That kind of things makes me feel less safer using Chrome and a lot safer using Mozilla, a NGO that has shown their commitment for a free and open internet where user&#39;s rights are first.&lt;/p&gt;
+
+&lt;p&gt;I used to complain a lot about Firefox: slow, bloated, consuming all my memory, crashing randomly. Now it just works as it should and even better: &lt;strong&gt;makes me feel safe&lt;/strong&gt;.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
           <title>Sí, nos bloquearon</title>
           <link>/2014/02/15/si-nos-bloquearon</link>
           <guid isPermaLink="true">/2014/02/15/si-nos-bloquearon</guid>
@@ -721,32 +752,6 @@
 &lt;p&gt;&lt;a href=&quot;https://gist.github.com/2862235&quot;&gt;Grab it&lt;/a&gt; if you want, is under Do Whatever You Want license.&lt;/p&gt;
 
 &lt;p&gt;As you can see from the shebang (that&#39;s the first line of the script, with the #!) I ran it from my command-line, this was not used in a website, although it could without too much modifications (the magic of JavaScript).&lt;/p&gt;
-
-          </description>
-        </item>
-      
-    
-      
-        <item>
-          
-          <title>Tracker eating my memory cache</title>
-          <link>/2012/04/28/tracker-eating-my-memory-cache</link>
-          <guid isPermaLink="true">/2012/04/28/tracker-eating-my-memory-cache</guid>
-          
-          <pubDate>Sat, 28 Apr 2012 00:00:00 -0500</pubDate>
-          <description>&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt; I removed tracker, when I rebooted my machine again my memory cache got ~1000M again, and again, and again.&lt;/p&gt;
-
-&lt;p&gt;I didn&#39;t knew it existed until recently, that I saw all my memory was eaten up and suddenly I was using my SWAP instead of my memory, and it was fully loaded.&lt;/p&gt;
-
-&lt;p&gt;What&#39;s my surprise? I have 2G in memory and 1113M of it was cache, and 1G of swap full as well. The worst thing is that I reboot my machine and without starting anything I get 903M of cache full, out of nowhere!&lt;/p&gt;
-
-&lt;p&gt;I start to track what&#39;s the issue, where&#39;s the leak, and found that if I killed tracker-store early then my memory stopped being loaded of cache.&lt;/p&gt;
-
-&lt;p&gt;There&#39;s a bug, already reported, it&#39;s &lt;a href=&#39;http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=612242&#39;&gt;#612242&lt;/a&gt; and the workaround given is to nuke the database with &lt;code&gt;tracker-control -r&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;It worked. Now my cache is not full, but since I just did it I don&#39;t know if in some days my tracker-cache will be full again and eating all my memory.&lt;/p&gt;
-
-&lt;p&gt;Just wanted people know there was a work-around at least and you could use your computer again.&lt;/p&gt;
 
           </description>
         </item>
