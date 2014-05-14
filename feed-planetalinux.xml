@@ -9,6 +9,31 @@
       
         <item>
           
+          <title>transloadit-api v1.0.0-rc1</title>
+          <link>/2014/05/14/transloadit-api-v1.0.0-rc1-es</link>
+          <guid isPermaLink="true">/2014/05/14/transloadit-api-v1.0.0-rc1-es</guid>
+          
+          <pubDate>Wed, 14 May 2014 00:09:46 -0500</pubDate>
+          <description>&lt;p&gt;El release candidate de &lt;code&gt;v1.0.0&lt;/code&gt; para &lt;code&gt;transloadit-api&lt;/code&gt; ya está disponible.&lt;/p&gt;
+
+&lt;p&gt;Puedes instalarlo vía &lt;code&gt;npm&lt;/code&gt; y probarlo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install transloadit-api@1.0.0-rc1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ahora soporta la &lt;a href=&quot;https://transloadit.com/docs/api-docs&quot;&gt;API completa de transloadit&lt;/a&gt;: firmas, assemblies, notifications y manejo de plantillas.&lt;/p&gt;
+
+&lt;p&gt;El &lt;a href=&quot;https://github.com/ghostbar/transloadit-api&quot;&gt;código está en github&lt;/a&gt;, la &lt;a href=&quot;https://ghostbar.github.io/transloadit-api&quot;&gt;documentación en este website&lt;/a&gt; así como en los comentarios del código (que son la fuente para el website) y por supuesto: &lt;a href=&quot;https://github.com/ghostbar/transloadit-api/issues&quot;&gt;cualquier problema repórtalo en el tracker de github&lt;/a&gt;. Tiene un montón de pruebas pero aún le faltan algunas, especialmente para operaciones que requieren internet.&lt;/p&gt;
+
+&lt;p&gt;Quizás tenga tiempo para escribirlas esta semana y entonces lanzar una &lt;code&gt;v1.0.0&lt;/code&gt; como es.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
           <title>Primera versión de angular-geocomplete</title>
           <link>/2014/05/13/angular-geocomplete-es</link>
           <guid isPermaLink="true">/2014/05/13/angular-geocomplete-es</guid>
