@@ -9,6 +9,30 @@
       
         <item>
           
+          <title>Framework Challenge Bogodev 2014</title>
+          <link>/2014/05/18/framework-challenge-bogodev</link>
+          <guid isPermaLink="true">/2014/05/18/framework-challenge-bogodev</guid>
+          
+          <pubDate>Sun, 18 May 2014 07:05:03 -0500</pubDate>
+          <description>&lt;p&gt;Ayer participé en el framework challenge de Bogodev. Fue en la sede de Wayra Colombia que es genial.&lt;/p&gt;
+
+&lt;p&gt;El reto era hacer una visualización de objetos espaciales alrededor de otro (la &quot;estrella de la muerte&quot;) y actualizar sus posiciones a partir de coordenadas X, Y y Z.&lt;/p&gt;
+
+&lt;p&gt;La solución que le dió mi equipo consistió en Angularjs y D3js para el frontend y un expressjs muy simple para el backend.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.cloudup.com/7PpfqYofVN.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para este tipo de visualización three.js da un mejor aspecto, genera 3D de verdad y no hay que forzar un fake 3d como nos tocó hacer con D3js, y eso fue lo que hicieron otros equipos. Pero: aprendimos D3js, SVG y cómo funciona D3js cuando da el órden de renderizado lo cuál fue muy instructivo (pista: cuando le pasas un array toma la posición como identificador para hacer el renderizado, tanto posición como transisiones).&lt;/p&gt;
+
+&lt;p&gt;Aquí está el código y cómo correrlo por si quieren probarlo: &lt;a href=&quot;https://github.com/ghostbar/fchallenge-ngjs&quot;&gt;https://github.com/ghostbar/fchallenge-ngjs&lt;/a&gt;.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
           <title>Using angular-file-uploader and angular-file-model together</title>
           <link>/2014/05/16/using-angular-file-uploader-together-with-angular-file-model</link>
           <guid isPermaLink="true">/2014/05/16/using-angular-file-uploader-together-with-angular-file-model</guid>
@@ -754,22 +778,6 @@
 &lt;h2&gt;On the bright-side&lt;/h2&gt;
 
 &lt;p&gt;I even could put pretty-permalinks to work! So the structure for my old links kept the same.&lt;/p&gt;
-
-          </description>
-        </item>
-      
-    
-      
-        <item>
-          
-          <title>Switched to Jekyll</title>
-          <link>/2012/12/15/switched-to-jekyll</link>
-          <guid isPermaLink="true">/2012/12/15/switched-to-jekyll</guid>
-          
-          <pubDate>Sat, 15 Dec 2012 00:00:00 -0500</pubDate>
-          <description>&lt;p&gt;After long-time without updating my blog, I decided to give it life again, but this time I wanted it to look different and started to make a new theme. Remembering the good-bad old days with WordPress was not an option, so I started prototyping right away with &lt;a href=&quot;http://jekyllrb.com&quot;&gt;jekyll&lt;/a&gt; and things were fast, considering my 30-minutes a day approach since 3 days ago.&lt;/p&gt;
-
-&lt;p&gt;Of course, is yet a work-in-progress, and in the meantime I wrote &lt;a href=&quot;https://github.com/ghostbar/320Stylus&quot;&gt;320Stylus&lt;/a&gt; so things could came up faster working mobile-first. But I will write more about that later.&lt;/p&gt;
 
           </description>
         </item>
