@@ -19,7 +19,7 @@ textarea {
 }
 
 html {
-    font-size: 1em;
+    font-size: 16px;
     line-height: 1.4;
 }
 
@@ -191,8 +191,25 @@ pre, code {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 70em) {
+  header#header {
+    #logo {
+      float: left;
+    }
+
+    #title {
+      float: left;
+    }
+  }
+}
+
+@media only screen and (min-width: 70em) {
+  /* Style adjustments for viewports that meet the condition */
+  header#header {
+    width: 12.5em;
+    margin-left: -12.5em;
+    float: left;
+  }
 }
 
 @media print,
