@@ -22,25 +22,17 @@ title: Homepage
 <div id='featured-posts' class='container'>
   <div class='row'>
 
-    <ul>
-      {% for post in site.posts limit: 2 offset: 1 %}
-        {% if forloop.first %}
-          <li class='sixcol'>
-        {% else %}
-          <li class='sixcol last'>
-        {% endif %}
-        <article class='container'>
-          <header>
-            <h1><a href='{{ post.url }}'>{{ post.title }}</a></h1>
-            <div class='date'>{{ post.date | date: "%B %d, %Y" }}</div>
-          </header>
-          <div class='content'>
-            {{ post.content}}
-          </div>
-        </article>
-        </li>
-      {% endfor %}
-    </ul>
+    {% for post in site.posts limit: 2 offset: 1 %}
+      <article class='container'>
+        <header>
+          <h1><a href='{{ post.url }}'>{{ post.title }}</a></h1>
+          <div class='date'>{{ post.date | date: "%B %d, %Y" }}</div>
+        </header>
+        <div class='content'>
+          {{ post.content}}
+        </div>
+      </article>
+    {% endfor %}
 
   </div> <!-- end for .row -->
 </div><!-- end for #featured-posts.container -->
