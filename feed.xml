@@ -9,6 +9,24 @@
       
         <item>
           
+          <title>Why my gpg does not support hkps?</title>
+          <link>/2014/05/30/why-my-gpg-does-not-support-hkps</link>
+          <guid isPermaLink="true">/2014/05/30/why-my-gpg-does-not-support-hkps</guid>
+          
+          <pubDate>Fri, 30 May 2014 20:23:08 -0500</pubDate>
+          <description>&lt;p&gt;I was changing my ~/.gnupg/gpg.conf values today and with those was using &lt;code&gt;hkps&lt;/code&gt; instead of the regular &lt;code&gt;hkp&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;And found out it my debian system said gpg did not support that protocol &lt;code&gt;hkps&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Doing a little search I found out the package &lt;code&gt;gnupg&lt;/code&gt; does not ship with &lt;code&gt;hkps&lt;/code&gt; support because is not built with &lt;code&gt;libcurl&lt;/code&gt;, if you want to have &lt;code&gt;hkps&lt;/code&gt; support just install &lt;code&gt;gnupg-curl&lt;/code&gt; and done, now my servers are going on &lt;code&gt;hkps&lt;/code&gt;.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
           <title>parserss v0.0.1</title>
           <link>/2014/05/23/parserss-v0.0.1</link>
           <guid isPermaLink="true">/2014/05/23/parserss-v0.0.1</guid>
@@ -741,32 +759,6 @@
 &lt;p&gt;Happy hacking.&lt;/p&gt;
 
 &lt;p&gt;¹ &lt;strong&gt;Lecturas relacionadas&lt;/strong&gt;: «&lt;em&gt;:(){ :|:&amp;amp; };: Internet, hackers y software libre&lt;/em&gt;», «&lt;em&gt;En el principio... fue la línea de comandos&lt;/em&gt;», «&lt;em&gt;La Catedral y El Bazar&lt;/em&gt;» y «&lt;em&gt;&lt;a href=&quot;http://www.cypherpunks.to/faq/cyphernomicron/cyphernomicon.html&quot;&gt;Cyphernomicon&lt;/a&gt;&lt;/em&gt;».&lt;/p&gt;
-
-          </description>
-        </item>
-      
-    
-      
-        <item>
-          
-          <title>No he visto al primero programar en Chavista</title>
-          <link>/2013/01/19/no-he-visto-al-primero-programar-en-chavista</link>
-          <guid isPermaLink="true">/2013/01/19/no-he-visto-al-primero-programar-en-chavista</guid>
-          
-          <pubDate>Sat, 19 Jan 2013 22:38:43 +0000</pubDate>
-          <description>&lt;p&gt;Hoy leí, por casualidad, todo el drama armado en &lt;a href=&quot;http://listas.canaima.softwarelibre.gob.ve/pipermail/discusion/2013-January/&quot;&gt;la lista de discusiones de Canaima&lt;/a&gt; y recordé porqué decidí, afortunadamente, dejar toda lista de correo sobre &quot;linux&quot; venezolana. Y coloco linux entre comillas porque ahí se habla de todo, menos de siquiera, cultura libre.&lt;/p&gt;
-
-&lt;p&gt;Resulta que en el software libre se programa, y si se la pasan todo el día discutiendo de politiquería, pues eso es lo que tendrán en la cabeza ¿y saben qué? No he visto al primero programar en Chavista ni en Caprilista.&lt;/p&gt;
-
-&lt;p&gt;Está bien que programen inspirados en, por, para cualquier ideal político que tengan, o que lo hagan para volverse millonarios, o simplemente porque les dió la gana. Lo que está mal es que &lt;strong&gt;no lo hagan&lt;/strong&gt; y además se la pasen jodiendo a los que &lt;strong&gt;sí lo hacen&lt;/strong&gt;, únicamente por su inclinación política. Y esto no pasó sólo en Canaima, ha pasado en eventos, ha pasado en proyectos, &lt;strong&gt;y ya está buena la joda&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Yo entiendo que puedan haber problemas entre personas, entre grupos, ¿pero por politiquería? &lt;strong&gt;¡Ustedes ni siquiera les importan a ellos!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Si quieren hacer, &lt;strong&gt;hagan&lt;/strong&gt;. Sino, busquen algo que de verdad les guste y hagan allá, pero dejen en paz.&lt;/p&gt;
-
-&lt;p&gt;PD: &lt;em&gt;Un ejemplo de lo que pasa cuando se mezcla política con software: &lt;a href=&quot;http://fdiv.net/2012/04/01/objectivist-c&quot;&gt;Objectivist-C&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Edit(2013-01-20 00:40:27 UTC-0430): Pueden complementar con esta lectura de mi amigo Miguel: &lt;a href=&quot;http://skatox.com/blog/2011/03/13/el-software-libre-y-su-mezcla-con-la-politica-en-venezuela/&quot;&gt;El software libre y su mezcla con la política en Venezuela&lt;/a&gt;.&lt;/p&gt;
 
           </description>
         </item>
