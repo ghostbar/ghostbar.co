@@ -14,9 +14,9 @@
           <guid isPermaLink="true">/2014/05/30/why-my-gpg-does-not-support-hkps</guid>
           
           <pubDate>Fri, 30 May 2014 20:23:08 -0500</pubDate>
-          <description>&lt;p&gt;I was changing my ~/.gnupg/gpg.conf values today and with those was using &lt;code&gt;hkps&lt;/code&gt; instead of the regular &lt;code&gt;hkp&lt;/code&gt;.&lt;/p&gt;
+          <description>&lt;p&gt;I was changing my &lt;code&gt;~/.gnupg/gpg.conf&lt;/code&gt; values today and with those was using &lt;code&gt;hkps&lt;/code&gt; instead of the regular &lt;code&gt;hkp&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;And found out it my debian system said gpg did not support that protocol &lt;code&gt;hkps&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;And found out my debian system said &lt;code&gt;gpg&lt;/code&gt; did not support that protocol &lt;code&gt;hkps&lt;/code&gt;. &lt;strong&gt;What?!&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Doing a little search I found out the package &lt;code&gt;gnupg&lt;/code&gt; does not ship with &lt;code&gt;hkps&lt;/code&gt; support because is not built with &lt;code&gt;libcurl&lt;/code&gt;, if you want to have &lt;code&gt;hkps&lt;/code&gt; support just install &lt;code&gt;gnupg-curl&lt;/code&gt; and done, now my servers are going on &lt;code&gt;hkps&lt;/code&gt;.&lt;/p&gt;
 
