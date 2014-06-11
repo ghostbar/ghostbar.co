@@ -2,10 +2,33 @@ ul {
   padding-left: 1em;
 }
 
+$background-blue-url: #13aae1;
+$foreground-white: #ffffff;
+
+.links-blue-background {
+  text-decoration: none;
+  background: $background-blue-url;
+  color: $foreground-white;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+
 header#header {
   #title {
     a {
       text-decoration: none;
     }
+  }
+
+  #menu {
+    a {
+      @extend .links-blue-background;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  a {
+    @extend .links-blue-background;
   }
 }
