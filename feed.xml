@@ -9,6 +9,41 @@
       
         <item>
           
+          <title>vim: clipboard support without x</title>
+          <link>/2014/06/30/vim-clipboard-support-without-x</link>
+          <guid isPermaLink="true">/2014/06/30/vim-clipboard-support-without-x</guid>
+          
+          <pubDate>Mon, 30 Jun 2014 11:59:32 -0500</pubDate>
+          <description>&lt;p&gt;On my Linux computers I have used &lt;code&gt;xclip&lt;/code&gt; for having clipboard support for some years but never got it to run in my servers because they do not have X server and you need one for the clipboard, always got a:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;xclip: Error: Can&#39;t open display: (null)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So I had to do a workaround and the easiest thing to do was using a temporary file:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;vim&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;echo $DISPLAY&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=~&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+  vmap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;y&lt;/span&gt;: &lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;gt; /tmp/theClipboardWithoutX&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; getreg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; setreg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt; /tmp/theClipboardWithoutX&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;p&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+  vmap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;y&lt;/span&gt;: &lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;xclip -i -selection clipboard&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; getreg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; setreg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;xclip -o -selection clipboard&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;p&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;endif&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Basically: if there&#39;s no &lt;code&gt;$DISPLAY&lt;/code&gt; set then send the copied selection to the file &lt;code&gt;/tmp/theClipboardWithoutX&lt;/code&gt; with the keybinds Ctrl+C and with Ctrl+V you get the data inside that file. If there&#39;s &lt;code&gt;$DISPLAY&lt;/code&gt; then use &lt;code&gt;xclip&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Surprisely it works very well.&lt;/p&gt;
+
+&lt;p&gt;Check &lt;a href=&quot;https://github.com/ghostbar/dotvim/blob/master/vim/rc/copy-n-paste.vimrc&quot;&gt;my full &lt;code&gt;vimrc&lt;/code&gt; for copy and paste stuff (has configs for Mac as well)&lt;/a&gt; and if you want, the full &lt;a href=&quot;https://github.com/ghostbar/dotvim&quot;&gt;vimfiles repo&lt;/a&gt; may come handy as well.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
           <title>angular-zxcvbn v1.0.0</title>
           <link>/2014/06/16/angular-zxcvbn-v1.0.0</link>
           <guid isPermaLink="true">/2014/06/16/angular-zxcvbn-v1.0.0</guid>
@@ -698,30 +733,6 @@
 &lt;p&gt;No queremos una ley que esté hecha a medida del gobierno, un gobierno que le encanta la propaganda, firmar papelitos y mostrarlos como hechos. Queremos hechos que se hagan conocidos porque son &lt;strong&gt;realidad&lt;/strong&gt; no porque los repiten y los repiten en los micros del gobierno pero que al ir a una institución pública no tienen ni idea de qué se les está hablando. (Que es lo que pasa con los registros y la ley del Registro Civil).&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Comentarios a &lt;a href=&quot;https://twitter.com/joseluisrivas&quot;&gt;@joseluisrivas&lt;/a&gt; o &lt;a href=&quot;https://twitter.com/ghostbar&quot;&gt;@ghostbar&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-          </description>
-        </item>
-      
-    
-      
-        <item>
-          
-          <title>Less Swap</title>
-          <link>/2013/01/27/less-swap</link>
-          <guid isPermaLink="true">/2013/01/27/less-swap</guid>
-          
-          <pubDate>Sun, 27 Jan 2013 12:26:02 +0000</pubDate>
-          <description>&lt;p&gt;My old X61 has 2G in RAM and 3G in Swap. It seems my using-habit for Google Chrome is heavy (more than 20 tabs open most of the time) so my swap is normally being used above the 1.8G-mark. That means, my disk is constantly being written and read, and since this is the original hard-drive scare comes to my mind: &lt;em&gt;will I blow-up my disk if I continue doing this?&lt;/em&gt; and the heat this disk-use&#39;s generating was absurd.&lt;/p&gt;
-
-&lt;p&gt;That&#39;s not good, at all, I prefer having cache used than swap; in Venezuela is not that easy to get a good sale on hard-drives (you know, is hard to get dollars here, since is illegal to buy them unless the govt gives you permission).&lt;/p&gt;
-
-&lt;p&gt;So the first thing that comes to my mind is &lt;code&gt;sysctl&lt;/code&gt;. If I wanted to cofigure swap it would be with a kernel parameter. So running &lt;code&gt;sysctl -a | grep swap&lt;/code&gt; throws me &lt;code&gt;vm.swappiness = 60&lt;/code&gt;, and a little google search tells me more about it.&lt;/p&gt;
-
-&lt;p&gt;If the swappiness is close to 0 then it will use the swap only if it is really necessary, if it is close to 100 then it will use the swap aggressively. Mine was at 60, and it was really aggressive.&lt;/p&gt;
-
-&lt;p&gt;The next steps for me was doing &lt;code&gt;sudo echo &#39;vm.swappiness = 1&#39; &amp;gt;&amp;gt; /etc/sysctl.conf &amp;amp;&amp;amp; sudo sysctl -p&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now my system is really smooth and using Chrome + Terminal + Tmux + Rhythmbox is acceptable.&lt;/p&gt;
 
           </description>
         </item>
