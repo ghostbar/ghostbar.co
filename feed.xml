@@ -35,7 +35,7 @@
 
 &lt;p&gt;Surprisely it works very well.&lt;/p&gt;
 
-&lt;p&gt;Check &lt;a href=&quot;https://github.com/ghostbar/dotvim/blob/master/vim/rc/copy-n-paste.vimrc&quot;&gt;my full &lt;code&gt;vimrc&lt;/code&gt; for copy and paste stuff (has configs for Mac as well)&lt;/a&gt; and if you want, the full &lt;a href=&quot;https://github.com/ghostbar/dotvim&quot;&gt;vimfiles repo&lt;/a&gt; may come handy as well.&lt;/p&gt;
+&lt;p&gt;Check &lt;a href=&quot;https://github.com/ghostbar/dotvim/blob/master/vim/rc/copy-n-paste.vim&quot;&gt;my full &lt;code&gt;vimrc&lt;/code&gt; for copy and paste stuff (has configs for Mac as well)&lt;/a&gt; and if you want, the full &lt;a href=&quot;https://github.com/ghostbar/dotvim&quot;&gt;vimfiles repo&lt;/a&gt; may come handy as well.&lt;/p&gt;
 
           </description>
         </item>
