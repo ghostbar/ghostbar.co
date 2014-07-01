@@ -28,4 +28,4 @@ Basically: if there's no `$DISPLAY` set then send the copied selection to the fi
 
 Surprisely it works very well.
 
-Check [my full `vimrc` for copy and paste stuff (has configs for Mac as well)](https://github.com/ghostbar/dotvim/blob/master/vim/rc/copy-n-paste.vimrc) and if you want, the full [vimfiles repo](https://github.com/ghostbar/dotvim) may come handy as well.
+Check [my full `vimrc` for copy and paste stuff (has configs for Mac as well)](https://github.com/ghostbar/dotvim/blob/master/vim/rc/copy-n-paste.vim) and if you want, the full [vimfiles repo](https://github.com/ghostbar/dotvim) may come handy as well.
