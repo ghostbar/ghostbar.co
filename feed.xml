@@ -9,6 +9,32 @@
       
         <item>
           
+          <title>Irssi and Tmux having refresh issues, quick work-around</title>
+          <link>/2014/10/13/irssi-and-tmux-refresh-screen</link>
+          <guid isPermaLink="true">/2014/10/13/irssi-and-tmux-refresh-screen</guid>
+          
+          <pubDate>Mon, 13 Oct 2014 22:08:54 -0500</pubDate>
+          <description>&lt;pre&gt;&lt;code&gt;TERM=screen irssi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I had this same issue with &lt;code&gt;htop&lt;/code&gt; and &lt;code&gt;tmux&lt;/code&gt; and this was the solution. It seems it&#39;s an issue with the 256-color support or something.&lt;/p&gt;
+
+&lt;p&gt;So there you go, if you&#39;re using the latests &lt;code&gt;irssi&lt;/code&gt; and see only half of the screen refreshes (or just the last line) then this workaround will solve it for you.&lt;/p&gt;
+
+&lt;p&gt;I put it on my aliases list like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alias irssi=&#39;TERM=screen irssi&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And done.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
           <title>vim: clipboard support without x</title>
           <link>/2014/06/30/vim-clipboard-support-without-x</link>
           <guid isPermaLink="true">/2014/06/30/vim-clipboard-support-without-x</guid>
@@ -643,96 +669,6 @@
 &lt;p&gt;Es retrógrado degradar un servicio, es retrógrado ofrecer peor conexión, es retrógrado cuando hay más y más data cada vez rondando en la internet. Es retrógrado cuando entramos en la era de la BigData y no se puede hacer uso de ella porque nos están limitando más en vez de ampliar capacidad. Es retrógrado porque la capacidad instalada para soportar esto &lt;strong&gt;ya está instalada&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Es retrógrado, es absurdo y habla mucho de las intenciones del gobierno para con las universidades: atraso.&lt;/strong&gt;&lt;/p&gt;
-
-          </description>
-        </item>
-      
-    
-      
-        <item>
-          
-          <title>Ley de Infogobierno: ley a medida del gobierno</title>
-          <link>/2013/05/07/ley-a-medida-del-gobierno-ley-infogobierno</link>
-          <guid isPermaLink="true">/2013/05/07/ley-a-medida-del-gobierno-ley-infogobierno</guid>
-          
-          <pubDate>Tue, 07 May 2013 23:23:17 +0000</pubDate>
-          <description>&lt;p&gt;&lt;strong&gt;Actualización 2013-05-08 13:19:26 UTC-0430&lt;/strong&gt;: Erróneamente dije que desde el 2013 la Ley del Registro Civil contempla la digitalización del registro civil, es desde finales de 2009, fecha en la cuál fue aprobada la ley.&lt;/p&gt;
-
-&lt;p&gt;Mi intención desde el principio era asistir a las discusiones públicas del proyecto de Ley de Infogobierno, pero dado que la fecha se aproxima y mi agenda no se desocupa, no podré estar.&lt;/p&gt;
-
-&lt;p&gt;A pesar de eso, estoy condensando mis observaciones en este post para que, idealmente, lo lean en las discusiones públicas que se den.&lt;/p&gt;
-
-&lt;h2&gt;¿Basado en software libre?&lt;/h2&gt;
-
-&lt;p&gt;Lo primero que me preocupa es el uso de la frase «&lt;em&gt;basado en software libre&lt;/em&gt;» en vez de «&lt;em&gt;ser software libre&lt;/em&gt;». El software usado en la administración pública venezolana &lt;strong&gt;tiene que ser software libre&lt;/strong&gt;, no basado. ¿Por qué no dejar el «basado en»? Porque hay licencias de software libre como la MIT y la BSD que permiten el relicenciamiento de código derivado a cualquier otra licencia, entre las cuáles se incluyen licencias cerradas.&lt;/p&gt;
-
-&lt;p&gt;Igualmente, el artículo 12 debería obligar a la &lt;em&gt;autoridad competente&lt;/em&gt; a publicar ese registro de programas informáticos que poseen los poderes públicos venezolanos, en conjunto con su licenciamiento y proveedores. Esto es vital sobretodo en las excepciones que permite el artículo 51. Necesitamos transparencia, necesitamos saber qué software se está usando que no es software libre y qué razones se dieron. Igualmente se necesita un mecanismo para apelar estas excepciones previamente y posterior a su otorgamiento.&lt;/p&gt;
-
-&lt;p&gt;(Artículo 35)&lt;/p&gt;
-
-&lt;h2&gt;Sobre la &quot;transferencia del conocimiento asociado para su comprensión&quot;&lt;/h2&gt;
-
-&lt;p&gt;Hay una apreciación errónea sobre las libertades en los programas libres, en la ley aparece repetidamente la frase «&lt;em&gt;y la transferencia del conocimiento asociado para su comprensión&lt;/em&gt;» en conjunto con la definición de software libre. Esto no es cierto y de hecho se contradice con lo escrito en muchas licencias de software libre, que el software es entregado «&lt;em&gt;AS IS&lt;/em&gt;», sin garantías de que funcione y con cláusula de desprendimiento de responsabilidad en caso de que algo funcione mal y cree un gran problema (o incluso un pequeño problema). Además transferir el conocimiento asociado para su comprension requeriría que el programa el enseñara a las personas a programar, pues si alguien no programa no lo comprenderá, o hacer una documentación extensiva de la aplicación lo cuál no es cierto. Entiendo que esto esta incluído en la multitud de contratos que ha tenido el gobierno con proveedores, pero ahí es donde pertenece, en los contratos, no en la ley de infogobierno, mucho menos en las deficiones sobre software libre.&lt;/p&gt;
-
-&lt;p&gt;El artículo 36 incluso lo dice explícitamente como parte de las «&lt;em&gt;Licencias&lt;/em&gt;», cuestión que en ninguna licencia de software libre actual podrán encontrar.&lt;/p&gt;
-
-&lt;p&gt;(Artículo 36)&lt;/p&gt;
-
-&lt;h2&gt;Queremos más transparencia&lt;/h2&gt;
-
-&lt;p&gt;Lo poco que llegamos a ver sobre transparencia no obliga en ninguna forma a nadie a publicar. No sólo no obliga sino que en las partes donde no se limita a citar una ley que regula el acceso a la información pública, lo que hace es pedir a burócratas quienes históricamente no han sido transparentes en sus actuaciones a que promuevan la transparencia (41.5); por lo que tendremos que unirnos a las propuestas de &lt;a href=&quot;http://espaciopublico.org&quot;&gt;Espacio Público&lt;/a&gt; y &lt;a href=&quot;http://transparencia.org.ve&quot;&gt;Transparencia Venezuela&lt;/a&gt; para lograr más en ese campo, quienes ya entregaron un proyecto de Ley Orgánica de Transparencia y Acceso a la Información Pública.&lt;/p&gt;
-
-&lt;h2&gt;¿Cómo es la cooperación?&lt;/h2&gt;
-
-&lt;p&gt;El artículo 30 habla del principio de cooperación entre el Poder Público y el Poder Popular, sin embargo, nada dice de cómo debe ejercerse esto. Dejar este tema para el reglamento de la ley es excluir al poder popular de voz al momento de establecer los mecanismos para esta cooperación. Ha sido histórico el conflicto Poder Popular vs. Poder Público en este tema, incluso entre grupos del mismo factor político, por lo que establecer de inmediato en la ley, que es consultada al pueblo, los mecanismos daría certeza y una gran muestra de verdadero deseo cooperativo.&lt;/p&gt;
-
-&lt;h2&gt;Es excluyente&lt;/h2&gt;
-
-&lt;p&gt;Y este no es un problema de esta ley nada más, es un problema de interpretación de quién es el Poder Popular. Según la interpretación del gobierno nacional y la mayoría de los gobiernos regionales el Poder Popular sólo está representado mediante los consejos comunales y las comunas. Aquí quedan por fuera las comunidades organizadas en esquemas diferentes a consejo comunal/comuna, mucho menos las ONGs. Esto hace que la colaboración y cooperación entre pueblo y gobierno se vea limitado a solo los que componen y coinciden en ese «Poder Popular». Se está excluyendo a los que no participan y se deja de apreciar las cooperaciones por su valor para pasar a apreciarse por su origen.&lt;/p&gt;
-
-&lt;h2&gt;Del comité de tecnología sin tecnólogos&lt;/h2&gt;
-
-&lt;p&gt;El anteproyecto contempla la creación de un Comité Nacional para el Uso de Tecnologías de Información, cuyo fin sería promover y consolidar el uso y aprovechamiento de las TI en la APN. ¿Quienes espera uno que conformen ese comité? &lt;strong&gt;Personas expertas en promover el uso y expertas en uso de TI&lt;/strong&gt;, sin embargo, está conformado por burócratas que si acaso serán usuarios casuales de TI, y que de todos sólo uno es de la materia de TI (el Ministro con competencia en tecnología de información).&lt;/p&gt;
-
-&lt;p&gt;¿Qué puede lograr un comité que no tiene ni idea de lo que le corresponde promover? Y no es sólo promover, ¡inclusive le corresponde «&lt;em&gt;establecer lineamientos y estrategias pra el desarrollo de las tecnologías de información&lt;/em&gt;»! (41.2)&lt;/p&gt;
-
-&lt;p&gt;Sí, hay «unidades de apoyo», pero ¿por qué no son esas unidades de apoyo los miembros permanentes de ese comité y los que toman las decisiones? ¿Por qué hay que seguir dependiendo de la cima de la pirámide jerárquica para tomar decisiones si la idea es ir aplanando esa pirámide y volver las decisiones tan horizontales como sean posibles? ¿Por qué darle más funciones a burócratas que &lt;strong&gt;ya&lt;/strong&gt; no son capaces de cumplir a cabalidad con las funciones que tienen asignadas? ¿Qué eficiencia se puede esperar entonces?&lt;/p&gt;
-
-&lt;p&gt;Y si la excusa es que se necesitan tomar decisiones políticas entonces les recuerdo que las cabezas de los ministerios no se llenan con personas capaces en la materia sino ya están son personas que tomen decisiones políticas y no técnicas, los técnicos son los asesores.&lt;/p&gt;
-
-&lt;p&gt;(Artículo 39 en adelante).&lt;/p&gt;
-
-&lt;h2&gt;Los conflictos de competencia&lt;/h2&gt;
-
-&lt;p&gt;El capítulo I del título III tiene conflicto &lt;strong&gt;absoluto&lt;/strong&gt; con el capítulo II del mismo título (inclusive con el capítulo III donde habla del CNTI). Este segundo capítulo empodera con capacidad de decisión al ministerio con competencia en tecnologías de información, sin embargo, tiene mucha de las mismas competencias que el comité de tecnología sin tecnólogos.&lt;/p&gt;
-
-&lt;p&gt;Sin competencias claras no es que se hacen las cosas 2 y 3 veces sino que ¡&lt;strong&gt;no se hacen y se tienen 2 y 3 excusas&lt;/strong&gt;!&lt;/p&gt;
-
-&lt;h2&gt;Queremos privacidad&lt;/h2&gt;
-
-&lt;p&gt;En la ley se menciona que todas las actuaciones se harán bajo el respeto a la vida privada y confidencialidad de los ciudadanos, sin embargo, esto sólo es demostrable si las actuaciones del poder público son auditables. Más cuando el artículo 53 en su numeral 9 permite a la SUSCERT «Extraer, revisar y analizar las trazas y bitácoras de equipos y herramientas de redes.», siendo evidente que estas incluyen las de CANTV y probablemente cualquier otro ISP. Tiene que ser pública la razón de esa extracción de datos así como la información a menos que amerite ser privado. La única forma de que se extraiga información privada sobre un ciudadano debería ser por solicitud judicial y para atender una causa ya en proceso.&lt;/p&gt;
-
-&lt;h2&gt;Sobre la homologación de equipos y aplicaciones con soporte criptográfico&lt;/h2&gt;
-
-&lt;p&gt;Aquí hace falta ser más explícito. Dice que la certificación tendrá una duración de tres años pero ¿esto soporta cambio de versiones? ¿Qué cambios se cubren y qué cambios no? ¿Qué hace que una aplicación o equipo califique para que se haga de nuevo la revisión para la homologación?&lt;/p&gt;
-
-&lt;h2&gt;Correcciones menores&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Artículo 5.2: Documento electrónico no es un documento digitalizado, es un documento digital.&lt;/li&gt;
-&lt;li&gt;Artículo 27: la certificación solicitada para documentos que deberían ser impresos por ley debe aplicar a todos los documentos electrónicos, incluso aquellos que no estén destinados por ley a ser impresos. Otorgar una certificación y un repositorio digital desde donde se pueda bajar una copia para la comprobación de su autenticidad es básica para dejar atrás el ciclo del papel.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;h2&gt;Finalmente&lt;/h2&gt;
-
-&lt;p&gt;Queremos &lt;strong&gt;realidades&lt;/strong&gt;, no leyes bonitas. Desde el 2009 la Ley del Registro Civil contempla la digitalización del registro civil venezolano, la otorgación de un número único de identidad desde el nacimiento a los venezolanos y la vacatio legis era de 12 meses apenas.&lt;/p&gt;
-
-&lt;p&gt;Ya es mitad del año 2013 y nada de esto está si quiera en los planes de los burócratas.&lt;/p&gt;
-
-&lt;p&gt;No queremos una ley que esté hecha a medida del gobierno, un gobierno que le encanta la propaganda, firmar papelitos y mostrarlos como hechos. Queremos hechos que se hagan conocidos porque son &lt;strong&gt;realidad&lt;/strong&gt; no porque los repiten y los repiten en los micros del gobierno pero que al ir a una institución pública no tienen ni idea de qué se les está hablando. (Que es lo que pasa con los registros y la ley del Registro Civil).&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Comentarios a &lt;a href=&quot;https://twitter.com/joseluisrivas&quot;&gt;@joseluisrivas&lt;/a&gt; o &lt;a href=&quot;https://twitter.com/ghostbar&quot;&gt;@ghostbar&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
           </description>
         </item>
