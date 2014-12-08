@@ -9,6 +9,30 @@
       
         <item>
           
+          <title>Don't trust on file uploads with postman</title>
+          <link>/2014/12/08/dont-trust-on-file-uploads-with-postman</link>
+          <guid isPermaLink="true">/2014/12/08/dont-trust-on-file-uploads-with-postman</guid>
+          
+          <pubDate>Mon, 08 Dec 2014 18:01:57 -0500</pubDate>
+          <description>&lt;p&gt;I have been using postman for quite a while to test requests into my day-job API, so I was confident it worked pretty nice and it was definitely very easy to use. I just saved the requests and it even handled cookies for me.&lt;/p&gt;
+
+&lt;p&gt;Then I had to test files. Since it worked pretty nice on the other requests I were doing, including &lt;code&gt;form-data&lt;/code&gt;, &lt;code&gt;urlencoded&lt;/code&gt; or &lt;code&gt;multipart&lt;/code&gt; then when files upload failed the first thing that came to my mind was «&lt;em&gt;shit, I couldn&#39;t get streams to work&lt;/em&gt;» and «&lt;em&gt;hapi is broken&lt;/em&gt;» (I&#39;m using &lt;a href=&quot;http://hapijs.com/&quot;&gt;&lt;code&gt;hapi&lt;/code&gt;&lt;/a&gt;), even worst: &lt;a href=&quot;https://github.com/pkgcloud/pkgcloud&quot;&gt;&lt;code&gt;pkgcloud&lt;/code&gt;&lt;/a&gt; doesn&#39;t takes streams. As a result, I ended up debugging for hours streams on &lt;code&gt;pkgcloud&lt;/code&gt; and changed implementations, then checked upstreams on &lt;code&gt;hapi&lt;/code&gt; and saw there was on &lt;code&gt;.on(&#39;data&#39;, fn)&lt;/code&gt; being called but &lt;code&gt;.on(&#39;readable&#39;)&lt;/code&gt; and &lt;code&gt;.on(&#39;end&#39;)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;«&lt;em&gt;Empty streams!&lt;/em&gt;» I said, «&lt;em&gt;of course, &lt;code&gt;hapi&lt;/code&gt; is wrong and it&#39;s not reading the file I&#39;m sending!&lt;/em&gt;». Oh boy, I was so wrong. I even filled a bug asking if the streams implementation was broken.&lt;/p&gt;
+
+&lt;p&gt;Then I decided to give it a try with &lt;code&gt;curl&lt;/code&gt; and &lt;strong&gt;boom&lt;/strong&gt;: worked.&lt;/p&gt;
+
+&lt;p&gt;«&lt;em&gt;OK, &lt;code&gt;curl&lt;/code&gt; must be corrupted, will try with &lt;code&gt;wget&lt;/code&gt;&lt;/em&gt;», of course, &lt;em&gt;&lt;code&gt;curl&lt;/code&gt; must be corrupted&lt;/em&gt;; seems legit, right? So &lt;code&gt;wget&lt;/code&gt; was &lt;em&gt;corrupted&lt;/em&gt; as well it seemed, because that was working too.&lt;/p&gt;
+
+&lt;p&gt;Lesson: do not trust on postman. When I started writing it I was thinking &lt;em&gt;don&#39;t trust postman for file uploads&lt;/em&gt; but now, after revisiting all it took to debug such a simple thing it&#39;s better a &lt;em&gt;don&#39;t trust postman at all&lt;/em&gt;.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
           <title>Did you got a SSL certificate from GoDaddy, was issued by GoDaddy G2 and now you have issues of non-valid/not-trusted certificate?</title>
           <link>/2014/12/06/did-you-got-a-ssl-from-godaddy-g2-and-is-not-trusted</link>
           <guid isPermaLink="true">/2014/12/06/did-you-got-a-ssl-from-godaddy-g2-and-is-not-trusted</guid>
@@ -605,31 +629,6 @@
 &lt;p&gt;So starting my Raspberry Pi was as easy as connect a wire to my device and the router, then a quick &lt;code&gt;nmap -sP 192.168.0.0/24&lt;/code&gt; and there it was, under the hostname &lt;code&gt;raspberry&lt;/code&gt; my brand new raspberry.&lt;/p&gt;
 
 &lt;p&gt;After a &lt;code&gt;ssh pi@192.168.0.X&lt;/code&gt; a nice &lt;code&gt;raspi-conf&lt;/code&gt; was receiving me to start setting up my device.&lt;/p&gt;
-
-          </description>
-        </item>
-      
-    
-      
-        <item>
-          
-          <title>postinstall script on heroku with different environment than production</title>
-          <link>/2013/05/16/postinstall-script-on-heroku-with-env-different-to-production</link>
-          <guid isPermaLink="true">/2013/05/16/postinstall-script-on-heroku-with-env-different-to-production</guid>
-          
-          <pubDate>Thu, 16 May 2013 00:00:00 -0500</pubDate>
-          <description>&lt;p&gt;While trying to push a little project to &lt;a href=&quot;http://heroku.com&quot;&gt;Heroku&lt;/a&gt; based on &lt;a href=&quot;http://brunch.io&quot;&gt;Brunch&lt;/a&gt;, I ran into a difficult problem: I needed to move some files according to the environment being built, so, if it was &lt;code&gt;staging&lt;/code&gt; should &lt;code&gt;mv&lt;/code&gt;/&lt;code&gt;cp&lt;/code&gt; a different set of files than if were &lt;code&gt;production&lt;/code&gt;. I used &lt;code&gt;npm&lt;/code&gt;&#39;s &lt;code&gt;postinstall&lt;/code&gt; script field and everything ran OK, until I saw that it actually was copying the &lt;code&gt;production&lt;/code&gt; files.&lt;/p&gt;
-
-&lt;p&gt;After digging a lot, I saw the reason: Heroku uses &lt;em&gt;buildpacks&lt;/em&gt; and the Node.js buildpack runs &lt;code&gt;npm install --production&lt;/code&gt; which forces &lt;code&gt;NODE_ENV&lt;/code&gt; to be production. Not only that, it actually runs the script in an isolated shell, so all the configs you pass to heroku via &lt;code&gt;heroku config:set&lt;/code&gt; are not available. You can customize this buildpack, so I went ahead, &lt;a href=&quot;https://github.com/eserre/heroku-buildpack-nodejs-staging&quot;&gt;forked the buildpack&lt;/a&gt; and made a simple addition: added a &lt;code&gt;REAL_ENV=staging&lt;/code&gt; variable to the &lt;code&gt;bin/compile:46&lt;/code&gt; and made the scripts that are being launched from &lt;code&gt;postinstall&lt;/code&gt; to check &lt;code&gt;REAL_ENV&lt;/code&gt; instead of &lt;code&gt;NODE_ENV&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Why not use &lt;code&gt;NODE_ENV&lt;/code&gt; directly? Because my tests showed my that &lt;code&gt;npm install --production&lt;/code&gt; forces &lt;code&gt;NODE_ENV&lt;/code&gt; and got it rewritten.&lt;/p&gt;
-
-&lt;p&gt;After this change, using this buildpack was pretty easy, just:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;heroku config:set BUILDPACK_URL=https://github.com/eserre/heroku-buildpack-nodejs-staging
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Done, push and get it rebuilt.&lt;/p&gt;
 
           </description>
         </item>
