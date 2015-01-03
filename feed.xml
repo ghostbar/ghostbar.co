@@ -9,6 +9,24 @@
       
         <item>
           
+          <title>Published hapi-mongodb2 on npm</title>
+          <link>/2015/01/03/hapi-mongodb2-plugin</link>
+          <guid isPermaLink="true">/2015/01/03/hapi-mongodb2-plugin</guid>
+          
+          <pubDate>Sat, 03 Jan 2015 00:30:29 +0000</pubDate>
+          <description>&lt;p&gt;I just published to &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;&lt;code&gt;npm&lt;/code&gt;&lt;/a&gt; the module &lt;a href=&quot;https://www.npmjs.com/package/hapi-mongodb2&quot;&gt;&lt;code&gt;hapi-mongodb2&lt;/code&gt;&lt;/a&gt;. This plugin for &lt;a href=&quot;http://hapijs.com&quot;&gt;&lt;code&gt;hapi&lt;/code&gt;&lt;/a&gt; is fully compatible with 8.0 (and actually expects it) and uses the MongoDB node.js driver 2.0 instead of the old 1.4.&lt;/p&gt;
+
+&lt;p&gt;Using it is very simple, after registering the usual way as any other plugin then you can get it from the context on handlers and extensions as &lt;code&gt;this.mongo&lt;/code&gt; or get it from &lt;code&gt;server.plugins[&#39;hapi-mongodb2].client&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;For more info on what you can do with the mongodb native driver &lt;a href=&quot;https://mongodb.github.io/node-mongodb-native/2.0/overview/quickstart/&quot;&gt;check the docs&lt;/a&gt;.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
           <title>Don't trust on file uploads with postman</title>
           <link>/2014/12/08/dont-trust-on-file-uploads-with-postman</link>
           <guid isPermaLink="true">/2014/12/08/dont-trust-on-file-uploads-with-postman</guid>
@@ -609,26 +627,6 @@
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;You can add that per-host or wide (without indents, even as the first line in the config file!).&lt;/p&gt;
-
-          </description>
-        </item>
-      
-    
-      
-        <item>
-          
-          <title>Starting a Raspbery Pi without a display</title>
-          <link>/2013/08/22/starting-raspberry-without-display</link>
-          <guid isPermaLink="true">/2013/08/22/starting-raspberry-without-display</guid>
-          
-          <pubDate>Thu, 22 Aug 2013 02:12:22 -0500</pubDate>
-          <description>&lt;p&gt;Recently (actually 3 weeks ago) &lt;a href=&quot;http://instagram.com/p/cdELMsNxk-/&quot;&gt;I bought a Raspberry Pi for myself&lt;/a&gt; and it wasn&#39;t until today that I power it on by the first time. Call it RealLife™ for simplicity.&lt;/p&gt;
-
-&lt;p&gt;Anyway, one of my first issues was that I do not own any display with RCA or HDMI inputs, and all I have is a router that works as my WiFi hotspot as well. Since this starter kit comes with &lt;a href=&quot;http://raspbian.org&quot;&gt;Raspbian&lt;/a&gt; by default I made some research and found that the default &lt;code&gt;user:password&lt;/code&gt; is &lt;code&gt;pi:raspberry&lt;/code&gt;, &lt;code&gt;ssh-server&lt;/code&gt; is on by default and the network interface &lt;code&gt;eth0&lt;/code&gt; tries to grab an IP automatically via DHCP.&lt;/p&gt;
-
-&lt;p&gt;So starting my Raspberry Pi was as easy as connect a wire to my device and the router, then a quick &lt;code&gt;nmap -sP 192.168.0.0/24&lt;/code&gt; and there it was, under the hostname &lt;code&gt;raspberry&lt;/code&gt; my brand new raspberry.&lt;/p&gt;
-
-&lt;p&gt;After a &lt;code&gt;ssh pi@192.168.0.X&lt;/code&gt; a nice &lt;code&gt;raspi-conf&lt;/code&gt; was receiving me to start setting up my device.&lt;/p&gt;
 
           </description>
         </item>
