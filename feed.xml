@@ -9,6 +9,24 @@
       
         <item>
           
+          <title>Published hapi-hiredis on npm</title>
+          <link>/2015/01/08/hapi-hiredis-plugin</link>
+          <guid isPermaLink="true">/2015/01/08/hapi-hiredis-plugin</guid>
+          
+          <pubDate>Thu, 08 Jan 2015 21:55:36 +0000</pubDate>
+          <description>&lt;p&gt;I just published to &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;&lt;code&gt;npm&lt;/code&gt;&lt;/a&gt; the module &lt;a href=&quot;https://www.npmjs.com/package/hapi-hiredis&quot;&gt;&lt;code&gt;hapi-hiredis&lt;/code&gt;&lt;/a&gt;. This plugin for &lt;a href=&quot;http://hapijs.com&quot;&gt;&lt;code&gt;hapi&lt;/code&gt;&lt;/a&gt; is fully compatible with 8.0 (and actually expects it).&lt;/p&gt;
+
+&lt;p&gt;The difference between this plugin and &lt;a href=&quot;https://www.npmjs.com/package/hapi-redis&quot;&gt;&lt;code&gt;hapi-redis&lt;/code&gt;&lt;/a&gt; is that this module uses the &lt;code&gt;hiredis&lt;/code&gt; parser based on &lt;code&gt;C++&lt;/code&gt; bindings, &lt;code&gt;redis&lt;/code&gt; uses a slower &lt;code&gt;javascript&lt;/code&gt; parser. Besides that main difference this plugin supports &lt;code&gt;URL&lt;/code&gt;s for giving the connection, instead &lt;code&gt;hapi-redis&lt;/code&gt; only supports giving the connection parameters via separate &lt;code&gt;host&lt;/code&gt;, &lt;code&gt;port&lt;/code&gt; and &lt;code&gt;password&lt;/code&gt; fields.&lt;/p&gt;
+
+&lt;p&gt;Using it is very simple, after registering the usual way as any other plugin then you can get it from the context on handlers and extensions as &lt;code&gt;this.redis&lt;/code&gt; or get it from &lt;code&gt;server.plugins[&#39;hapi-hiredis].client&lt;/code&gt;.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
           <title>Published hapi-mongodb2 on npm</title>
           <link>/2015/01/03/hapi-mongodb2-plugin</link>
           <guid isPermaLink="true">/2015/01/03/hapi-mongodb2-plugin</guid>
@@ -603,30 +621,6 @@
 
 
 
-
-          </description>
-        </item>
-      
-    
-      
-        <item>
-          
-          <title>Too many authentication failures on SSH</title>
-          <link>/2013/08/22/too-many-authentication-failures-ssh</link>
-          <guid isPermaLink="true">/2013/08/22/too-many-authentication-failures-ssh</guid>
-          
-          <pubDate>Thu, 22 Aug 2013 21:08:25 -0500</pubDate>
-          <description>&lt;p&gt;It seems like having several SSH keys on the same system starts giving issues with some SSH servers. The issue is that while connecting it returns:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Too many authentication failures for xxxxxx.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The fix for this is very simple and quick. Open up your &lt;code&gt;~/.ssh/config&lt;/code&gt; and put:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;IdentitiesOnly yes
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can add that per-host or wide (without indents, even as the first line in the config file!).&lt;/p&gt;
 
           </description>
         </item>
