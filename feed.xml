@@ -9,6 +9,68 @@
       
         <item>
           
+          <title>Easy proxies with nodejs</title>
+          <link>/2015/02/27/easy-proxies-with-nodejs</link>
+          <guid isPermaLink="true">/2015/02/27/easy-proxies-with-nodejs</guid>
+          
+          <pubDate>Fri, 27 Feb 2015 15:01:20 +0000</pubDate>
+          <description>&lt;p&gt;Easy ways to get proxies with nodejs/iojs, the way to launch it should be&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;URL=&#39;http://google.com&#39; PORT=8080 node script.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Using http-proxy&lt;/h2&gt;
+
+&lt;p&gt;Requires &lt;code&gt;npm install http-proxy&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var http = require(&#39;http&#39;);
+var httpProxy = require(&#39;http-proxy&#39;);
+
+var proxy = httpProxy.createProxyServer({target: process.env.URL});
+
+http.createServer(function (req, res) {
+  proxy.web(req, res);
+}).listen(process.env.PORT || 3000);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Using hapijs&lt;/h2&gt;
+
+&lt;p&gt;Requires &lt;code&gt;npm install hapi&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var hapi = require(&#39;hapi&#39;);
+var server = new hapi.Server();
+server.connection({ port: process.env.PORT || 3000 })
+
+var routes = [{
+  method: &#39;*&#39;,
+  path: &#39;/{p*}&#39;,
+  config: {
+  },
+  handler: {
+    proxy: {
+      host: process.env.URL,
+      passThrough: true,
+      redirects: 9999
+    }
+  }
+}];
+
+server.route(routes);
+
+server.start(function () {
+  console.log(&#39;Server running at:&#39;, server.info.uri);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With &lt;code&gt;hapijs&lt;/code&gt; it&#39;s longer and having just one path to proxy seems like killing an ant with an elephant shotgun, yet I wanted to publish the &lt;code&gt;hapijs&lt;/code&gt; way because it&#39;s easier to have several proxies in the same server in different paths. If you combine it with &lt;code&gt;catbox&lt;/code&gt; you could do a very simple &lt;code&gt;proxy-cache&lt;/code&gt; for several URLs, each URL in a different route without spawning several servers.&lt;/p&gt;
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
           <title>Recordando a Aaron Swartz</title>
           <link>/2015/01/11/recordando-a-aaron-swartz</link>
           <guid isPermaLink="true">/2015/01/11/recordando-a-aaron-swartz</guid>
@@ -556,54 +618,6 @@
 &lt;li&gt;&lt;a href=&quot;http://io9.com/the-time-gateway-is-open-move-to-neutropolis-before-pr-1506383451&quot;&gt;Futuristic cities concept art&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-
-          </description>
-        </item>
-      
-    
-      
-        <item>
-          
-          <title>The Road to Happiness incluye no usar WordPress</title>
-          <link>/2013/08/26/the-road-to-happiness-incluye-no-usar-wordpress</link>
-          <guid isPermaLink="true">/2013/08/26/the-road-to-happiness-incluye-no-usar-wordpress</guid>
-          
-          <pubDate>Mon, 26 Aug 2013 03:03:23 -0500</pubDate>
-          <description>&lt;p&gt;Ayer hubo una interesante conversa en Twitter sobre WordPress, lo mínimo para correrlo y opciones para &lt;em&gt;gente pobre&lt;/em&gt; (como dijo Faneyth).&lt;a href=&quot;https://twitter.com/phenobarbital/status/371819458421346304&quot;&gt;0&lt;/a&gt; &lt;a href=&quot;https://twitter.com/LuisAlejandro/status/371821008681852930&quot;&gt;1&lt;/a&gt; &lt;a href=&quot;https://twitter.com/zentraedi/status/371821336706166786&quot;&gt;2&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Yo soy exponente de la &lt;em&gt;opción para gente pobre&lt;/em&gt; (LOL) con Jekyll y GitHub Pages. Migré en &lt;a href=&quot;http://ghostbar.co/2012/12/15/switched-to-jekyll/&quot;&gt;diciembre del 2012&lt;/a&gt; y no fué por pobreza exactamente sino porque WordPress (junto con la mayoría de opciones para blogging como Drupal), al menos para mi, no tiene sentido con las tecnologías disponibles actualmente.&lt;/p&gt;
-
-&lt;h2&gt;¿Bases de datos en un blog? ¿Para qué?&lt;/h2&gt;
-
-&lt;p&gt;Esto es algo que no tiene sentido. Si bien las bases de datos ayudan a organizar información de manera ordenada eso es algo que un blog NO necesita. El contenido es estático en su mayoría, lo único dinámico son los comentarios y con lo fácil que es usar un servicio tipo &lt;a href=&quot;http://disqus.com&quot;&gt;Disqus&lt;/a&gt; ya esa información no es necesaria almacenarla en un sistema propio.&lt;/p&gt;
-
-&lt;h2&gt;Usar un CMS es renderizar, una y otra vez la misma cosa. ¿Tiene sentido?&lt;/h2&gt;
-
-&lt;p&gt;En mi opinión es desperdiciar poder de procesamiento. ¿Por qué? Porque es el mismo HTML, una y otra vez, y otra vez, y otra vez. La única forma de cambiar esto es colocando un caché por encima, lo cuál es aún más overhead, más cosas que mantener, menos tiempo para hacer cosas que de hecho sean útiles y no simple &lt;em&gt;mantenimiento&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2&gt;Seguridad&lt;/h2&gt;
-
-&lt;p&gt;Todos sabemos que un CMS es propenso a tener problemas de seguridad, alguien consigue un bug y lo explota. Con Jekyll y los otros generadores de contenido estático eso no pasa. El problema de seguridad pasa a ser en el hosting y es mucho más fácil controlar un punto que dos.&lt;/p&gt;
-
-&lt;h2&gt;Rapidez&lt;/h2&gt;
-
-&lt;p&gt;Para cualquier servidor tan sólo servir un archivo estático es mucho más rápido que generar un archivo y servirlo.&lt;/p&gt;
-
-&lt;h2&gt;Hacer templates es mucho más sencillo&lt;/h2&gt;
-
-&lt;p&gt;En vez de un día en 1 hora puedes tener todo el template de un blog listo. TODO.&lt;/p&gt;
-
-&lt;h2&gt;Es simple HTML&lt;/h2&gt;
-
-&lt;p&gt;¿Qué más fácil de hacer debugging que de simple HTML?!&lt;/p&gt;
-
-&lt;h2&gt;Extra: GitHub da hosting gratuito&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt; tiene un servicio llamado GitHub Pages el cuál te permite hospedar archivos estáticos y mantenerlos organizados en un repositorio &lt;code&gt;git&lt;/code&gt;. Además, si usas Jekyll puedes simplemente subirlo a GitHub y GitHub Pages los generará y publicará. Además puedes usar dominios personalizados, por lo que al menos que no estés usando un &lt;code&gt;A record&lt;/code&gt; en tu DNS sino un &lt;code&gt;CNAME&lt;/code&gt; o la persona se sepa la IP de GitHub, nadie se dará cuenta que el servidor que lo está sirviendo es de GitHub.&lt;/p&gt;
-
-&lt;p&gt;También puede ser servidor por un simple NGINX o &lt;em&gt;ponga aquí el nombre de su servidor HTTP favorito&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;El tiempo del &lt;em&gt;dynamic blog engine&lt;/em&gt; pasó&lt;/strong&gt;.&lt;/p&gt;
 
           </description>
         </item>
