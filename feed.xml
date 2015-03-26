@@ -9,6 +9,25 @@
       
         <item>
           
+          <title>Loggly as a CoreOS service</title>
+          <link>/2015/03/26/loggly-as-a-coreos-service</link>
+          <guid isPermaLink="true">/2015/03/26/loggly-as-a-coreos-service</guid>
+          
+          <pubDate>Thu, 26 Mar 2015 16:02:05 +0000</pubDate>
+          <description>&lt;p&gt;I spent a lot of today figuring out the best way to send the stream of logs from CoreOS to loggly, because it requires structured data and then sending it from a service on systemd.&lt;/p&gt;
+
+&lt;p&gt;So this was my solution for whoever it can work for.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/ghostbar/f7f2e82884631b083017.js&quot;&gt;&lt;/script&gt;
+
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
           <title>Easy proxies with nodejs</title>
           <link>/2015/02/27/easy-proxies-with-nodejs</link>
           <guid isPermaLink="true">/2015/02/27/easy-proxies-with-nodejs</guid>
@@ -169,7 +188,7 @@ server.start(function () {
           <link>/2014/12/08/dont-trust-on-file-uploads-with-postman</link>
           <guid isPermaLink="true">/2014/12/08/dont-trust-on-file-uploads-with-postman</guid>
           
-          <pubDate>Mon, 08 Dec 2014 18:01:57 -0500</pubDate>
+          <pubDate>Mon, 08 Dec 2014 18:01:57 -0800</pubDate>
           <description>&lt;p&gt;I have been using postman for quite a while to test requests into my day-job API, so I was confident it worked pretty nice and it was definitely very easy to use. I just saved the requests and it even handled cookies for me.&lt;/p&gt;
 
 &lt;p&gt;Then I had to test files. Since it worked pretty nice on the other requests I were doing, including &lt;code&gt;form-data&lt;/code&gt;, &lt;code&gt;urlencoded&lt;/code&gt; or &lt;code&gt;multipart&lt;/code&gt; then when files upload failed the first thing that came to my mind was «&lt;em&gt;shit, I couldn&#39;t get streams to work&lt;/em&gt;» and «&lt;em&gt;hapi is broken&lt;/em&gt;» (I&#39;m using &lt;a href=&quot;http://hapijs.com/&quot;&gt;&lt;code&gt;hapi&lt;/code&gt;&lt;/a&gt;), even worst: &lt;a href=&quot;https://github.com/pkgcloud/pkgcloud&quot;&gt;&lt;code&gt;pkgcloud&lt;/code&gt;&lt;/a&gt; doesn&#39;t takes streams. As a result, I ended up debugging for hours streams on &lt;code&gt;pkgcloud&lt;/code&gt; and changed implementations, then checked upstreams on &lt;code&gt;hapi&lt;/code&gt; and saw there was on &lt;code&gt;.on(&#39;data&#39;, fn)&lt;/code&gt; being called but &lt;code&gt;.on(&#39;readable&#39;)&lt;/code&gt; and &lt;code&gt;.on(&#39;end&#39;)&lt;/code&gt;.&lt;/p&gt;
@@ -193,7 +212,7 @@ server.start(function () {
           <link>/2014/12/06/did-you-got-a-ssl-from-godaddy-g2-and-is-not-trusted</link>
           <guid isPermaLink="true">/2014/12/06/did-you-got-a-ssl-from-godaddy-g2-and-is-not-trusted</guid>
           
-          <pubDate>Sat, 06 Dec 2014 00:00:00 -0500</pubDate>
+          <pubDate>Sat, 06 Dec 2014 00:00:00 -0800</pubDate>
           <description>&lt;p&gt;After we bought a certificate with GoDaddy (which BTW, wasn&#39;t my idea) it got signed by their CA GoDaddy - G2, which turns out is not trusted by &lt;code&gt;nodejs&lt;/code&gt;, nor by safari on iOS.&lt;/p&gt;
 
 &lt;p&gt;The certificate comes with a file called &lt;code&gt;gd_bundle.crt&lt;/code&gt; which I thought it would be enough since it&#39;s the one being sent by GoDaddy to be added into the chain, so I made the &lt;code&gt;cat gd_bundle.crt &amp;gt;&amp;gt; my_cert.crt&lt;/code&gt;. What&#39;s the surprise? That&#39;s only G2 CA bundle, not G1 which is widely trusted, the path wasn&#39;t there.&lt;/p&gt;
@@ -216,7 +235,7 @@ server.start(function () {
           <link>/2014/10/13/irssi-and-tmux-refresh-screen</link>
           <guid isPermaLink="true">/2014/10/13/irssi-and-tmux-refresh-screen</guid>
           
-          <pubDate>Mon, 13 Oct 2014 22:08:54 -0500</pubDate>
+          <pubDate>Mon, 13 Oct 2014 22:08:54 -0700</pubDate>
           <description>&lt;pre&gt;&lt;code&gt;TERM=screen irssi
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -242,7 +261,7 @@ server.start(function () {
           <link>/2014/06/30/vim-clipboard-support-without-x</link>
           <guid isPermaLink="true">/2014/06/30/vim-clipboard-support-without-x</guid>
           
-          <pubDate>Mon, 30 Jun 2014 11:59:32 -0500</pubDate>
+          <pubDate>Mon, 30 Jun 2014 11:59:32 -0700</pubDate>
           <description>&lt;p&gt;On my Linux computers I have used &lt;code&gt;xclip&lt;/code&gt; for having clipboard support for some years but never got it to run in my servers because they do not have X server and you need one for the clipboard, always got a:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;xclip: Error: Can&#39;t open display: (null)
@@ -277,7 +296,7 @@ server.start(function () {
           <link>/2014/06/16/angular-zxcvbn-v1.0.0</link>
           <guid isPermaLink="true">/2014/06/16/angular-zxcvbn-v1.0.0</guid>
           
-          <pubDate>Mon, 16 Jun 2014 00:00:00 -0500</pubDate>
+          <pubDate>Mon, 16 Jun 2014 00:00:00 -0700</pubDate>
           <description>&lt;p&gt;I wrote a very simple &lt;code&gt;angular.js&lt;/code&gt; directive for the &lt;a href=&quot;https://github.com/dropbox/zxcvbn&quot;&gt;&lt;code&gt;zxcvbn&lt;/code&gt; library&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;You can give it a try with a live demo on &lt;a href=&quot;http://plnkr.co/9wTZgR&quot;&gt;&lt;code&gt;plnkr&lt;/code&gt;&lt;/a&gt; and grab the code either from &lt;a href=&quot;https://github.com/ghostbar/angular-zxcvbn&quot;&gt;github&lt;/a&gt; or install it with:&lt;/p&gt;
@@ -296,7 +315,7 @@ server.start(function () {
           <link>/2014/05/30/why-my-gpg-does-not-support-hkps</link>
           <guid isPermaLink="true">/2014/05/30/why-my-gpg-does-not-support-hkps</guid>
           
-          <pubDate>Fri, 30 May 2014 20:23:08 -0500</pubDate>
+          <pubDate>Fri, 30 May 2014 20:23:08 -0700</pubDate>
           <description>&lt;p&gt;I was changing my &lt;code&gt;~/.gnupg/gpg.conf&lt;/code&gt; values today and with those was using &lt;code&gt;hkps&lt;/code&gt; instead of the regular &lt;code&gt;hkp&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;And found out my debian system said &lt;code&gt;gpg&lt;/code&gt; did not support that protocol &lt;code&gt;hkps&lt;/code&gt;. &lt;strong&gt;What?!&lt;/strong&gt;&lt;/p&gt;
@@ -314,7 +333,7 @@ server.start(function () {
           <link>/2014/05/23/parserss-v0.0.1</link>
           <guid isPermaLink="true">/2014/05/23/parserss-v0.0.1</guid>
           
-          <pubDate>Fri, 23 May 2014 18:44:30 -0500</pubDate>
+          <pubDate>Fri, 23 May 2014 18:44:30 -0700</pubDate>
           <description>&lt;p&gt;I wrote &lt;code&gt;parserss&lt;/code&gt; a few days ago, it&#39;s basically a wrapper for &lt;code&gt;feedparser&lt;/code&gt; and it&#39;s convenient to have an easy to use JSON with all the data you require.&lt;/p&gt;
 
 &lt;p&gt;For more info just read the &lt;code&gt;README&lt;/code&gt; at the &lt;a href=&quot;https://github.com/ghostbar/parserss&quot;&gt;repository&lt;/a&gt;.&lt;/p&gt;
@@ -337,7 +356,7 @@ server.start(function () {
           <link>/2014/05/18/framework-challenge-bogodev</link>
           <guid isPermaLink="true">/2014/05/18/framework-challenge-bogodev</guid>
           
-          <pubDate>Sun, 18 May 2014 07:05:03 -0500</pubDate>
+          <pubDate>Sun, 18 May 2014 07:05:03 -0700</pubDate>
           <description>&lt;p&gt;Ayer participé en el framework challenge de Bogodev. Fue en la sede de Wayra Colombia que es genial.&lt;/p&gt;
 
 &lt;p&gt;El reto era hacer una visualización de objetos espaciales alrededor de otro (la &quot;estrella de la muerte&quot;) y actualizar sus posiciones a partir de coordenadas X, Y y Z.&lt;/p&gt;
@@ -361,7 +380,7 @@ server.start(function () {
           <link>/2014/05/16/using-angular-file-uploader-together-with-angular-file-model</link>
           <guid isPermaLink="true">/2014/05/16/using-angular-file-uploader-together-with-angular-file-model</guid>
           
-          <pubDate>Fri, 16 May 2014 21:59:39 -0500</pubDate>
+          <pubDate>Fri, 16 May 2014 21:59:39 -0700</pubDate>
           <description>&lt;p&gt;Two of the first angular module&#39;s I wrote were built to work together very well, they are &lt;a href=&quot;https://github.com/ghostbar/angular-file-uploader&quot;&gt;&lt;code&gt;angular-file-uploader&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/ghostbar/angular-file-uploader&quot;&gt;&lt;code&gt;angular-file-model&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;angular-file-model&lt;/code&gt; works as you actually expect &lt;code&gt;ng-model&lt;/code&gt; to work by default with files, that means: takes the data from an &lt;code&gt;&amp;lt;input type=&#39;file&#39;&amp;gt;&lt;/code&gt; and makes it available on the object passed to &lt;code&gt;ng-model&lt;/code&gt;.&lt;/p&gt;
@@ -438,7 +457,7 @@ server.start(function () {
           <link>/2014/05/14/transloadit-api-v1.0.0-rc1</link>
           <guid isPermaLink="true">/2014/05/14/transloadit-api-v1.0.0-rc1</guid>
           
-          <pubDate>Wed, 14 May 2014 00:10:02 -0500</pubDate>
+          <pubDate>Wed, 14 May 2014 00:10:02 -0700</pubDate>
           <description>&lt;p&gt;A release candidate for &lt;code&gt;v1.0.0&lt;/code&gt; of &lt;code&gt;transloadit-api&lt;/code&gt; is out.&lt;/p&gt;
 
 &lt;p&gt;You can install it via &lt;code&gt;npm&lt;/code&gt; and give it a try.&lt;/p&gt;
@@ -463,7 +482,7 @@ server.start(function () {
           <link>/2014/05/14/transloadit-api-v1.0.0-rc1-es</link>
           <guid isPermaLink="true">/2014/05/14/transloadit-api-v1.0.0-rc1-es</guid>
           
-          <pubDate>Wed, 14 May 2014 00:09:46 -0500</pubDate>
+          <pubDate>Wed, 14 May 2014 00:09:46 -0700</pubDate>
           <description>&lt;p&gt;El release candidate de &lt;code&gt;v1.0.0&lt;/code&gt; para &lt;code&gt;transloadit-api&lt;/code&gt; ya está disponible.&lt;/p&gt;
 
 &lt;p&gt;Puedes instalarlo vía &lt;code&gt;npm&lt;/code&gt; y probarlo:&lt;/p&gt;
@@ -488,7 +507,7 @@ server.start(function () {
           <link>/2014/05/13/angular-geocomplete</link>
           <guid isPermaLink="true">/2014/05/13/angular-geocomplete</guid>
           
-          <pubDate>Tue, 13 May 2014 07:08:41 -0500</pubDate>
+          <pubDate>Tue, 13 May 2014 07:08:41 -0700</pubDate>
           <description>&lt;p&gt;So I was needing a resulting JSON array with possible solutions for a given address or city name and then &lt;a href=&quot;https://github.com/ghostbar/angular-geocomplete/&quot;&gt;angular-geocomplete&lt;/a&gt; was made.&lt;/p&gt;
 
 &lt;p&gt;The great thing is that you can use it together with &lt;code&gt;typeahead&lt;/code&gt; and now you have address/location autocomplete, just like the one on Google Maps.&lt;/p&gt;
@@ -512,7 +531,7 @@ server.start(function () {
           <link>/2014/05/13/angular-geocomplete-es</link>
           <guid isPermaLink="true">/2014/05/13/angular-geocomplete-es</guid>
           
-          <pubDate>Tue, 13 May 2014 07:02:37 -0500</pubDate>
+          <pubDate>Tue, 13 May 2014 07:02:37 -0700</pubDate>
           <description>&lt;p&gt;Esta es la historia de un día que necesitaba con una dirección o el nombre de una ciudad conseguir un array JSON que me diese los posibles lugares donde eso fuese cierto.&lt;/p&gt;
 
 &lt;p&gt;Y entonces nació &lt;a href=&quot;https://github.com/ghostbar/angular-geocomplete&quot;&gt;angular-geocomplete&lt;/a&gt;.&lt;/p&gt;
@@ -538,7 +557,7 @@ server.start(function () {
           <link>/2014/05/13/using-firefox-feels-safer</link>
           <guid isPermaLink="true">/2014/05/13/using-firefox-feels-safer</guid>
           
-          <pubDate>Tue, 13 May 2014 00:50:20 -0500</pubDate>
+          <pubDate>Tue, 13 May 2014 00:50:20 -0700</pubDate>
           <description>&lt;p&gt;For the last couple of years I was using Chrome, the main reasons were:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -569,7 +588,7 @@ server.start(function () {
           <link>/2014/02/15/si-nos-bloquearon</link>
           <guid isPermaLink="true">/2014/02/15/si-nos-bloquearon</guid>
           
-          <pubDate>Sat, 15 Feb 2014 03:43:26 -0500</pubDate>
+          <pubDate>Sat, 15 Feb 2014 03:43:26 -0800</pubDate>
           <description>&lt;p&gt;Tanto CONATEL como CANTV han negado que haya habido censura en el Internet venezolano estos últimos dos días, aquí están las pruebas que sí lo han hecho.&lt;/p&gt;
 
 &lt;p&gt;El primer bloqueo fue del servidor de imágenes de Twitter bajo &lt;code&gt;pbs.twimg.com&lt;/code&gt; el 13 de febrero de 2014. Bajo este dominio se sirven las imágenes de Twitter, tanto imágenes de perfil como imágenes de contenido generado por el usuario.&lt;/p&gt;
@@ -595,29 +614,6 @@ server.start(function () {
 &lt;p&gt;Para detener ataques informáticos no es necesario bloquear sitios web, mucho menos sitios como pastebin.com que sólo almacenan información. Se detiene con infraestructura sólida, con balance de cargas y contenido distribuido por regiones (CDN). Igualmente usando software con las actualizaciones de seguridad. Pastebin.com es un sitio que sólo almacena información y bloquear información constituye censura.&lt;/p&gt;
 
 &lt;p&gt;La censura es inconstitucional, establecido así en el artículo 57. El bloqueo es un acto de censura. No sólo eso, no hay transparencia sobre qué están bloqueando ni por qué. El mismo artículo 57 de la constitución prohíbe la censura a los funcionarios para dar cuenta de los asuntos bajo sus responsabilidades y la recién aprobada ley de infogobierno en su artículo 13 habla del principio de transparencia y la publicidad máxima que debe dársele a sus actuaciones. Espero que los funcionarios públicos den ejemplo de ciudadanía y hagan cumplir las leyes a cabalidad. Ya hay leyes de delitos informáticos, no es necesario romper una ley (ni la constitución) para hacer cumplir otra.&lt;/p&gt;
-
-          </description>
-        </item>
-      
-    
-      
-        <item>
-          
-          <title>Serendipities of the day</title>
-          <link>/2014/01/22/serendipity</link>
-          <guid isPermaLink="true">/2014/01/22/serendipity</guid>
-          
-          <pubDate>Wed, 22 Jan 2014 18:31:18 -0500</pubDate>
-          <description>&lt;p&gt;So today has been a fairly good day of serendipities and I thought it would make for an awesome post.&lt;/p&gt;
-
-&lt;p&gt;I&#39;m starting to love having io9.com in my reading-list everyday.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://io9.com/12-of-the-most-astounding-living-fossils-known-to-sci-1506539384&quot;&gt;12 of the most astounding living fossils known to science&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://io9.com/a-white-dwarf-just-exploded-creating-the-closest-super-1506539405&quot;&gt;A white dwarf just exploded and created a supernova&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://io9.com/the-time-gateway-is-open-move-to-neutropolis-before-pr-1506383451&quot;&gt;Futuristic cities concept art&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
 
           </description>
         </item>

@@ -71,7 +71,7 @@
           <link>/2014/05/18/framework-challenge-bogodev</link>
           <guid isPermaLink="true">/2014/05/18/framework-challenge-bogodev</guid>
           
-          <pubDate>Sun, 18 May 2014 07:05:03 -0500</pubDate>
+          <pubDate>Sun, 18 May 2014 07:05:03 -0700</pubDate>
           <description>&lt;p&gt;Ayer participé en el framework challenge de Bogodev. Fue en la sede de Wayra Colombia que es genial.&lt;/p&gt;
 
 &lt;p&gt;El reto era hacer una visualización de objetos espaciales alrededor de otro (la &quot;estrella de la muerte&quot;) y actualizar sus posiciones a partir de coordenadas X, Y y Z.&lt;/p&gt;
@@ -95,7 +95,7 @@
           <link>/2014/05/14/transloadit-api-v1.0.0-rc1-es</link>
           <guid isPermaLink="true">/2014/05/14/transloadit-api-v1.0.0-rc1-es</guid>
           
-          <pubDate>Wed, 14 May 2014 00:09:46 -0500</pubDate>
+          <pubDate>Wed, 14 May 2014 00:09:46 -0700</pubDate>
           <description>&lt;p&gt;El release candidate de &lt;code&gt;v1.0.0&lt;/code&gt; para &lt;code&gt;transloadit-api&lt;/code&gt; ya está disponible.&lt;/p&gt;
 
 &lt;p&gt;Puedes instalarlo vía &lt;code&gt;npm&lt;/code&gt; y probarlo:&lt;/p&gt;
@@ -120,7 +120,7 @@
           <link>/2014/05/13/angular-geocomplete-es</link>
           <guid isPermaLink="true">/2014/05/13/angular-geocomplete-es</guid>
           
-          <pubDate>Tue, 13 May 2014 07:02:37 -0500</pubDate>
+          <pubDate>Tue, 13 May 2014 07:02:37 -0700</pubDate>
           <description>&lt;p&gt;Esta es la historia de un día que necesitaba con una dirección o el nombre de una ciudad conseguir un array JSON que me diese los posibles lugares donde eso fuese cierto.&lt;/p&gt;
 
 &lt;p&gt;Y entonces nació &lt;a href=&quot;https://github.com/ghostbar/angular-geocomplete&quot;&gt;angular-geocomplete&lt;/a&gt;.&lt;/p&gt;
@@ -146,7 +146,7 @@
           <link>/2013/08/26/the-road-to-happiness-incluye-no-usar-wordpress</link>
           <guid isPermaLink="true">/2013/08/26/the-road-to-happiness-incluye-no-usar-wordpress</guid>
           
-          <pubDate>Mon, 26 Aug 2013 03:03:23 -0500</pubDate>
+          <pubDate>Mon, 26 Aug 2013 03:03:23 -0700</pubDate>
           <description>&lt;p&gt;Ayer hubo una interesante conversa en Twitter sobre WordPress, lo mínimo para correrlo y opciones para &lt;em&gt;gente pobre&lt;/em&gt; (como dijo Faneyth).&lt;a href=&quot;https://twitter.com/phenobarbital/status/371819458421346304&quot;&gt;0&lt;/a&gt; &lt;a href=&quot;https://twitter.com/LuisAlejandro/status/371821008681852930&quot;&gt;1&lt;/a&gt; &lt;a href=&quot;https://twitter.com/zentraedi/status/371821336706166786&quot;&gt;2&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Yo soy exponente de la &lt;em&gt;opción para gente pobre&lt;/em&gt; (LOL) con Jekyll y GitHub Pages. Migré en &lt;a href=&quot;http://ghostbar.co/2012/12/15/switched-to-jekyll/&quot;&gt;diciembre del 2012&lt;/a&gt; y no fué por pobreza exactamente sino porque WordPress (junto con la mayoría de opciones para blogging como Drupal), al menos para mi, no tiene sentido con las tecnologías disponibles actualmente.&lt;/p&gt;
@@ -194,7 +194,7 @@
           <link>/2013/05/10/desde-el-cenit-anuncian-plan-de-retroceso-tecnologico</link>
           <guid isPermaLink="true">/2013/05/10/desde-el-cenit-anuncian-plan-de-retroceso-tecnologico</guid>
           
-          <pubDate>Fri, 10 May 2013 00:00:00 -0500</pubDate>
+          <pubDate>Fri, 10 May 2013 00:00:00 -0700</pubDate>
           <description>&lt;p&gt;&lt;strong&gt;Actualización [2013-05-11 14:31:11 UTC-0430]&lt;/strong&gt;: Justamente 1 día antes de producirse esta noticia en Venezuela, en Chile anuncia el &lt;a href=&quot;http://www.reuna.cl/index.php/es/noticias-nuestros-socios/2308-reuna-cuadruplico-su-capacidad-de-conexion-a-las-redes-internacionales&quot;&gt;REUNA (el Reacciun chileno) que cuadruplicaron su capacidad hasta 1.35Gbps &lt;strong&gt;hacia el extranjero&lt;/strong&gt;&lt;/a&gt; para que los investigadores y científicos tengan más con que trabajar, así como anunciaron que han unido más universidades con IXPs locales.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Actualización [2013-05-10 22:22:16 UTC-0430]&lt;/strong&gt;: Para entender un poco más de cómo funciona el internet pueden ver &lt;a href=&quot;https://www.youtube.com/watch?v=a5837LcDHfE&quot;&gt;este vídeo precisamente sobre IXP y de donde sale el internet junto a sus interconexiones&lt;/a&gt;.&lt;/p&gt;
