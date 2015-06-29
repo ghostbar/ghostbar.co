@@ -13,7 +13,7 @@
           <link>/2014/05/14/transloadit-api-v1.0.0-rc1</link>
           <guid isPermaLink="true">/2014/05/14/transloadit-api-v1.0.0-rc1</guid>
           
-          <pubDate>Wed, 14 May 2014 00:10:02 -0700</pubDate>
+          <pubDate>Wed, 14 May 2014 00:10:02 -0500</pubDate>
           <description>&lt;p&gt;A release candidate for &lt;code&gt;v1.0.0&lt;/code&gt; of &lt;code&gt;transloadit-api&lt;/code&gt; is out.&lt;/p&gt;
 
 &lt;p&gt;You can install it via &lt;code&gt;npm&lt;/code&gt; and give it a try.&lt;/p&gt;
@@ -38,7 +38,7 @@
           <link>/2014/05/13/angular-geocomplete</link>
           <guid isPermaLink="true">/2014/05/13/angular-geocomplete</guid>
           
-          <pubDate>Tue, 13 May 2014 07:08:41 -0700</pubDate>
+          <pubDate>Tue, 13 May 2014 07:08:41 -0500</pubDate>
           <description>&lt;p&gt;So I was needing a resulting JSON array with possible solutions for a given address or city name and then &lt;a href=&quot;https://github.com/ghostbar/angular-geocomplete/&quot;&gt;angular-geocomplete&lt;/a&gt; was made.&lt;/p&gt;
 
 &lt;p&gt;The great thing is that you can use it together with &lt;code&gt;typeahead&lt;/code&gt; and now you have address/location autocomplete, just like the one on Google Maps.&lt;/p&gt;
@@ -62,7 +62,7 @@
           <link>/2013/08/26/mongodb-pull-from-embedded-document-array</link>
           <guid isPermaLink="true">/2013/08/26/mongodb-pull-from-embedded-document-array</guid>
           
-          <pubDate>Mon, 26 Aug 2013 02:43:25 -0700</pubDate>
+          <pubDate>Mon, 26 Aug 2013 02:43:25 -0500</pubDate>
           <description>&lt;p&gt;TL;DR:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;    &lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;collection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$pull&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;embedded_doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}})&lt;/span&gt;
@@ -137,7 +137,7 @@
           <link>/2013/08/22/too-many-authentication-failures-ssh</link>
           <guid isPermaLink="true">/2013/08/22/too-many-authentication-failures-ssh</guid>
           
-          <pubDate>Thu, 22 Aug 2013 21:08:25 -0700</pubDate>
+          <pubDate>Thu, 22 Aug 2013 21:08:25 -0500</pubDate>
           <description>&lt;p&gt;It seems like having several SSH keys on the same system starts giving issues with some SSH servers. The issue is that while connecting it returns:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Too many authentication failures for xxxxxx.
@@ -161,7 +161,7 @@
           <link>/2013/08/22/starting-raspberry-without-display</link>
           <guid isPermaLink="true">/2013/08/22/starting-raspberry-without-display</guid>
           
-          <pubDate>Thu, 22 Aug 2013 02:12:22 -0700</pubDate>
+          <pubDate>Thu, 22 Aug 2013 02:12:22 -0500</pubDate>
           <description>&lt;p&gt;Recently (actually 3 weeks ago) &lt;a href=&quot;http://instagram.com/p/cdELMsNxk-/&quot;&gt;I bought a Raspberry Pi for myself&lt;/a&gt; and it wasn&#39;t until today that I power it on by the first time. Call it RealLife™ for simplicity.&lt;/p&gt;
 
 &lt;p&gt;Anyway, one of my first issues was that I do not own any display with RCA or HDMI inputs, and all I have is a router that works as my WiFi hotspot as well. Since this starter kit comes with &lt;a href=&quot;http://raspbian.org&quot;&gt;Raspbian&lt;/a&gt; by default I made some research and found that the default &lt;code&gt;user:password&lt;/code&gt; is &lt;code&gt;pi:raspberry&lt;/code&gt;, &lt;code&gt;ssh-server&lt;/code&gt; is on by default and the network interface &lt;code&gt;eth0&lt;/code&gt; tries to grab an IP automatically via DHCP.&lt;/p&gt;
@@ -205,7 +205,7 @@
           <link>/2012/12/15/why-jekyll</link>
           <guid isPermaLink="true">/2012/12/15/why-jekyll</guid>
           
-          <pubDate>Sat, 15 Dec 2012 00:00:00 -0800</pubDate>
+          <pubDate>Sat, 15 Dec 2012 00:00:00 -0500</pubDate>
           <description>&lt;h2&gt;Why?&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://ghostbar.ath.cx/2012/12/15/switched-to-jekyll/&quot;&gt;I switched to Jekyll&lt;/a&gt; but it wasn&#39;t a fast decision. I really tried to give WordPress a chance, again, but I&#39;m not getting along pretty well with PHP since like 2 years ago. In fact, is a headache to maintain on my server. In the course of the years I have had several downtimes on my PHP-based sites because of changes like PHP-FPM. Some sites just dropped working for me while others kept doing OK. This is in the same server, with the same database and the same codebase (WordPress).&lt;/p&gt;
@@ -239,7 +239,7 @@
           <link>/2012/12/15/switched-to-jekyll</link>
           <guid isPermaLink="true">/2012/12/15/switched-to-jekyll</guid>
           
-          <pubDate>Sat, 15 Dec 2012 00:00:00 -0800</pubDate>
+          <pubDate>Sat, 15 Dec 2012 00:00:00 -0500</pubDate>
           <description>&lt;p&gt;After long-time without updating my blog, I decided to give it life again, but this time I wanted it to look different and started to make a new theme. Remembering the good-bad old days with WordPress was not an option, so I started prototyping right away with &lt;a href=&quot;http://jekyllrb.com&quot;&gt;jekyll&lt;/a&gt; and things were fast, considering my 30-minutes a day approach since 3 days ago.&lt;/p&gt;
 
 &lt;p&gt;Of course, is yet a work-in-progress, and in the meantime I wrote &lt;a href=&quot;https://github.com/ghostbar/320Stylus&quot;&gt;320Stylus&lt;/a&gt; so things could came up faster working mobile-first. But I will write more about that later.&lt;/p&gt;

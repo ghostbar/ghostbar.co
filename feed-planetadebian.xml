@@ -71,7 +71,7 @@
           <link>/2014/05/14/transloadit-api-v1.0.0-rc1-es</link>
           <guid isPermaLink="true">/2014/05/14/transloadit-api-v1.0.0-rc1-es</guid>
           
-          <pubDate>Wed, 14 May 2014 00:09:46 -0700</pubDate>
+          <pubDate>Wed, 14 May 2014 00:09:46 -0500</pubDate>
           <description>&lt;p&gt;El release candidate de &lt;code&gt;v1.0.0&lt;/code&gt; para &lt;code&gt;transloadit-api&lt;/code&gt; ya está disponible.&lt;/p&gt;
 
 &lt;p&gt;Puedes instalarlo vía &lt;code&gt;npm&lt;/code&gt; y probarlo:&lt;/p&gt;
@@ -96,7 +96,7 @@
           <link>/2014/05/13/angular-geocomplete-es</link>
           <guid isPermaLink="true">/2014/05/13/angular-geocomplete-es</guid>
           
-          <pubDate>Tue, 13 May 2014 07:02:37 -0700</pubDate>
+          <pubDate>Tue, 13 May 2014 07:02:37 -0500</pubDate>
           <description>&lt;p&gt;Esta es la historia de un día que necesitaba con una dirección o el nombre de una ciudad conseguir un array JSON que me diese los posibles lugares donde eso fuese cierto.&lt;/p&gt;
 
 &lt;p&gt;Y entonces nació &lt;a href=&quot;https://github.com/ghostbar/angular-geocomplete&quot;&gt;angular-geocomplete&lt;/a&gt;.&lt;/p&gt;
@@ -122,7 +122,7 @@
           <link>/2013/05/10/desde-el-cenit-anuncian-plan-de-retroceso-tecnologico</link>
           <guid isPermaLink="true">/2013/05/10/desde-el-cenit-anuncian-plan-de-retroceso-tecnologico</guid>
           
-          <pubDate>Fri, 10 May 2013 00:00:00 -0700</pubDate>
+          <pubDate>Fri, 10 May 2013 00:00:00 -0500</pubDate>
           <description>&lt;p&gt;&lt;strong&gt;Actualización [2013-05-11 14:31:11 UTC-0430]&lt;/strong&gt;: Justamente 1 día antes de producirse esta noticia en Venezuela, en Chile anuncia el &lt;a href=&quot;http://www.reuna.cl/index.php/es/noticias-nuestros-socios/2308-reuna-cuadruplico-su-capacidad-de-conexion-a-las-redes-internacionales&quot;&gt;REUNA (el Reacciun chileno) que cuadruplicaron su capacidad hasta 1.35Gbps &lt;strong&gt;hacia el extranjero&lt;/strong&gt;&lt;/a&gt; para que los investigadores y científicos tengan más con que trabajar, así como anunciaron que han unido más universidades con IXPs locales.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Actualización [2013-05-10 22:22:16 UTC-0430]&lt;/strong&gt;: Para entender un poco más de cómo funciona el internet pueden ver &lt;a href=&quot;https://www.youtube.com/watch?v=a5837LcDHfE&quot;&gt;este vídeo precisamente sobre IXP y de donde sale el internet junto a sus interconexiones&lt;/a&gt;.&lt;/p&gt;
