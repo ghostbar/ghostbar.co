@@ -31,7 +31,11 @@ The key [`4096R/0xFC23BA297C4DF50D`](/keys/0xFC23BA297C4DF50D.pub.asc) does belo
 
     cce3356a6e81f95e26985ca77d2566ef860dad7e
 
-TextSecure's fingerprint
+TextSecure/Signal fingerprint
+
+    05 44 64 3d 62 02 c8 df 55 67 82 19 03 75 b8 38 da 79 05 44 31 13 eb 90 99 90 d7 ee 07 3b 5c 28 52
+
+  Just for reference, this is the old **not functioning** fingerprint:
 
     05 0b 85 b1 a2 db 29 90 1d e6
     d9 36 24 de e0 f9 46 0a 92 59
