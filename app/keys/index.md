@@ -25,7 +25,7 @@ The key [`4096R/0xFC23BA297C4DF50D`](/keys/0xFC23BA297C4DF50D.pub.asc) does belo
 
 `ghostbar@jabber.at` fingerprint
 
-    ad08d9ee7a35b7de38b1f8e606914d63736d3ec8
+    d2e8e005830abbf41c8e797fcc77aca6f5e22990
 
 `ghostbar@riseup.net` fingerprint
 
