@@ -13,4 +13,4 @@ I wanted to know what was exactly the timeout id from `setTimeout` and what woul
 
 <script src="https://gist.github.com/ghostbar/81cb47ac4a03a6140a40.js"></script>
 
-<script type="text/javascript" src="https://asciinema.org/a/32948.js" id="asciicast-32948" async></script>i
+<script type="text/javascript" src="https://asciinema.org/a/32948.js" id="asciicast-32948" async></script>
