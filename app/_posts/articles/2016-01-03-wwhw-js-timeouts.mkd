@@ -1,0 +1,16 @@
+---
+layout: post
+title: "WWHW: a timeout id is saved on an array"
+categories:
+- javascript
+type: post
+date: 2016-01-04T17:50:54
+---
+
+I always do silly tests to check what happens when I do something, so just wanted to share it with whoever does silly tests as well and wants to save some time.
+
+I wanted to know what was exactly the timeout id from `setTimeout` and what would happen if I saved it on an array. (Wondered basically if it would go `null` some time, and it doesn't).
+
+<script src="https://gist.github.com/ghostbar/81cb47ac4a03a6140a40.js"></script>
+
+<script type="text/javascript" src="https://asciinema.org/a/32948.js" id="asciicast-32948" async></script>i
