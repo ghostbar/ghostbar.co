@@ -9,11 +9,35 @@
       
         <item>
           
+          <title>WWHW: a timeout id is saved on an array</title>
+          <link>/2016/01/04/wwhw-js-timeouts</link>
+          <guid isPermaLink="true">/2016/01/04/wwhw-js-timeouts</guid>
+          
+          <pubDate>Mon, 04 Jan 2016 12:50:54 -0500</pubDate>
+          <description>&lt;p&gt;I always do silly tests to check what happens when I do something, so just wanted to share it with whoever does silly tests as well and wants to save some time.&lt;/p&gt;
+
+&lt;p&gt;I wanted to know what was exactly the timeout id from &lt;code&gt;setTimeout&lt;/code&gt; and what would happen if I saved it on an array. (Wondered basically if it would go &lt;code&gt;null&lt;/code&gt; some time, and it doesn&#39;t).&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/ghostbar/81cb47ac4a03a6140a40.js&quot;&gt;&lt;/script&gt;
+
+
+
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://asciinema.org/a/32948.js&quot; id=&quot;asciicast-32948&quot; async&gt;&lt;/script&gt;
+
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
           <title>Loggly as a CoreOS service</title>
           <link>/2015/03/26/loggly-as-a-coreos-service</link>
           <guid isPermaLink="true">/2015/03/26/loggly-as-a-coreos-service</guid>
           
-          <pubDate>Thu, 26 Mar 2015 16:02:05 +0000</pubDate>
+          <pubDate>Thu, 26 Mar 2015 11:02:05 -0500</pubDate>
           <description>&lt;p&gt;I spent a lot of today figuring out the best way to send the stream of logs from CoreOS to loggly, because it requires structured data and then sending it from a service on systemd.&lt;/p&gt;
 
 &lt;p&gt;So this was my solution for whoever it can work for.&lt;/p&gt;
@@ -32,7 +56,7 @@
           <link>/2015/02/27/easy-proxies-with-nodejs</link>
           <guid isPermaLink="true">/2015/02/27/easy-proxies-with-nodejs</guid>
           
-          <pubDate>Fri, 27 Feb 2015 15:01:20 +0000</pubDate>
+          <pubDate>Fri, 27 Feb 2015 10:01:20 -0500</pubDate>
           <description>&lt;p&gt;Easy ways to get proxies with nodejs/iojs, the way to launch it should be&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;URL=&#39;http://google.com&#39; PORT=8080 node script.js
@@ -94,7 +118,7 @@ server.start(function () {
           <link>/2015/01/11/recordando-a-aaron-swartz</link>
           <guid isPermaLink="true">/2015/01/11/recordando-a-aaron-swartz</guid>
           
-          <pubDate>Sun, 11 Jan 2015 17:53:38 +0000</pubDate>
+          <pubDate>Sun, 11 Jan 2015 12:53:38 -0500</pubDate>
           <description>&lt;p&gt;Un libro que me encantó es «Homeland» de Cory Doctorow, trata sobre un grupo de hackers que se ven envueltos en situaciones que los deja expuestos a uno de los gobiernos y empresas más poderosas que existen y deben hacer algo aún así los haga correr peligros. Una historia de ficción sobre gente como Aaron Swartz.&lt;/p&gt;
 
 &lt;p&gt;Pero lo mejor del libro, es que precisamente cierra con dos cartas, una por Jacob Appelbaum, uno de los primeros mimbros de Wikileaks y desarrollador del proyecto Tor; y otra por Aaron Swartz. La carta de Aaron la traduje y publico a continuación, espero les sirva de inspiración para que sigan en sus luchas aún cuando a veces parezca que quién da la batalla del otro lado es muy grande e invencible:&lt;/p&gt;
@@ -152,7 +176,7 @@ server.start(function () {
           <link>/2015/01/08/hapi-hiredis-plugin</link>
           <guid isPermaLink="true">/2015/01/08/hapi-hiredis-plugin</guid>
           
-          <pubDate>Thu, 08 Jan 2015 21:55:36 +0000</pubDate>
+          <pubDate>Thu, 08 Jan 2015 16:55:36 -0500</pubDate>
           <description>&lt;p&gt;I just published to &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;&lt;code&gt;npm&lt;/code&gt;&lt;/a&gt; the module &lt;a href=&quot;https://www.npmjs.com/package/hapi-hiredis&quot;&gt;&lt;code&gt;hapi-hiredis&lt;/code&gt;&lt;/a&gt;. This plugin for &lt;a href=&quot;http://hapijs.com&quot;&gt;&lt;code&gt;hapi&lt;/code&gt;&lt;/a&gt; is fully compatible with 8.0 (and actually expects it).&lt;/p&gt;
 
 &lt;p&gt;The difference between this plugin and &lt;a href=&quot;https://www.npmjs.com/package/hapi-redis&quot;&gt;&lt;code&gt;hapi-redis&lt;/code&gt;&lt;/a&gt; is that this module uses the &lt;code&gt;hiredis&lt;/code&gt; parser based on &lt;code&gt;C++&lt;/code&gt; bindings, &lt;code&gt;redis&lt;/code&gt; uses a slower &lt;code&gt;javascript&lt;/code&gt; parser. Besides that main difference this plugin supports &lt;code&gt;URL&lt;/code&gt;s for giving the connection, instead &lt;code&gt;hapi-redis&lt;/code&gt; only supports giving the connection parameters via separate &lt;code&gt;host&lt;/code&gt;, &lt;code&gt;port&lt;/code&gt; and &lt;code&gt;password&lt;/code&gt; fields.&lt;/p&gt;
@@ -167,10 +191,10 @@ server.start(function () {
         <item>
           
           <title>Published hapi-mongodb2 on npm</title>
-          <link>/2015/01/03/hapi-mongodb2-plugin</link>
-          <guid isPermaLink="true">/2015/01/03/hapi-mongodb2-plugin</guid>
+          <link>/2015/01/02/hapi-mongodb2-plugin</link>
+          <guid isPermaLink="true">/2015/01/02/hapi-mongodb2-plugin</guid>
           
-          <pubDate>Sat, 03 Jan 2015 00:30:29 +0000</pubDate>
+          <pubDate>Fri, 02 Jan 2015 19:30:29 -0500</pubDate>
           <description>&lt;p&gt;I just published to &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;&lt;code&gt;npm&lt;/code&gt;&lt;/a&gt; the module &lt;a href=&quot;https://www.npmjs.com/package/hapi-mongodb2&quot;&gt;&lt;code&gt;hapi-mongodb2&lt;/code&gt;&lt;/a&gt;. This plugin for &lt;a href=&quot;http://hapijs.com&quot;&gt;&lt;code&gt;hapi&lt;/code&gt;&lt;/a&gt; is fully compatible with 8.0 (and actually expects it) and uses the MongoDB node.js driver 2.0 instead of the old 1.4.&lt;/p&gt;
 
 &lt;p&gt;Using it is very simple, after registering the usual way as any other plugin then you can get it from the context on handlers and extensions as &lt;code&gt;this.mongo&lt;/code&gt; or get it from &lt;code&gt;server.plugins[&#39;hapi-mongodb2].client&lt;/code&gt;.&lt;/p&gt;
@@ -269,15 +293,13 @@ server.start(function () {
 
 &lt;p&gt;So I had to do a workaround and the easiest thing to do was using a temporary file:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;vim&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;echo $DISPLAY&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=~&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
-  vmap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;y&lt;/span&gt;: &lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;gt; /tmp/theClipboardWithoutX&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; getreg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-  map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; setreg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt; /tmp/theClipboardWithoutX&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;p&lt;/span&gt;
+&lt;p&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-vim&quot; data-lang=&quot;vim&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;echo $DISPLAY&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=~&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+  vmap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt; /tmp/theClipboardWithoutX&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; getreg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;\&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; setreg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;\&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt; /tmp/theClipboardWithoutX&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;p&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-  vmap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;y&lt;/span&gt;: &lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;xclip -i -selection clipboard&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; getreg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-  map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; setreg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;xclip -o -selection clipboard&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;p&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;endif&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+  vmap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;xclip -i -selection clipboard&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; getreg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;\&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; setreg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;\&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;system&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;xclip -o -selection clipboard&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;p&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;endif&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/p&gt;
 
 &lt;p&gt;Basically: if there&#39;s no &lt;code&gt;$DISPLAY&lt;/code&gt; set then send the copied selection to the file &lt;code&gt;/tmp/theClipboardWithoutX&lt;/code&gt; with the keybinds Ctrl+C and with Ctrl+V you get the data inside that file. If there&#39;s &lt;code&gt;$DISPLAY&lt;/code&gt; then use &lt;code&gt;xclip&lt;/code&gt;.&lt;/p&gt;
 
@@ -389,62 +411,56 @@ server.start(function () {
 
 &lt;p&gt;Installing it is:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower install angular-file-uploader angular-file-model
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;p&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;~$ &lt;/span&gt;bower install angular-file-uploader angular-file-model&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/p&gt;
 
 &lt;p&gt;So let&#39;s take a basic &lt;code&gt;uploader.html&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;file&amp;#39;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-file-model=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;form.theFile&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-click=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;upload()&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Upload&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;p&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;file&#39;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-file-model=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;form.theFile&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-click=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;upload()&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Upload&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/p&gt;
 
 &lt;p&gt;And now &lt;code&gt;file.js&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;myApp&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;angular-file-uploader&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;angular-file-model&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;p&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;myApp&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;angular-file-uploader&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;angular-file-model&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;&lt;/p&gt;
 
-&lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;myApp&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;UploadCtrl&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-  &lt;span class=&quot;s1&quot;&gt;&amp;#39;$scope&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;s1&quot;&gt;&amp;#39;angularFileUploader&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;p&gt;&lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;myApp&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;UploadCtrl&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;s1&quot;&gt;&#39;$scope&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;s1&quot;&gt;&#39;angularFileUploader&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ngUploader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;form&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;form&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;&lt;/p&gt;
 
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;newNames&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;form&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;newNameWithoutExtension&amp;#39;&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;span class=&quot;kd&quot;&amp;gt;var&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nx&quot;&amp;gt;config&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;{&amp;lt;/span&amp;gt;
+  &amp;lt;span class=&quot;na&quot;&amp;gt;newNames&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;:&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;{&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;nx&quot;&amp;gt;$scope&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;form&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;file&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;[&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;mi&quot;&amp;gt;0&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;].&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;na&quot;&amp;gt;name&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;:&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;s1&quot;&amp;gt;&#39;newNameWithoutExtension&#39;&amp;lt;/span&amp;gt;
+  &amp;lt;span class=&quot;p&quot;&amp;gt;}&amp;lt;/span&amp;gt;
+&amp;lt;span class=&quot;p&quot;&amp;gt;};&amp;lt;/span&amp;gt;
 
-    &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;upload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;ngUploader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;s1&quot;&gt;&amp;#39;https://domain.tld/upload/path&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;form&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;progress&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&amp;lt;span class=&quot;nx&quot;&amp;gt;$scope&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;upload&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;kd&quot;&amp;gt;function&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;()&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;{&amp;lt;/span&amp;gt;
+  &amp;lt;span class=&quot;nx&quot;&amp;gt;ngUploader&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;send&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;s1&quot;&amp;gt;&#39;https://domain.tld/upload/path&#39;&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;,&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;nx&quot;&amp;gt;$scope&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;form&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;file&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;,&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;nx&quot;&amp;gt;config&amp;lt;/span&amp;gt;
+  &amp;lt;span class=&quot;p&quot;&amp;gt;).&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;then&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;nx&quot;&amp;gt;success&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;,&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;nx&quot;&amp;gt;error&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;,&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;nx&quot;&amp;gt;progress&amp;lt;/span&amp;gt;
+  &amp;lt;span class=&quot;p&quot;&amp;gt;);&amp;lt;/span&amp;gt;
+&amp;lt;span class=&quot;p&quot;&amp;gt;};&amp;lt;/span&amp;gt;
 
-    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;success&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&amp;lt;span class=&quot;kd&quot;&amp;gt;function&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nx&quot;&amp;gt;success&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;msg&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;{&amp;lt;/span&amp;gt;
+  &amp;lt;span class=&quot;nx&quot;&amp;gt;console&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;log&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;msg&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;);&amp;lt;/span&amp;gt;
+&amp;lt;span class=&quot;p&quot;&amp;gt;};&amp;lt;/span&amp;gt;
 
-    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errorMsg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errorMsg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&amp;lt;span class=&quot;kd&quot;&amp;gt;function&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nx&quot;&amp;gt;error&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;errorMsg&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;{&amp;lt;/span&amp;gt;
+  &amp;lt;span class=&quot;nx&quot;&amp;gt;console&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;log&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;errorMsg&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;);&amp;lt;/span&amp;gt;
+&amp;lt;span class=&quot;p&quot;&amp;gt;};&amp;lt;/span&amp;gt;
 
-    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;progress&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&amp;lt;span class=&quot;kd&quot;&amp;gt;function&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nx&quot;&amp;gt;progress&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;status&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;{&amp;lt;/span&amp;gt;
+  &amp;lt;span class=&quot;nx&quot;&amp;gt;console&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;log&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nx&quot;&amp;gt;status&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;);&amp;lt;/span&amp;gt;
+&amp;lt;span class=&quot;p&quot;&amp;gt;};&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
-
-
+&lt;p&gt;  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;&lt;/p&gt;
 
           </description>
         </item>
@@ -576,44 +592,6 @@ server.start(function () {
 &lt;p&gt;That kind of things makes me feel less safer using Chrome and a lot safer using Mozilla, a NGO that has shown their commitment for a free and open internet where user&#39;s rights are first.&lt;/p&gt;
 
 &lt;p&gt;I used to complain a lot about Firefox: slow, bloated, consuming all my memory, crashing randomly. Now it just works as it should and even better: &lt;strong&gt;makes me feel safe&lt;/strong&gt;.&lt;/p&gt;
-
-          </description>
-        </item>
-      
-    
-      
-        <item>
-          
-          <title>Sí, nos bloquearon</title>
-          <link>/2014/02/15/si-nos-bloquearon</link>
-          <guid isPermaLink="true">/2014/02/15/si-nos-bloquearon</guid>
-          
-          <pubDate>Sat, 15 Feb 2014 03:43:26 -0500</pubDate>
-          <description>&lt;p&gt;Tanto CONATEL como CANTV han negado que haya habido censura en el Internet venezolano estos últimos dos días, aquí están las pruebas que sí lo han hecho.&lt;/p&gt;
-
-&lt;p&gt;El primer bloqueo fue del servidor de imágenes de Twitter bajo &lt;code&gt;pbs.twimg.com&lt;/code&gt; el 13 de febrero de 2014. Bajo este dominio se sirven las imágenes de Twitter, tanto imágenes de perfil como imágenes de contenido generado por el usuario.&lt;/p&gt;
-
-&lt;p&gt;Este bloqueo fue por CANTV, únicamente. Pueden ver los resultados de intentar descargar una imágen y luego hacer &lt;code&gt;traceroute&lt;/code&gt; tanto &lt;a href=&quot;http://pastebin.com/P8h71vTV&quot;&gt;en Inter (que sí funcionó)&lt;/a&gt; como &lt;a href=&quot;http://pastebin.com/E7eYTZNp&quot;&gt;con CANTV (que tenía bloqueado)&lt;/a&gt;. (Si no pueden ver los archivos, es porque pastebin.com aún está siendo bloqueado, como lo es al momento de escribir esto: 04:49:13 UTC-0430).&lt;/p&gt;
-
-&lt;p&gt;Los reportes no fueron aislados y se dejaron sentir por gran cantidad de usuarios. Los reportes confirmaron que sólo CANTV era el ISP con problemas. Al cambiar a Movistar, Digitel e Inter, las imágenes cargaban con normalidad.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://twitter.com/planwac&quot;&gt;William Castillo&lt;/a&gt;, presidente de CONATEL, &lt;a href=&quot;http://laiguana.tv/noticias/2014/02/14/12304/DESDE-TELESUR-WILLIAM-CASTILLO-LE-MANDO-UN-MENSAJE-A-LOS-MEDIOS-INTERNACIONALES.html&quot;&gt;dió declaraciones a Telesur TV&lt;/a&gt; donde afirmó que &lt;em&gt;la falla&lt;/em&gt; se dió en muchos países de latinoamérica también. No consigo fuentes para confirmar eso. Este argumento lo repite CANTV en un comunicado, donde dicen que la falla se dió también en varios países de latinoamérica. Incluso, fuentes mexicanas cubren la censura de las imágenes en Twitter de Venezuela y nunca se menciona que haya habido fallas en México. El comunicado, emitido por CANTV, &lt;a href=&quot;http://www.cantv.com.ve/seccion.asp?pid=1&amp;amp;sid=144&amp;amp;NotID=6460&quot;&gt;repite ese argumento&lt;/a&gt;, sin fuentes.&lt;/p&gt;
-
-&lt;p&gt;Así mismo, &lt;a href=&quot;https://twitter.com/wexler&quot;&gt;Nu Wexler&lt;/a&gt;, &lt;a href=&quot;http://www.linkedin.com/in/nwexler&quot;&gt;portavoz de Twitter&lt;/a&gt;, &lt;a href=&quot;http://www.bloomberg.com/news/2014-02-14/twitter-says-venezuela-blocks-its-images-amid-protest-crackdown.html&quot;&gt;confirmó a Bloomberg que sus imágenes estaban siendo bloqueadas en Venezuela&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Más pruebas de las trazas que muestran a CANTV deteniendo la ruta para llegar a &lt;code&gt;pbs.twimg.com&lt;/code&gt; están &lt;a href=&quot;https://twitter.com/lorissantamaria/status/434153609781981184/photo/1&quot;&gt;aquí&lt;/a&gt; &lt;a href=&quot;https://twitter.com/lorissantamaria/status/434154104621760514&quot;&gt;aquí&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Pero los bloqueos no terminan allí, &lt;a href=&quot;https://twitter.com/planwac/status/434388069349748737&quot;&gt;el presidente de CONATEL en su cuenta de Twitter confirma que se han bloqueado varios sitios desde donde se atacan a sitios gubernamentales&lt;/a&gt; y horas después se empiezan a sentir quejas por el bloqueo a &lt;a href=&quot;http://pastebin.com&quot;&gt;pastebin.com&lt;/a&gt;. Pastebin es un sitio donde se comparte texto plano. Desde este sitio no se puede ejecutar ningún ataque. Sin embargo, se confirma que está bloqueado y no sólo por CANTV, sino por Inter también.&lt;/p&gt;
-
-&lt;p&gt;Al hacer trazas y hacer pruebas de resolución de dominio se consigue que: &lt;a href=&quot;https://twitter.com/yondri/status/434456214978564096/photo/1&quot;&gt;CANTV bloqueó&lt;/a&gt; &lt;a href=&quot;https://gist.github.com/ghostbar/9010495&quot;&gt;la resolución del dominio pastebin.com desde sus DNS&lt;/a&gt; (&lt;a href=&quot;https://i.cloudup.com/oyiwqpFsIw-2000x2000.png&quot;&gt;no así resolver &lt;code&gt;pbs.twimg.com&lt;/code&gt; o &lt;code&gt;google.com&lt;/code&gt;&lt;/a&gt;) y que &lt;a href=&quot;https://gist.github.com/ghostbar/9012910&quot;&gt;intentar llegar a la IP mediante una traza es imposible&lt;/a&gt;. Estos servidores DNS son controlados directamente por CANTV. Otros servidores DNS resuelven correctamente el dominio &lt;code&gt;pastebin.com&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Ahora, &lt;a href=&quot;http://pastebin.com/4QaK7jag&quot;&gt;Inter no sacó &lt;code&gt;pastebin.com&lt;/code&gt; de sus DNS&lt;/a&gt; sino que &lt;a href=&quot;https://twitter.com/anibalrojas/status/434477751790489600&quot;&gt;únicamente bloqueó&lt;/a&gt; &lt;a href=&quot;https://twitter.com/ghostbar/status/434452582849732608&quot;&gt;la IP&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;A todas estas, William Castillo afirma en su perfil de Twitter: &lt;a href=&quot;https://twitter.com/planwac/status/434468976563740672&quot;&gt;«Expertos informáticos d oposiciòn han reconocido hoy en radio q es improbable un bloqueo de Twitter desde Venezuela #GuerraDeDesinformación»&lt;/a&gt;. No sé quiénes serán, pero eso es una mera opinión y la realidad es que en Venezuela, los ISP han estado bloqueando páginas web enteras. Ante los hechos (y no las opiniones) vale la pena hacer saber &lt;a href=&quot;http://www.oas.org/es/cidh/expresion/showarticle.asp?artID=848&amp;amp;lID=2&quot;&gt;la declaración conjunta que hiciesen los relatores sobre libertad de expresión y opinión de las Naciones Unidas el 1 de junio de 2011&lt;/a&gt; (no está demás).&lt;/p&gt;
-
-&lt;p&gt;Para detener ataques informáticos no es necesario bloquear sitios web, mucho menos sitios como pastebin.com que sólo almacenan información. Se detiene con infraestructura sólida, con balance de cargas y contenido distribuido por regiones (CDN). Igualmente usando software con las actualizaciones de seguridad. Pastebin.com es un sitio que sólo almacena información y bloquear información constituye censura.&lt;/p&gt;
-
-&lt;p&gt;La censura es inconstitucional, establecido así en el artículo 57. El bloqueo es un acto de censura. No sólo eso, no hay transparencia sobre qué están bloqueando ni por qué. El mismo artículo 57 de la constitución prohíbe la censura a los funcionarios para dar cuenta de los asuntos bajo sus responsabilidades y la recién aprobada ley de infogobierno en su artículo 13 habla del principio de transparencia y la publicidad máxima que debe dársele a sus actuaciones. Espero que los funcionarios públicos den ejemplo de ciudadanía y hagan cumplir las leyes a cabalidad. Ya hay leyes de delitos informáticos, no es necesario romper una ley (ni la constitución) para hacer cumplir otra.&lt;/p&gt;
 
           </description>
         </item>
