@@ -9,6 +9,30 @@
       
         <item>
           
+          <title>Node's EventEmitter without object modules</title>
+          <link>/2016/01/30/node-eventemitter-easy</link>
+          <guid isPermaLink="true">/2016/01/30/node-eventemitter-easy</guid>
+          
+          <pubDate>Sat, 30 Jan 2016 19:14:40 -0500</pubDate>
+          <description>&lt;p&gt;I was looking for a way to use Node&#39;s EventEmitters without having to use classes/prototypes on my modules and turns out thanks to the caching of modules, this way of creating event emitters is possible.&lt;/p&gt;
+
+&lt;p&gt;Basically I create a module (let&#39;s call it &lt;code&gt;a&lt;/code&gt;) where there&#39;s an &lt;code&gt;init&lt;/code&gt; function that gets called when the module is required and exports an event emitter that&#39;s used along the &lt;code&gt;a&lt;/code&gt; module. Thanks to caching, the &lt;code&gt;init&lt;/code&gt; function get&#39;s called just once even if it&#39;s required in several other modules and/or the &lt;code&gt;index.js&lt;/code&gt; and the EventEmitter works just like it should. This is the prototype I made for this test and an asciinema with the output:&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://asciinema.org/a/35204.js&quot; id=&quot;asciicast-35204&quot; async&gt;&lt;/script&gt;
+
+
+
+
+&lt;script src=&quot;https://gist.github.com/ghostbar/bcc29ec190eeb616f571.js&quot;&gt;&lt;/script&gt;
+
+
+          </description>
+        </item>
+      
+    
+      
+        <item>
+          
           <title>WWHW: a timeout id is saved on an array</title>
           <link>/2016/01/04/wwhw-js-timeouts</link>
           <guid isPermaLink="true">/2016/01/04/wwhw-js-timeouts</guid>
@@ -561,37 +585,6 @@ server.start(function () {
 &lt;p&gt;Instalable vía &lt;code&gt;bower&lt;/code&gt; también con &lt;code&gt;bower install angular-geocomplete&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Problemas a los &lt;a href=&quot;https://github.com/ghostbar/angular-geocomplete/issues&quot;&gt;issues de GitHub&lt;/a&gt;.&lt;/p&gt;
-
-          </description>
-        </item>
-      
-    
-      
-        <item>
-          
-          <title>Using Firefox feels safer</title>
-          <link>/2014/05/13/using-firefox-feels-safer</link>
-          <guid isPermaLink="true">/2014/05/13/using-firefox-feels-safer</guid>
-          
-          <pubDate>Tue, 13 May 2014 00:50:20 -0500</pubDate>
-          <description>&lt;p&gt;For the last couple of years I was using Chrome, the main reasons were:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Faster&lt;/li&gt;
-&lt;li&gt;Less memory&lt;/li&gt;
-&lt;li&gt;Better rendering (I used to complain a lot about &lt;a href=&quot;http://ghostbar.co/2009/12/18/firefox-with-chrome-font-rendering-engine-no-way/&quot;&gt;Firefox&#39;s text rendering&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;p&gt;But now, all those issues are long gone and there are bigger issues to face, and one of the biggest is: privacy.&lt;/p&gt;
-
-&lt;p&gt;The thing is, while Chrome is a modified and branded version of Google there&#39;s a huge issue with your privacy. Specially when they require you to be logged into your Google account to install some extensions and keep you logged &quot;syncing&quot; your data.&lt;/p&gt;
-
-&lt;p&gt;They know how to avoid extensions to be usable at certain URLs and they actually do it at their Chrome Store, so it just takes a pair of seconds to know they may disable your privacy enhancing extensions on their &lt;code&gt;*google.com&lt;/code&gt; domains.&lt;/p&gt;
-
-&lt;p&gt;That kind of things makes me feel less safer using Chrome and a lot safer using Mozilla, a NGO that has shown their commitment for a free and open internet where user&#39;s rights are first.&lt;/p&gt;
-
-&lt;p&gt;I used to complain a lot about Firefox: slow, bloated, consuming all my memory, crashing randomly. Now it just works as it should and even better: &lt;strong&gt;makes me feel safe&lt;/strong&gt;.&lt;/p&gt;
 
           </description>
         </item>
