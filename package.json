@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "description": "Yeoman workflow for ghostbar.co",
   "dependencies": {},
+  "scripts": {
+    "deploy": "grunt deploy && git push --all"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.6.4",
