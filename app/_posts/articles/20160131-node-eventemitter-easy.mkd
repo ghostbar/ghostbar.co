@@ -1,0 +1,20 @@
+---
+layout: post
+type: post
+title: "Node's EventEmitter without object modules"
+categories:
+- javascript
+- node
+- nodejs
+- events
+- eventemitter
+date: 2016-01-31T00:14:40
+---
+
+I was looking for a way to use Node's EventEmitters without having to use classes/prototypes on my modules and turns out thanks to the caching of modules, this way of creating event emitters is possible.
+
+Basically I create a module (let's call it `a`) where there's an `init` function that gets called when the module is required and exports an event emitter that's used along the `a` module. Thanks to caching, the `init` function get's called just once even if it's required in several other modules and/or the `index.js` and the EventEmitter works just like it should. This is the prototype I made for this test and an asciinema with the output:
+
+<script type="text/javascript" src="https://asciinema.org/a/35204.js" id="asciicast-35204" async></script>
+
+<script src="https://gist.github.com/ghostbar/bcc29ec190eeb616f571.js"></script>
