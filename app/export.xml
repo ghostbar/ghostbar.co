@@ -26,7 +26,7 @@ layout: none
       <link>{{ site.url }}</link>
     </image>
 
-    {% for post in site.posts %}
+    {% for post in site.posts limit: 30 offset: 0 %}
       <item>
         <title><![CDATA[{{post.title}}]]></title>
         <link>{% if post.link %}{{ post.link }}{% else %}{{ site.url }}{{ post.url }}{% endif %}</link>
